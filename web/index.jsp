@@ -35,11 +35,33 @@
             flex-direction: column;
             /* border: solid; */
         }
+
+        .bg-video {
+            width: 100%;
+            height: 100vh;
+            z-index: -100;
+            display: block;
+            position: absolute;
+            overflow: hidden;
+            opacity: 0.3;
+        }
+
+        .bg-video > .video-01 {
+            width: 100%;
+            height: auto;
+        }
     </style>
     <title>Welcome to Education System | Harbin Institute of Technology</title>
 </head>
 
 <body>
+<div class="bg-video">
+    <video class="video-01" autoplay muted loop>
+        <source src="http://en.hit.edu.cn/public/video/z.mp4"
+                type="video/mp4">
+    </video>
+</div>
+
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">
