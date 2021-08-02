@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td>项目名称</td>
-<td  colspan="6">哈工大教务系统（HIT Education System）</td>
+<td  colspan="6">哈工大学生成绩管理系统（HIT Score Management System）</td>
 </tr>
 <tr>
 <td rowspan="2">评分项目</td>
@@ -30,23 +30,23 @@
 <td>个人得分</td>
 </tr>
 <tr>
-<td>&nbsp;</td>
+<td>120L02xxxx</td>
+<td>***</td>
+<td colspan="3">表示层（前端，JSP）</td>
 <td></td>
-<td colspan="3"></td>
+<td></td>
+</tr>
+<tr>
+<td>120L02xxxx</td>
+<td>***</td>
+<td colspan="3">业务逻辑层（Servlet）</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td></td>
-<td colspan="3"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td></td>
-<td colspan="3"></td>
+<td>**</td>
+<td colspan="3">数据处理层（UserDao、DBUtils）</td>
 <td></td>
 <td></td>
 </tr>

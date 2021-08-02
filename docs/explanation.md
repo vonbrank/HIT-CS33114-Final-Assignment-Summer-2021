@@ -114,33 +114,6 @@
         │  web.xml
         │
         ├─classes
-        │  └─cn
-        │      └─edu
-        │          └─hit
-        │              └─edusys
-        │                  ├─controller
-        │                  │      CourseServlet.class
-        │                  │      LoginServlet.class
-        │                  │      UserServlet.class
-        │                  │
-        │                  ├─dao
-        │                  │      CourseDao.class
-        │                  │      ScoreDao.class
-        │                  │      UserDao.class
-        │                  │
-        │                  ├─entity
-        │                  │  ├─course
-        │                  │  │      Course.class
-        │                  │  │      Score.class
-        │                  │  │
-        │                  │  └─user
-        │                  │          Staff.class
-        │                  │          Student.class
-        │                  │          Teacher.class
-        │                  │          User.class
-        │                  │
-        │                  └─utils
-        │                          DBUtils.class
         │
         └─lib
                 mysql-connector-java-8.0.26.jar
@@ -152,7 +125,7 @@
 
 ## 接口、方法说明
 
-### `cn.edu.hit.edusys.controller.*`
+### `cn.edu.hit.sms.controller.*`
 
 #### `LoginServlet`
 
@@ -166,26 +139,26 @@
 
 用于处理关于课程信息的请求。
 
-### `cn.edu.hit.edusys.entity.*`
+### `cn.edu.hit.sms.entity.*`
 
 #### `User`类：
 
 `User`类是所有用户类的基类，包含每个用户的编号、姓名、性别和用户类型，以及其`Getter`和`Setter`方法。
 
-| 字段                   | 说明                                                         |
-|------------------------|--------------------------------------------------------------|
-| `private String id;`     | 用户的编号、学号。                                           |
-| `private String name;`   | 用户的姓名。                                                 |
-| `private String gender;` | 用户的性别。                                                 |
+| 字段                     | 说明                                                                 |
+| ------------------------ | -------------------------------------------------------------------- |
+| `private String id;`     | 用户的编号、学号。                                                   |
+| `private String name;`   | 用户的姓名。                                                         |
+| `private String gender;` | 用户的性别。                                                         |
 | `private int userType;`  | 用户的类型。<br>错误的类型值输入需抛出`IllegalArgumentException`异常 |
 
 `userType`值与用户类类型对应关系如下：
 
-| 值 | 对应类 |
-|----|----------|
-| `0`  | `Staff`   |
-| `1`  | `Teacher`  |
-| `2`  | `Student`  |
+| 值  | 对应类    |
+| --- | --------- |
+| `0` | `Staff`   |
+| `1` | `Teacher` |
+| `2` | `Student` |
 
 #### `Staff`类：
 
@@ -199,28 +172,26 @@
 
 `Student`类是学生类，有额外字段`private String major;`表示其所属专业。
 
-
-### `cn.edu.hit.edusys.dao.*`
+### `cn.edu.hit.sms.dao.*`
 
 #### `UserDao`接口：
 
 `UserDao`用以操作、查询数据库中所有用户的信息，包括`Staff`, `Teacher`和`Student`。
 
-| 接口原型                            |  说明                     |
-|---------------------------------------|--------------------------|
+| 接口原型                              | 说明                     |
+| ------------------------------------- | ------------------------ |
 | `public User getById(String id);`     | 以`id`获取单个用户。     |
 | `public User getByName(String name);` | 以名字`name`获取单个用户 |
 | `public int add(User user);`          | 添加一个用户。           |
 | `public int modify(User user);`       | 修改一个用户。           |
 | `public int remove(String id);`       | 移除一个用户。           |
 
-
 #### `CourseDao`接口：
 
 `CourseDao`用以操作和查询数据库中所有课程信息，和所有学生关于其课程的得分记录。
 
 | 接口原型                                              | 说明                                            |
-|-------------------------------------------------------|-------------------------------------------------|
+| ----------------------------------------------------- | ----------------------------------------------- |
 | `public List<Course> getAllCourses();`                | 获取所有课程。                                  |
 | `public Course getCourseByCid(String cid);`           | 以课程`id`获取一个课程。                        |
 | `public Course getCourseByCname(String cname);`       | 以课程名`cname`获取一个课程。                   |
@@ -238,12 +209,12 @@
 | `public int modifyScore(Score score);`                | 修改一条得分记录。                              |
 | `public int removeScore(Score Score);`                | 移除一条得分记录。                              |
 
-### `cn.edu.hit.edusys.utils.*`
+### `cn.edu.hit.sms.utils.*`
 
 #### `DBUtils`
 
-| 字段与方法名                                      | 解释                 |
-|---------------------------------------------------|----------------------|
+| 字段与方法名                                        | 解释                 |
+| --------------------------------------------------- | -------------------- |
 | `static final String JDBC_DRIVER;`                  | JDBC驱动名           |
 | `static final String DB_URL;`                       | 数据库地址           |
 | `static final String USER;`                         | 数据库登录用户       |

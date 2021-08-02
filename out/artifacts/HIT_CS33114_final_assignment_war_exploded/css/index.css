@@ -1,0 +1,32 @@
+.body-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main-content {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 3rem 0;
+}
+
+.bg-video {
+    z-index: -100;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    /*border: solid blue;*/
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.bg-video > .video-01 {
+    object-fit: cover;
+    /*border: solid red;*/
+}

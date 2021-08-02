@@ -19,23 +19,26 @@
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
     <title>Welcome to Score Management System | Harbin Institute of Technology</title>
 </head>
 
 <body>
+
+
 <div class="bg-video">
     <video class="video-01" autoplay muted loop>
         <source src="http://en.hit.edu.cn/public/video/z.mp4" type="video/mp4">
     </video>
 </div>
 
+
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">
             <a class="navbar-brand" href="./">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
@@ -51,7 +54,7 @@
         <div class="container">
             <!-- <a class="navbar-brand" href="#">Von Brank</a> -->
             <ul class="navbar-nav m-auto">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="#">©2021</a>
                 </li>
             </ul>
