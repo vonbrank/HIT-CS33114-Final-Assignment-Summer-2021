@@ -11,17 +11,45 @@ public class DBUtils {
 
     private static Connection con;
     private static Statement stmt;
+    static {
+        try {
+            Class.forName(JDBC_DRIVER);
+            con = DriverManager.getConnection(DB_URL, USER, PASS);
+            stmt = con.createStatement();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static ResultSet executeQuery(String sql) {
-        return null;
+        try {
+            System.out.printf("%s\n", sql);
+            ResultSet rs = stmt.executeQuery(sql);
+            return rs;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public static int executeUpdate(String sql) {
-        return 0;
+        try {
+            System.out.printf("%s\n", sql);
+            return stmt.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return -1;
+        }
+
     }
 
     public static void close() {
-
+        try {
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }

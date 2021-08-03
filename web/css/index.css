@@ -12,6 +12,8 @@
     justify-content: space-around;
     flex-direction: column;
     margin: 3rem 0;
+    /* border: solid; */
+    transition: height 2s;
 }
 
 .bg-video {
