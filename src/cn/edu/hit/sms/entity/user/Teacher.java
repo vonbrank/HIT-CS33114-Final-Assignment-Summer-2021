@@ -3,8 +3,8 @@ package cn.edu.hit.sms.entity.user;
 public class Teacher extends User {
     private String profession;
 
-    public Teacher(String id, String name, String gender, int userType, String profession) {
-        super(id, name, gender, userType);
+    public Teacher(String id, String name, String gender, String profession) {
+        super(id, name, gender, 1);
         this.profession = profession;
     }
 

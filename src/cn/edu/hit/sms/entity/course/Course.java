@@ -46,4 +46,10 @@ public class Course {
     public void setNumOfStu(int numOfStu) {
         this.numOfStu = numOfStu;
     }
+
+    @Override
+    public String toString() {
+        return String.format("id = %s\nname = %s\nTeacherID = %s\nTeacherName = %s\nNumberOfStudent = %s",
+                id, name, teacher.getId(), teacher.getName(), numOfStu);
+    }
 }

@@ -24,7 +24,7 @@ public class EasyFileIO {
             System.out.println("PrintWriter error opening the file:"+this.fileName);
             System.exit(0);
         }
-        System.out.println("Please input four lines of text:");         //本例中控制输入4行
+        System.out.println("Please input one lines of text:");         //本例中控制输入4行
         toFile.print(s);
 
         System.out.println("Four lines were written to "+this.fileName);
@@ -49,7 +49,7 @@ public class EasyFileIO {
             System.out.println("FileWriter error opening the file:"+this.fileName);
             System.exit(0);
         }
-        System.out.println("Please input four additional lines of text:");         //本例中控制输入4行
+        System.out.println("Please input one additional lines of text:");         //本例中控制输入4行
         toFile.print(s);
 
         System.out.println("Four lines were written to "+this.fileName);

@@ -16,6 +16,8 @@ public interface CourseDao {
 
     public List<Course> getCourseByTname(String tname);
 
+    public int getNumberOfStudentByCid(String cid);
+
     public int addCourse(Course course);
 
     public int modifyCourse(Course course);

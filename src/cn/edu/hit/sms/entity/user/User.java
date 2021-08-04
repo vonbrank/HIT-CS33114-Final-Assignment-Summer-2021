@@ -44,4 +44,9 @@ public class User {
     public void setUserType(int userType) {
         this.userType = userType;
     }
+
+    @Override
+    public String toString() {
+        return String.format("id: %s\nname: %s\ngender: %s\nuserType: %d", id, name, gender, userType);
+    }
 }
