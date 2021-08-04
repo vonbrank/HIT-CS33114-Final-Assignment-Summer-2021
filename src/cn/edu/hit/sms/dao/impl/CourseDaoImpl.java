@@ -111,15 +111,16 @@ public class CourseDaoImpl implements CourseDao {
                 teacherIDList.add(tid);
                 courseList.add(course);
             }
+            for(Course course1 : courseList) {
+                cid = course1.getId();
+                course1.setNumOfStu(this.getNumberOfStudentByCid(cid));
+                course1.setTeacher((Teacher) userDao.getById(tid));
+            }
+            return courseList;
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        for(Course course1 : courseList) {
-            cid = course1.getId();
-            course1.setNumOfStu(this.getNumberOfStudentByCid(cid));
-            course1.setTeacher((Teacher) userDao.getById(tid));
-        }
-        return courseList;
+        return null;
     }
 
     @Override
@@ -201,6 +202,20 @@ public class CourseDaoImpl implements CourseDao {
         }
         String sql = String.format("DELETE FROM courses WHERE cid='%s';", id);
         return DBUtils.executeUpdate(sql);
+    }
+
+    @Override
+    public int getNumberOfCourseByTid(String tid) {
+        String sql = String.format("SELECT COUNT(*) FROM courses WHERE tid='%s';", tid);
+        ResultSet rs = DBUtils.executeQuery(sql);
+        try {
+            rs.next();
+            return rs.getInt(1);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return-1;
     }
 
     @Override
@@ -335,6 +350,7 @@ public class CourseDaoImpl implements CourseDao {
         return scoreList;
     }
 
+    @Override
     public int getScoreBySidAndCid(String sid, String cid) {
         String sql = String.format("SELECT * FROM scores WHERE sid='%s' AND cid='%s';",
                 sid, cid);
@@ -350,6 +366,7 @@ public class CourseDaoImpl implements CourseDao {
         return scoreValue;
     }
 
+    @Override
     public int getScoreBySnameAndCname(String sname, String cname) {
         String sql = String.format("SELECT * FROM scores WHERE sname='%s' AND cname='%s';",
                 sname, cname);

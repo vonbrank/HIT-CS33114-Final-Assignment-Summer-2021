@@ -24,6 +24,7 @@ public interface CourseDao {
 
     public int removeCourse(String id);
 
+    public int getNumberOfCourseByTid(String tid);
 
     public List<Score> getAllScores();
 
@@ -34,6 +35,10 @@ public interface CourseDao {
     public List<Score> getScoreByCid(String cid);
 
     public List<Score> getScoreByCname(String cname);
+
+    public int getScoreBySidAndCid(String sid, String cid);
+
+    public int getScoreBySnameAndCname(String sname, String cname);
 
     public int addScore(Score Score);
 

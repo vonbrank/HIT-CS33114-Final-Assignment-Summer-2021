@@ -19,7 +19,7 @@ import tools.EasyFileIO;
 public class Test {
     public static void main(String[] args) {
 
-        scoreDaotest();
+        courseDaoTest();
     }
 
     static void userDaoTest() {
@@ -48,10 +48,16 @@ public class Test {
 //        System.out.println(courseDao.getCourseByCid("C003").toString() + '\n');
 //        System.out.println(courseDao.getCourseByCname("C003"));
 //        System.out.println(courseDao.getCourseByCname("Biochemistry B").toString() + '\n');
-        Course course1 = new Course("C23", "College Chinese", (Teacher) userDao.getById("T007"), 0);
+//        Course course1 = new Course("C23", "College Chinese", (Teacher) userDao.getById("T007"), 0);
 //        System.out.println(courseDao.addCourse(course1));
 //        System.out.println(courseDao.modifyCourse(course1));
-        System.out.println(courseDao.removeCourse("C23"));
+//        System.out.println(courseDao.removeCourse("C23"));
+        List<Course> courseList = courseDao.getCourseByTid("T007");
+        for (Course course : courseList) {
+            System.out.println(course.toString() + '\n');
+        }
+
+        System.out.println(courseDao.getNumberOfCourseByTid("T006"));
     }
 
     static void scoreDaotest() {

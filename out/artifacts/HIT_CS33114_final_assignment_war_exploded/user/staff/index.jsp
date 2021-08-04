@@ -1,3 +1,12 @@
+<%@ page import="cn.edu.hit.sms.dao.UserDao" %>
+<%@ page import="cn.edu.hit.sms.dao.impl.UserDaoImpl" %>
+<%@ page import="cn.edu.hit.sms.entity.user.Teacher" %>
+<%@ page import="java.util.List" %>
+<%@ page import="cn.edu.hit.sms.entity.user.Student" %>
+<%@ page import="cn.edu.hit.sms.dao.CourseDao" %>
+<%@ page import="cn.edu.hit.sms.dao.impl.CourseDaoImpl" %>
+<%@ page import="cn.edu.hit.sms.entity.course.Course" %>
+<%@ page import="cn.edu.hit.sms.entity.course.Score" %>
 <%--
   Created by IntelliJ IDEA.
   User: VonBrank
@@ -6,6 +15,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    UserDao userDao = new UserDaoImpl();
+    CourseDao courseDao = new CourseDaoImpl();
+    int teacherCnt = 0, courseCnt = 0, studentCnt = 0;
+    List<Teacher> teacherList;
+    List<Student> studentList;
+    List<Course> courseList;
+    List<Score> scoreList;
+    Teacher teacher;
+    Student student;
+    Course course;
+    Score score;
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,6 +85,9 @@
                         <a class="nav-link" data-toggle="tab" href="#student-management">Student Management</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#course-management">Course Management</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="../profile/">Profile</a>
                     </li>
                     <!-- <li class="nav-item">
@@ -72,85 +97,316 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
+
+                    <%
+                        teacherList = userDao.getAllTeachers();
+//                        out.println(teacherList.size());
+                    %>
                     <div id="teacher-management" class="container tab-pane active"><br>
-                        <div class="card">
-                            <div class="card-body">
-                                <table class="table table-hover">
-                                    <thead class="btn-light" style="position: sticky; top: 0;">
-                                    <tr>
-                                        <td>ID</td>
-                                        <td>Name</td>
-                                        <td>Gender</td>
-                                        <td>User Type</td>
-                                        <td>Major or Profession</td>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>000001</td>
-                                        <td>XiaoMing</td>
-                                        <td>Male</td>
-                                        <td>Student</td>
-                                        <td>Computer Science and Technology</td>
-                                    </tr>
-                                    <tr>
-                                        <td>000001</td>
-                                        <td>XiaoMing</td>
-                                        <td>Male</td>
-                                        <td>Student</td>
-                                        <td>Computer Science and Technology</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                        <div id="teacherAccordion">
+                            <div class="card">
+                                <div class="card-header mb-0">
+                                    <table class="table table-hover mb-0">
+                                        <thead class="btn-light">
+                                        <tr>
+                                            <td class="col-sm-1">ID</td>
+                                            <td class="col-sm-2">Name</td>
+                                            <td class="col-sm-1">Gender</td>
+                                            <td class="col-sm-4">Profession</td>
+                                            <td class="col-sm-2">Number of Courses</td>
+                                            <td class="col-sm-2">Option</td>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <%
+                                for(int i=0; i<teacherList.size(); i++) {
+                            %>
+                            <div class="card">
+                                <div class="card-header">
+                                    <table class="table table-hover mb-0">
+                                        <tbody>
+                            <%
+                                    teacherCnt++;
+                                    teacher = teacherList.get(i);
+                                    courseList = courseDao.getCourseByTid(teacher.getId());
+                            %>
+                                        <tr>
+                                            <td class="col-sm-1"><%=teacher.getId()%></td>
+                                            <td class="col-sm-2"><%=teacher.getName()%></td>
+                                            <td class="col-sm-1"><%=teacher.getGender()%></td>
+                                            <td class="col-sm-4"><%=teacher.getProfession()%></td>
+                                            <td class="col-sm-2"><%=courseList.size()%></td>
+                                            <td class="col-sm-2">
+                                                <div class="btn-group btn-group-sm">
+                                                    <a class="card-link btn btn-primary" data-toggle="collapse"
+                                                       href="#<%="teacher-"+teacherCnt%>">Details</a>
+                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="<%="teacher-"+teacherCnt%>" class="collapse" data-parent="#teacherAccordion">
+                                    <div class="card-body">
+                                        <label for="teacherAssignment-<%=teacherCnt%>">
+                                            <h4>Course List</h4>
+                                        </label>
+
+                                        <table class="table table-hover">
+                                            <thead class="btn-light" style="position: sticky; top: 0;">
+                                            <tr>
+                                                <td>ID</td>
+                                                <td>Name</td>
+                                                <td>Number of Students</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <%
+
+                                                for(int j=0; j<courseList.size(); j++) {
+                                                    course = courseList.get(j);
+                                            %>
+                                            <tr>
+                                                <td><%=course.getId()%></td>
+                                                <td><%=course.getName()%></td>
+                                                <td><%=course.getNumOfStu()%></td>
+                                            </tr>
+
+<%--                                            <tr>--%>
+<%--                                                <td>000001</td>--%>
+<%--                                                <td>Data Structure</td>--%>
+<%--                                                <td>90</td>--%>
+<%--                                            </tr>--%>
+                                            <%
+                                                }
+                                            %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
 
+                            <%
+                                }
+                            %>
                         </div>
                     </div>
+
+                    <%
+                        studentList = userDao.getAllStudents();
+                    %>
                     <div id="student-management" class="container tab-pane fade"><br>
-                        <div class="card">
-                            <div class="card-body">
-                                <table class="table table-hover">
-                                    <thead class="btn-light" style="position: sticky; top: 0;">
-                                    <tr>
-                                        <td>ID</td>
-                                        <td>Name</td>
-                                        <td>Gender</td>
-                                        <td>User Type</td>
-                                        <td>Major or Profession</td>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>000001</td>
-                                        <td>XiaoMing</td>
-                                        <td>Male</td>
-                                        <td>Student</td>
-                                        <td>Computer Science and Technology</td>
-                                    </tr>
-                                    <tr>
-                                        <td>000001</td>
-                                        <td>XiaoMing</td>
-                                        <td>Male</td>
-                                        <td>Student</td>
-                                        <td>Computer Science and Technology</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                        <div id="studentAccordion">
+                            <div class="card">
+                                <div class="card-header mb-0">
+                                    <table class="table table-hover mb-0">
+                                        <thead class="btn-light">
+                                        <tr>
+                                            <td class="col-sm-1">ID</td>
+                                            <td class="col-sm-2">Name</td>
+                                            <td class="col-sm-1">Gender</td>
+                                            <td class="col-sm-4">Major</td>
+                                            <td class="col-sm-2">Number of Courses</td>
+                                            <td class="col-sm-2">Option</td>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
                             </div>
+                            <%
+                                for(int i=0; i<studentList.size(); i++) {
+                                    studentCnt++;
+                                    student = studentList.get(i);
+                                    scoreList = courseDao.getScoreBySid(student.getId());
+                            %>
+                            <div class="card">
+                                <div class="card-header">
+                                    <table class="table table-hover mb-0">
+                                        <tbody>
+                                        <tr>
+                                            <td class="col-sm-1"><%=student.getId()%></td>
+                                            <td class="col-sm-2"><%=student.getName()%></td>
+                                            <td class="col-sm-1"><%=student.getGender()%></td>
+                                            <td class="col-sm-4"><%=student.getMajor()%></td>
+                                            <td class="col-sm-2"><%=scoreList.size()%></td>
+                                            <td class="col-sm-2">
+                                                <div class="btn-group btn-group-sm">
+                                                    <a class="card-link btn btn-primary" data-toggle="collapse"
+                                                       href="#score-<%=studentCnt%>">Details</a>
+                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div id="score-<%=studentCnt%>" class="collapse" data-parent="#studentAccordion">
+                                    <div class="card-body">
+                                        <label>
+                                            <h4>Course List</h4>
+                                        </label>
+
+                                        <table class="table table-hover">
+                                            <thead class="btn-light" style="position: sticky; top: 0;">
+                                            <tr>
+                                                <td>ID</td>
+                                                <td>Name</td>
+                                                <td>Score</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <%
+
+                                                for (int j=0; j<scoreList.size(); j++) {
+                                                    score = scoreList.get(j);
+                                            %>
+                                            <tr>
+                                                <td><%=score.getCid()%></td>
+                                                <td><%=score.getCname()%></td>
+                                                <td><%=score.getScore()%></td>
+                                            </tr>
+
+                                            <%
+                                                }
+                                            %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <%
+                                }
+                            %>
 
                         </div>
                     </div>
-                    <!-- <div id="menu2" class="container tab-pane fade"><br>
-                        <h3>Menu 2</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam.</p>
-                    </div> -->
+
+                    <%
+                        courseList = courseDao.getAllCourses();
+                    %>
+                    <div id="course-management" class="container tab-pane fade">
+                        <div id="courseAccordion">
+                            <div class="card">
+                                <div class="card-header mb-0">
+                                    <table class="table table-hover mb-0">
+                                        <thead class="btn-light">
+                                        <tr>
+                                            <td class="col-sm-1">ID</td>
+                                            <td class="col-sm-3">Name</td>
+                                            <td class="col-sm-2">Teacher ID</td>
+                                            <td class="col-sm-2">Teacher Name</td>
+                                            <td class="col-sm-2">Number of Students</td>
+                                            <td class="col-sm-2">Option</td>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <%
+                                for (int i=0; i<courseList.size(); i++) {
+                                    courseCnt++;
+                                    course = courseList.get(i);
+                                    scoreList = courseDao.getScoreByCid(course.getId());
+                            %>
+                            <div class="card">
+                                <div class="card-header">
+                                    <table class="table table-hover mb-0">
+                                        <tbody>
+                                        <tr>
+                                            <td class="col-sm-1"><%=course.getId()%></td>
+                                            <td class="col-sm-3"><%=course.getName()%></td>
+                                            <td class="col-sm-2"><%=course.getTeacher().getId()%></td>
+                                            <td class="col-sm-2"><%=course.getTeacher().getName()%></td>
+                                            <td class="col-sm-2"><%=scoreList.size()%></td>
+                                            <td class="col-sm-2">
+                                                <div class="btn-group btn-group-sm">
+                                                    <a class="card-link btn btn-primary" data-toggle="collapse"
+                                                       href="#course-<%=courseCnt%>">Details</a>
+                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div id="course-<%=courseCnt%>" class="collapse" data-parent="#courseAccordion">
+                                    <div class="card-body">
+
+                                        <form action="" method="POST">
+                                            <div class="form-group">
+                                                <form action="">
+                                                    <label for="teacherAssignment-01">
+                                                        <h4>Assign a Teacher</h4>
+                                                    </label>
+                                                    <select class="form-control" id="teacherAssignment-01"
+                                                            name="teacherAssignment-01">
+                                                        <option value="Teacher-01" selected>
+                                                            Teacher-01
+                                                        </option>
+                                                        <option value="Teacher-02">
+                                                            Teacher-02
+                                                        </option>
+                                                        <option value="Teacher-03">
+                                                            Teacher-03
+                                                        </option>
+                                                    </select>
+                                                    <button type="submit"
+                                                            class="btn btn-primary btn-block mt-3">Assign</button>
+                                                </form>
+
+                                            </div>
+                                        </form>
+
+                                        <label>
+                                            <h4>Student List</h4>
+                                        </label>
+
+                                        <table class="table table-hover">
+                                            <thead class="btn-light" style="position: sticky; top: 0;">
+
+
+                                            <tr>
+                                                <td>ID</td>
+                                                <td>Name</td>
+                                                <td>Score</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <%
+                                                for (int j=0; j<scoreList.size(); j++) {
+                                                    score = scoreList.get(j);
+                                            %>
+                                            <tr>
+                                                <td><%=score.getSid()%></td>
+                                                <td><%=score.getSname()%></td>
+                                                <td><%=score.getScore()%></td>
+                                            </tr>
+                                            <%
+                                                }
+                                            %>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <%
+                                }
+                            %>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
         </div>
-
-
     </div>
     <div class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">

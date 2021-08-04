@@ -171,6 +171,8 @@ public class DBDataGenerator {
 //        teacherGen();
 //        studentGen();
 //        teacherAssignment();
+        String sql = "DELETE FROM scores;";
+        DBUtils.executeUpdate(sql);
         studentScore();
     }
 
@@ -289,12 +291,12 @@ public class DBDataGenerator {
         EasyFileIO EFO = new EasyFileIO("D:\\Users\\VonBrank\\Documents\\GitHub\\HIT-CS33114-final-assignment\\data\\input.txt");
 //        EFO.appendWriter("-----------------\n");
 //        EFO.appendWriter("Score:\n\n");
-        for(int i=80; i < 89; i++) {
+        for(int i=0; i < 89; i++) {
             String sid = String.format("S%03d", i+21);
             String sname = Names[i + 20];
-            boolean used[] = new boolean[18];
+            boolean used[] = new boolean[22];
             for (int j=0; j<18; j++) {
-                int cidn = rand.nextInt(18);
+                int cidn = rand.nextInt(22);
                 if(used[cidn]) continue;
                 used[cidn] = true;
                 String cid = String.format("C%03d", cidn+1);
