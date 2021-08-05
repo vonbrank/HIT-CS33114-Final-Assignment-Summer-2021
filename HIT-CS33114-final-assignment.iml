@@ -34,12 +34,12 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://I:/Software/apache-tomcat-9.0.50/lib/servlet-api.jar!/" />
+          <root url="jar://E:/Tools/Software/apache-tomcat-9.0.50/lib/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.50" level="application_server_libraries" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.50" level="application_server_libraries" />
   </component>
 </module>

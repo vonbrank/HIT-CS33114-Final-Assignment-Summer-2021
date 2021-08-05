@@ -34,7 +34,7 @@
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="/education-system">Harbin Institute of Technology</a>
+            <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="nav-about">
                     <a class="nav-link" href="#">About</a>

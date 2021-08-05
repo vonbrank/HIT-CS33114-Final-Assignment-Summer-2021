@@ -7,6 +7,8 @@
 <%@ page import="cn.edu.hit.sms.dao.impl.CourseDaoImpl" %>
 <%@ page import="cn.edu.hit.sms.entity.course.Course" %>
 <%@ page import="cn.edu.hit.sms.entity.course.Score" %>
+<%@ page import="cn.edu.hit.sms.entity.user.User" %>
+<%@ page import="cn.edu.hit.sms.entity.user.Staff" %>
 <%--
   Created by IntelliJ IDEA.
   User: VonBrank
@@ -16,6 +18,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    Object obj = request.getSession().getAttribute("user");
+    if(!(obj instanceof Staff) ){
+        response.sendRedirect("../../auth/login/?op=LogoutError");
+        return;
+    }
     UserDao userDao = new UserDaoImpl();
     CourseDao courseDao = new CourseDaoImpl();
     int teacherCnt = 0, courseCnt = 0, studentCnt = 0;
@@ -56,7 +63,7 @@
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="/education-system">Harbin Institute of Technology</a>
+            <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="nav-about">
                     <a class="nav-link" href="#">About</a>

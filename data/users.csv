@@ -1,0 +1,108 @@
+A001	4c140d588ba95acbcbe38c116648a66c5ba0f94a71d05c5f9d433dedde8d318d	A001	Tess William	Female	\N	\N	0
+A002	42651dea0ed5dd31fcf25c5b992d6c3db2e4aec9a530b1f5278e647bfddac07f	A002	Samantha Esther	Female	\N	\N	0
+A003	9b287e42c2717ed7a1c9edbce2335a7faac4cc3d99c86e1725ba6ebcc1213c00	A003	Zora Chamberlain	Female	\N	\N	0
+A004	259ae8c59307ef6cb03d8aefb45d6dd899fa0742dbf2874534d9192122ac788a	A004	Theresa Clarissa	Male	\N	\N	0
+A005	40ca42fec402b4b369f52b37e7e00b4571c7b1ad7a072e583c9278ceefe5bbad	A005	Iris David	Male	\N	\N	0
+T006	543c78b05963c9da8c35d1d9fcc799c7e62e4a239d0b54a3a81ae3d2e3b9e221	T006	Merry Tout	Female	\N	Energy Science and Engineering	1
+T007	293c3faf281af1d343a1bc23fea0fa7af8d7b0fce69c967d6abac8e321547b08	T007	Zachary Nico(l)	Male	\N	Environmental Science and Engineering	1
+T008	b0549cac9abd808a10761abd3b53a669817545986397724dda80bc00e69c0cef	T008	Levi Evans	Male	\N	Electronic Information Engineering	1
+T009	52fc819c6becdfd6fe6a320ce358064cdf0a7d0ba1e7351005b8fe70c20c22a5	T009	Shirley Sam	Female	\N	Instrument science and Technology	1
+T010	8a8d68e79360d87ab4fd6ae6a2de22d6c19cb6d67fe6b516171586a7837d936f	T010	Gale Holt	Female	\N	Mechanical and Electrical Engineering	1
+T011	7e8117ec7f7c4ca54c118f037b773428d6c664ef65a8f03c6eaf32c40f759bb6	T011	Osborn Gus	Male	\N	Materials Science and Engineering	1
+T012	3a3e82789097f74c29ce43f719a99f5c5aca3827da93c90cf66eb53e4f75e488	T012	Stephanie Grantham	Male	\N	Electronic Information Engineering	1
+T013	936a88ffefef6ec0005248e9d11b8aa9d5f485a60d13c97084e41568575d66b6	T013	Nydia Barrie	Male	\N	Instrument science and Technology	1
+T014	652dd46e74f4a46ed068a142f85132e76db4b501b65c509dfa00819cb7d3a7ab	T014	Letitia Wodehous	Male	\N	Chemical Engineering and Chemistry	1
+T015	604bf01208d3d872c6f58bdf599dc3c24933ce750a56bbdac1242703aba1fb5d	T015	Prudence Lindberg(h)	Male	\N	Mechanical and Electrical Engineering	1
+T016	b68dbddd818a2ccd947c0fedc77438c302a234a73254b3f0a0bb9ec49428f37f	T016	Elizabeth Saul	Male	\N	Materials Science and Engineering	1
+T017	75b9ecb7fb664a878879fbd5346085082f4a4c9d1e63f6bae590d2197e53d799	T017	Bonnie Raphael	Male	\N	Electronic Information Engineering	1
+T018	84b8be845be510929b7c44e699869f4ba6fb44fb341406aa7d8fe7c3028710b1	T018	Marjorie Lena	Male	\N	Electrical Engineering and Automation	1
+T019	5a97e203cca064f9e882e5e77691a993b0be5a846a5493b60f6107ca59e99418	T019	Fitch Donne	Male	\N	Chemical Engineering and Chemistry	1
+T020	23df7e3485beb6aa43ed2db7ab7befb55f85d60097b26d5a681169785b1b4dba	T020	Grace Daniel	Male	\N	Electrical Engineering and Automation	1
+S021	4570b90484c73cadd37b7e144a8ddeaa39b0934aeca57b9f688e2ccc0d487c85	S021	Scott Lily	Male	Electrical Engineering and Automation	\N	2
+S022	ac9211daab3a886236addf3427b5347ebb8931c73458507023705792f688f242	S022	Barbara Woo	Female	Aerospace Engineering	\N	2
+S023	300084871d921922e2a2d7e7ea6f09c9da29c598885d104a862b85b4f4cd7999	S023	lfEllis Webb	Male	Electronic Information Engineering	\N	2
+S024	6ee9d2b88ed8a5827b61b0535d21538440effcc243b19846ad3f697919bef7f9	S024	Afra Malachi	Male	Energy Science and Engineering	\N	2
+S025	08a245e325b07eeda581ee4f0b03dfd91524aa458ebdc974ae16342cb7f9f8f3	S025	Elliot Bobby	Male	Mechanical and Electrical Engineering	\N	2
+S026	cf517f115a12f45670327717cbc86006bfafc6d7707116d43729f4827050d970	S026	Jane Dobbin	Male	Electrical Engineering and Automation	\N	2
+S027	69bcb8ba84d2588cb0ba50b70440d1a7373403ccd309958155275719fed56a4c	S027	Carl Whitman	Male	Environmental Science and Engineering	\N	2
+S028	d842527d5a16cc25b5837defd369835c44aa70c615f3405a8c83835926a5d0d6	S028	Moira Kingsley	Male	Energy Science and Engineering	\N	2
+S029	9f3f0254331d10169266a82bf2c44070fee784f3844acee78df3a1f2e0dc46b4	S029	Beau Dunbar	Male	Materials Science and Engineering	\N	2
+S030	2d1ed98f2f0c98a734aa735fe31712a2153a4950d02fa3ffb941d297b27eff30	S030	Augustine Eliot	Female	Chemical Engineering and Chemistry	\N	2
+S031	80970e6f7bef77c2c0413b47e7cf01f5237146bdf8fa782381dd09ca5f65a3d2	S031	Channing Finger	Female	Energy Science and Engineering	\N	2
+S032	70dfd9debf085835fd451d6b7a8a9b41beef9aa1062eee386810df7468c01c00	S032	Caesar Rob	Male	Instrument science and Technology	\N	2
+S033	4b3e33d4e20fb92afc767c3b242450e41ec36df2026fbcd35d33ccb7a2ff1f24	S033	Oliver Robbins	Male	Electronic Information Engineering	\N	2
+S034	06db0ef921c3a3ea461596d186397dde95385d20fa9c87bd79dc2c1ab31f446e	S034	Spring Addison	Female	Chemical Engineering and Chemistry	\N	2
+S035	3ff277e46d7510f59632042afba779bde0ccb91fd9aaea58c88a1e19697bdb65	S035	Hermosa Snow	Female	Chemical Engineering and Chemistry	\N	2
+S036	d45ea320e93d3034b4798bf2f0186ece5cd315f8c4c14653c01a78f52e35cc36	S036	Bernard Malachi	Male	Mechanical and Electrical Engineering	\N	2
+S037	d623dafa100da9da1430bae2dc56fe099710d96a50845b36301618c1560caf6f	S037	Kimberley Smith	Male	Instrument science and Technology	\N	2
+S038	dd4faa02c74bb7bf6a29f6c479aeb11712a09edfbc326b12e7125dc75e25b7e1	S038	Albert Jack	Male	Computer Science and Technology	\N	2
+S039	73271367032f869c82401b8072558229684179ede2ab75118cc65fd6d78319ca	S039	Benjamin Sandy	Male	Chemical Engineering and Chemistry	\N	2
+S040	2230c231f06146072190cdd54a2845dabbd080a02e3f0604051f79c0e6a60f33	S040	Kerr Sapir	Female	Environmental Science and Engineering	\N	2
+S041	30dde6dc4922f502f8f323a3f79fdd3ee6cf4bf296ddad693cbc5f4f29ea1e22	S041	Ken Stephens	Male	Electronic Information Engineering	\N	2
+S042	6085e75f5a8c31c561f9c44b3b70a45afac05c8f7beb2fcbfd2af15e8447e860	S042	Porter Henry	Female	Computer Science and Technology	\N	2
+S043	fa5650152ef71f1876f9f8722c43076f9c489f7c92964cdae3cf5749bfcb5a48	S043	Ruth Alice	Female	Aerospace Engineering	\N	2
+S044	82e8fec2e7249d1d2209d92d9ec1f5d87176f85d06da8fdfaf8adf73e25de8b8	S044	Barbara Roy	Female	Materials Science and Engineering	\N	2
+S045	04f256d3e1cc3ab1ee8285a034eee128496c7da038344fc45a52f6dab3663c4b	S045	Ed Bartlett	Female	Electronic Information Engineering	\N	2
+S046	655b603552bc66fa354521d39c732f09dc97665c760b20e001961fa94a30bf4e	S046	Tyler Kennedy	Female	Instrument science and Technology	\N	2
+S047	eea64d5a516dcdc34d428b5eb18ddd29069813832f042aae33a87330c511129a	S047	Bradley Mac	Female	Instrument science and Technology	\N	2
+S048	3de49bdffd27dc2f89ba6b27f5e4fc7e06d97a0ee7515ab7abe0ea25eec15320	S048	Millan	Male	Computer Science and Technology	\N	2
+S049	4a9c67e8fe883414ecc5e17c25892738d99ae63f96a6c43f80d739842deb3ea3	S049	Gabriel Philemon	Female	Aerospace Engineering	\N	2
+S050	cd56f48f8bfb6e7007319a251c790441e640ab56a31aebe5989121935a77600f	S050	Harley Cumberland	Female	Mechanical and Electrical Engineering	\N	2
+S051	856945b81e322157f523936b5eeb5928eb6fe133ad5192dbd218c6969ba7d8a2	S051	Isidore Becher	Male	Aerospace Engineering	\N	2
+S052	ad1a6d74dc581daabb9afda9ba6a8fda41c7dc305490cb5275d8e7a07d2fd34d	S052	Sherry Lloyd	Male	Instrument science and Technology	\N	2
+S053	4503885add513a091dc61a436e601a7f9b2799dd5ab9a373cf9383c549250cac	S053	Brook Crofts	Female	Materials Science and Engineering	\N	2
+S054	f04fdb984f4ffec0661364b37188138936eb71577dfedf8ccc95625a46d76f07	S054	Lee Sara(h)	Male	Materials Science and Engineering	\N	2
+S055	b3f0d8198bd319a12401d2a0c6d92b7db5d7e722ecd0196f5eefa016f287f81f	S055	Hamiltion Horace	Male	Energy Science and Engineering	\N	2
+S056	b5300fb8756013b7b10d60a4e8b79c6e5e84566ad41ad3bf805664e7d7f33f2e	S056	Roberta Lyly	Male	Environmental Science and Engineering	\N	2
+S057	c4cc76b62e92665b4e68e44f591516789574d9037a1aa6ca8ab443f0cdab7636	S057	Genevieve Leigh	Male	Environmental Science and Engineering	\N	2
+S058	8e7c68b9d5a1b468a798228ba3ab18574e5c35809a11a4ccedee4943b0c65633	S058	Pag Nelson	Male	Electronic Information Engineering	\N	2
+S059	20571b22a4325a30f4c10bf7ea924de16f729cd7c1bc71000f71ed2909106d64	S059	Clyde Bess	Female	Chemical Engineering and Chemistry	\N	2
+S060	7ea54dd7a22ee4271d32de23321f903ab44465559e352cdc521c505a668fc67c	S060	Daphne Juliana	Male	Mechanical and Electrical Engineering	\N	2
+S061	b2075a505c58a64ce926adc967da441c79e52131303740eccf58a4ae55cd7aa0	S061	Darren Harry	Female	Environmental Science and Engineering	\N	2
+S062	497074f45788f3036b7ef52b4393f8a6656159cd149a58a5a414cdd047f6e3e2	S062	Jeffrey Dick	Male	Aerospace Engineering	\N	2
+S063	2c824f55f305fd7bcc9a8914fdae3f2295bce985e02a7e198cb10854cea552c9	S063	Vivien Bentham	Male	Computer Science and Technology	\N	2
+S064	8841c83fc43bf1726055f1b704b5be1eb9c063362105b08590e03424d9d59d0a	S064	Frances Surrey	Male	Materials Science and Engineering	\N	2
+S065	df62441db42e2fc442b6f54c3ad6e76281a3904e8669e05b287311cd7860fdab	S065	Bing Timothy	Male	Aerospace Engineering	\N	2
+S066	9f52a55b793a194394caa5ec2a31dc097b2dc11711fe3c9418cc2e280efac71d	S066	Letitia Benjamin	Female	Materials Science and Engineering	\N	2
+S067	6e9c7faf74677ff532eaf0efd752d9b27f2afeb92cd2ce20ce0afa43e1c18a1c	S067	Teresa Shakespeare	Female	Aerospace Engineering	\N	2
+S068	21c35c1ca86d7af9c16a1392b74324abe34426a05214fa1b9bf629e91e7c86f1	S068	Hannah Berkeley	Male	Aerospace Engineering	\N	2
+S069	69bfa3174a41ef4fdc42412fa42db328853808be5bd861dab4060018a374712b	S069	Fabian Virginia	Female	Mechanical and Electrical Engineering	\N	2
+S070	c8d4c8d09c93351aec455050aacab30230b77c5112cf969fa2d3df0a66008443	S070	Maxine Raglan	Male	Computer Science and Technology	\N	2
+S071	52b9ce18c4ee165b1eb8263b31be258f2c082452f0570eb317b3506635d03f78	S071	Elma Job	Female	Electrical Engineering and Automation	\N	2
+S072	ac26695b53e1c0cb6b4a45f24ee6e267799dcf750a8a15f8c287274ad67f759f	S072	Kennedy Michelson	Female	Mechanical and Electrical Engineering	\N	2
+S073	2c86a61423c6c21c1b53f977172ed49a34a429ea3f057a48a187f741da4bbbba	S073	Beatrice Zimmerman	Female	Computer Science and Technology	\N	2
+S074	e62d39176c99df3eff4ed2778390e6a7eebe8ed7dd35a5f1bcc1182ab76b9c2e	S074	Meredith Clapham	Male	Materials Science and Engineering	\N	2
+S075	c8be30534844803c5c85a56928e84ab82103b975ee38eff0693ecdc26b1266e2	S075	Ian Josh	Female	Instrument science and Technology	\N	2
+S076	4445cb2c284f73b950d88d114aeeea3b1846fbe64d15e2b456f30e05521137a0	S076	Wright Charley	Male	Aerospace Engineering	\N	2
+S077	a3fb55b93c1ca4b81c3dea3b00d66d5db2280ceb8c5e2cb93be0c865ceeb3603	S077	Carol Willard	Female	Environmental Science and Engineering	\N	2
+S078	0f096210af21f2c191ee9127aadb6999f546e917a7e394e3107b7ca164904d54	S078	Lynn Judd	Male	Materials Science and Engineering	\N	2
+S079	b7c4d94e8afdb66eb48b986e5da0fb5285a610fac7e32669965c77a63d89ca8c	S079	Henry Grote	Male	Computer Science and Technology	\N	2
+S080	853fb5b6a73e142e4add42b20a50c0f19743509c26e1293576eafe8e76412810	S080	Harriet Mc	Male	Energy Science and Engineering	\N	2
+S081	7c5ddd9cf333b236432cb8454e2729e5240bb87b523ac417178e20907ea2107c	S081	Carthy	Female	Chemical Engineering and Chemistry	\N	2
+S082	aed77dc353c88799c97bb577e128505581af0dc28c8454bf008056ddae7d525f	S082	Sabina Washington	Male	Environmental Science and Engineering	\N	2
+S083	1801d76049dba783cce31fb702efa553d9f856085fded433b31d0a2590cb11e5	S083	Jeff Baker	Male	Electronic Information Engineering	\N	2
+S084	b0f47bf7592d5daf4afe7bcb27424de48a4b390886c35bae731e7c17321fdc5c	S084	Roy Mac	Female	Materials Science and Engineering	\N	2
+S085	d6d6cc2afe5b0d2bcbf080dfafd5f2fbc2dc42834df3383539383f9581b451a7	S085	Arthur	Male	Energy Science and Engineering	\N	2
+S086	0c2fb7e45f4e61ad7d5afdee99ee6c70221d95dbd8dd9bd7e6ddf7d387ca5a00	S086	Byron Montgomery	Male	Aerospace Engineering	\N	2
+S087	dbc9e8e46c7ba963b9c1f78ff862cc850e4e50670321a65c4c2b3a91336a7b01	S087	Sara Habakkuk	Male	Computer Science and Technology	\N	2
+S088	1cc77b9ac2635809623a3dfaf618d3a8fd271032d8ad0b4a09d845d1a898fd78	S088	Cora Godwin	Female	Environmental Science and Engineering	\N	2
+S089	1d62fb04afb83279b35e3261e841d4dd103f2c9bcd12f7eac79cbba4642d96e1	S089	Chester Dillon	Female	Computer Science and Technology	\N	2
+S090	f5dcbb20f86cc6a45d96fa1d941e42019abad1cb6d98452a9b9498ae65c530a7	S090	Hulda Thoreau	Female	Materials Science and Engineering	\N	2
+S091	1ef20782d900b6a15a7c9db44be9570e4a4756de95cc4ca6467461277c6f88c7	S091	Liz Roosevelt	Female	Mechanical and Electrical Engineering	\N	2
+S092	c5796bdddfc29545d39f8fbb30a2f908d148e1d4923088390f5c68e8f1c69d18	S092	Edwiin Bernard	Male	Aerospace Engineering	\N	2
+S093	078e5ed9f7d7d9a681d458b68f09cd43118589d140897cfe4a3668612b102032	S093	Darcy Hamilton	Male	Chemical Engineering and Chemistry	\N	2
+S094	da285c4443841ae9622dfbbc1affdc2dabb879fa9784e9d0ebdfec25b51f1499	S094	Charlotte Eugene	Female	Environmental Science and Engineering	\N	2
+S095	f453745dc65f91bec36f34643c8a45e6e4ab73d37828e99de4f5fdc2560d4ab3	S095	Perry Maltz	Female	Energy Science and Engineering	\N	2
+S096	b0ffef2a6aa08ea6557124fd9d0228694ee3d5bfd936c8a6ee1ad52437cca3f4	S096	Kama Pigou	Male	Environmental Science and Engineering	\N	2
+S097	79ecb8d07dd0f36b09580982f1d8ed317c002c650dbfbb7ffca4f7d7ceb05c7f	S097	Christine Julius	Female	Electrical Engineering and Automation	\N	2
+S098	7cc75386d33680023e01972cf93ba2718ce07fbc4f7c98ad3307f2458c02925e	S098	Coral Paul	Male	Computer Science and Technology	\N	2
+S099	98b1e316c8035d7f86dd23e9204cfb86650e64293bd5115a50eba3861a3edbf1	S099	Andre Toby	Male	Materials Science and Engineering	\N	2
+S100	00d9966b8c24807fc5635633b2df7ef49753fc18930bf56779f250279228b940	S100	Megan Marcellus	Male	Chemical Engineering and Chemistry	\N	2
+S101	c8a869870d10ac25bdf58cb9aa0e9793bc9b58a2a63af4ca40ae4aa6879f60d1	S101	Meroy Belle	Female	Environmental Science and Engineering	\N	2
+S102	df808b0b9e9cb6bdd6c0be689d2174f1a55a467ca409b6b98b9a0a64b8540e58	S102	Delia Crane	Female	Aerospace Engineering	\N	2
+S103	c11224780036c8591cbc3e92b2e2a45f6c4c2358c09100fd0091ae58ffa1c52b	S103	Claire Sawyer	Female	Energy Science and Engineering	\N	2
+S104	fe50a5e2ce56f093c1aa21388539b8fac9380e60ca35f26fd2ef0af1f9aff041	S104	Burnell Ben	Male	Chemical Engineering and Chemistry	\N	2
+S105	e821734ff718d3fe68f4f72d8d51e713ddf90028af0f27e6c4f3475e92392817	S105	Lawrence Melville	Male	Aerospace Engineering	\N	2
+S106	4c54d8ec107164d532b6bf2654ec247baec98ecbf369f886f038853104c40176	S106	Esther Guy	Male	Mechanical and Electrical Engineering	\N	2
+S107	fb6745910d7b3d10b0d1e62c6cf1bbdfbcac9474a6b2aa2558cc13d3a336f1d6	S107	Jenny Bowen	Female	Electronic Information Engineering	\N	2
+S108	15f409ae3b9ce4abf59fd6b423b92e62dc1e474ce4b08ae65d06344a5b4cb588	S108	Nelson Oscar	Female	Energy Science and Engineering	\N	2

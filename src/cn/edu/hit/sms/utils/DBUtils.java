@@ -1,6 +1,7 @@
 package cn.edu.hit.sms.utils;
 
 import java.sql.*;
+import java.util.logging.Logger;
 
 public class DBUtils {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -11,6 +12,7 @@ public class DBUtils {
 
     private static Connection con;
     private static Statement stmt;
+
     static {
         try {
             Class.forName(JDBC_DRIVER);
@@ -23,7 +25,8 @@ public class DBUtils {
 
     public static ResultSet executeQuery(String sql) {
         try {
-            System.out.printf("%s\n", sql);
+//            System.out.printf("%s\n", sql);
+            Logger.getGlobal().info(sql);
             ResultSet rs = stmt.executeQuery(sql);
             return rs;
         } catch (SQLException e) {
@@ -34,7 +37,8 @@ public class DBUtils {
 
     public static int executeUpdate(String sql) {
         try {
-            System.out.printf("%s\n", sql);
+//            System.out.printf("%s\n", sql);
+            Logger.getGlobal().info(sql);
             return stmt.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();

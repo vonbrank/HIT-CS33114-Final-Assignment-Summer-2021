@@ -14,12 +14,14 @@ import cn.edu.hit.sms.utils.DBUtils;
 
 import java.security.SecureRandom;
 import java.util.List;
+import java.util.logging.Logger;
 
 import tools.EasyFileIO;
 public class Test {
     public static void main(String[] args) {
 
-        courseDaoTest();
+//        courseDaoTest();
+        Logger.getGlobal().info("Test");
     }
 
     static void userDaoTest() {

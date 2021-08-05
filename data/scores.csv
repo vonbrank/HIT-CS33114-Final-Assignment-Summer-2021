@@ -1,0 +1,1008 @@
+S021	C007	72	Scott Lily	Set Theory and Graph Theory
+S021	C012	72	Scott Lily	Mathematical Logic
+S021	C001	68	Scott Lily	High-level Language Programming
+S021	C010	64	Scott Lily	Compendium of Chinese Modern and Contemporary History
+S021	C006	77	Scott Lily	Physical Education
+S021	C018	93	Scott Lily	Computer System
+S021	C004	92	Scott Lily	Calculus B(1)
+S021	C017	70	Scott Lily	Biochemistry B
+S021	C005	98	Scott Lily	Linear Algebra and Analytic Geometry
+S021	C016	74	Scott Lily	Data Structures and Algorithms
+S021	C008	72	Scott Lily	Calculus B(2)
+S021	C011	99	Scott Lily	Algorithmic Design and Analysis
+S022	C005	65	Barbara Woo	Linear Algebra and Analytic Geometry
+S022	C018	95	Barbara Woo	Computer System
+S022	C013	99	Barbara Woo	Probability and Statistics
+S022	C003	63	Barbara Woo	College English
+S022	C016	91	Barbara Woo	Data Structures and Algorithms
+S022	C017	69	Barbara Woo	Biochemistry B
+S022	C012	79	Barbara Woo	Mathematical Logic
+S022	C009	89	Barbara Woo	Situation and Policy
+S022	C007	74	Barbara Woo	Set Theory and Graph Theory
+S022	C001	86	Barbara Woo	High-level Language Programming
+S022	C015	65	Barbara Woo	Digital Logic Design
+S022	C006	82	Barbara Woo	Physical Education
+S022	C004	95	Barbara Woo	Calculus B(1)
+S023	C007	62	lfEllis Webb	Set Theory and Graph Theory
+S023	C002	67	lfEllis Webb	PjBL and Technological Innovation
+S023	C006	70	lfEllis Webb	Physical Education
+S023	C001	94	lfEllis Webb	High-level Language Programming
+S023	C008	72	lfEllis Webb	Calculus B(2)
+S023	C018	72	lfEllis Webb	Computer System
+S023	C005	81	lfEllis Webb	Linear Algebra and Analytic Geometry
+S023	C012	60	lfEllis Webb	Mathematical Logic
+S023	C013	61	lfEllis Webb	Probability and Statistics
+S023	C003	73	lfEllis Webb	College English
+S023	C010	83	lfEllis Webb	Compendium of Chinese Modern and Contemporary History
+S024	C011	91	Afra Malachi	Algorithmic Design and Analysis
+S024	C018	69	Afra Malachi	Computer System
+S024	C010	83	Afra Malachi	Compendium of Chinese Modern and Contemporary History
+S024	C017	73	Afra Malachi	Biochemistry B
+S024	C008	87	Afra Malachi	Calculus B(2)
+S024	C001	74	Afra Malachi	High-level Language Programming
+S024	C009	96	Afra Malachi	Situation and Policy
+S024	C013	61	Afra Malachi	Probability and Statistics
+S024	C006	66	Afra Malachi	Physical Education
+S024	C016	67	Afra Malachi	Data Structures and Algorithms
+S024	C002	89	Afra Malachi	PjBL and Technological Innovation
+S025	C014	75	Elliot Bobby	College Physics Experiments B
+S025	C009	67	Elliot Bobby	Situation and Policy
+S025	C017	96	Elliot Bobby	Biochemistry B
+S025	C006	89	Elliot Bobby	Physical Education
+S025	C003	82	Elliot Bobby	College English
+S025	C015	72	Elliot Bobby	Digital Logic Design
+S025	C008	70	Elliot Bobby	Calculus B(2)
+S025	C005	62	Elliot Bobby	Linear Algebra and Analytic Geometry
+S025	C012	76	Elliot Bobby	Mathematical Logic
+S025	C004	81	Elliot Bobby	Calculus B(1)
+S025	C016	76	Elliot Bobby	Data Structures and Algorithms
+S025	C007	66	Elliot Bobby	Set Theory and Graph Theory
+S025	C001	96	Elliot Bobby	High-level Language Programming
+S026	C013	78	Jane Dobbin	Probability and Statistics
+S026	C018	87	Jane Dobbin	Computer System
+S026	C002	94	Jane Dobbin	PjBL and Technological Innovation
+S026	C010	65	Jane Dobbin	Compendium of Chinese Modern and Contemporary History
+S026	C001	79	Jane Dobbin	High-level Language Programming
+S026	C012	90	Jane Dobbin	Mathematical Logic
+S026	C016	72	Jane Dobbin	Data Structures and Algorithms
+S026	C007	70	Jane Dobbin	Set Theory and Graph Theory
+S026	C009	96	Jane Dobbin	Situation and Policy
+S026	C006	91	Jane Dobbin	Physical Education
+S026	C008	69	Jane Dobbin	Calculus B(2)
+S026	C017	66	Jane Dobbin	Biochemistry B
+S026	C003	76	Jane Dobbin	College English
+S027	C006	91	Carl Whitman	Physical Education
+S027	C012	61	Carl Whitman	Mathematical Logic
+S027	C009	95	Carl Whitman	Situation and Policy
+S027	C003	78	Carl Whitman	College English
+S027	C017	66	Carl Whitman	Biochemistry B
+S027	C002	80	Carl Whitman	PjBL and Technological Innovation
+S027	C001	73	Carl Whitman	High-level Language Programming
+S027	C004	60	Carl Whitman	Calculus B(1)
+S027	C013	67	Carl Whitman	Probability and Statistics
+S027	C016	89	Carl Whitman	Data Structures and Algorithms
+S027	C014	92	Carl Whitman	College Physics Experiments B
+S028	C004	69	Moira Kingsley	Calculus B(1)
+S028	C010	88	Moira Kingsley	Compendium of Chinese Modern and Contemporary History
+S028	C009	60	Moira Kingsley	Situation and Policy
+S028	C013	63	Moira Kingsley	Probability and Statistics
+S028	C005	66	Moira Kingsley	Linear Algebra and Analytic Geometry
+S028	C017	82	Moira Kingsley	Biochemistry B
+S028	C016	85	Moira Kingsley	Data Structures and Algorithms
+S028	C007	62	Moira Kingsley	Set Theory and Graph Theory
+S028	C002	70	Moira Kingsley	PjBL and Technological Innovation
+S028	C006	86	Moira Kingsley	Physical Education
+S029	C004	88	Beau Dunbar	Calculus B(1)
+S029	C015	81	Beau Dunbar	Digital Logic Design
+S029	C008	87	Beau Dunbar	Calculus B(2)
+S029	C007	97	Beau Dunbar	Set Theory and Graph Theory
+S029	C001	79	Beau Dunbar	High-level Language Programming
+S029	C014	81	Beau Dunbar	College Physics Experiments B
+S029	C003	81	Beau Dunbar	College English
+S029	C010	81	Beau Dunbar	Compendium of Chinese Modern and Contemporary History
+S029	C011	97	Beau Dunbar	Algorithmic Design and Analysis
+S029	C002	68	Beau Dunbar	PjBL and Technological Innovation
+S029	C013	63	Beau Dunbar	Probability and Statistics
+S029	C009	72	Beau Dunbar	Situation and Policy
+S030	C003	73	Augustine Eliot	College English
+S030	C001	78	Augustine Eliot	High-level Language Programming
+S030	C005	64	Augustine Eliot	Linear Algebra and Analytic Geometry
+S030	C006	73	Augustine Eliot	Physical Education
+S030	C012	75	Augustine Eliot	Mathematical Logic
+S030	C018	78	Augustine Eliot	Computer System
+S030	C008	88	Augustine Eliot	Calculus B(2)
+S030	C002	97	Augustine Eliot	PjBL and Technological Innovation
+S030	C004	67	Augustine Eliot	Calculus B(1)
+S030	C014	77	Augustine Eliot	College Physics Experiments B
+S030	C011	93	Augustine Eliot	Algorithmic Design and Analysis
+S030	C009	61	Augustine Eliot	Situation and Policy
+S031	C013	96	Channing Finger	Probability and Statistics
+S031	C015	98	Channing Finger	Digital Logic Design
+S031	C011	85	Channing Finger	Algorithmic Design and Analysis
+S031	C006	61	Channing Finger	Physical Education
+S031	C018	70	Channing Finger	Computer System
+S031	C010	76	Channing Finger	Compendium of Chinese Modern and Contemporary History
+S031	C005	60	Channing Finger	Linear Algebra and Analytic Geometry
+S031	C016	75	Channing Finger	Data Structures and Algorithms
+S031	C001	96	Channing Finger	High-level Language Programming
+S031	C003	65	Channing Finger	College English
+S031	C008	67	Channing Finger	Calculus B(2)
+S032	C012	91	Caesar Rob	Mathematical Logic
+S032	C004	86	Caesar Rob	Calculus B(1)
+S032	C007	68	Caesar Rob	Set Theory and Graph Theory
+S032	C011	96	Caesar Rob	Algorithmic Design and Analysis
+S032	C014	80	Caesar Rob	College Physics Experiments B
+S032	C009	82	Caesar Rob	Situation and Policy
+S032	C002	96	Caesar Rob	PjBL and Technological Innovation
+S032	C018	80	Caesar Rob	Computer System
+S032	C015	95	Caesar Rob	Digital Logic Design
+S032	C008	98	Caesar Rob	Calculus B(2)
+S032	C006	92	Caesar Rob	Physical Education
+S032	C016	75	Caesar Rob	Data Structures and Algorithms
+S033	C001	89	Oliver Robbins	High-level Language Programming
+S033	C005	69	Oliver Robbins	Linear Algebra and Analytic Geometry
+S033	C011	60	Oliver Robbins	Algorithmic Design and Analysis
+S033	C016	66	Oliver Robbins	Data Structures and Algorithms
+S033	C012	85	Oliver Robbins	Mathematical Logic
+S033	C009	84	Oliver Robbins	Situation and Policy
+S033	C006	98	Oliver Robbins	Physical Education
+S033	C017	73	Oliver Robbins	Biochemistry B
+S033	C007	81	Oliver Robbins	Set Theory and Graph Theory
+S033	C008	85	Oliver Robbins	Calculus B(2)
+S033	C002	81	Oliver Robbins	PjBL and Technological Innovation
+S033	C015	62	Oliver Robbins	Digital Logic Design
+S034	C012	81	Spring Addison	Mathematical Logic
+S034	C008	91	Spring Addison	Calculus B(2)
+S034	C014	68	Spring Addison	College Physics Experiments B
+S034	C007	64	Spring Addison	Set Theory and Graph Theory
+S034	C004	68	Spring Addison	Calculus B(1)
+S034	C016	85	Spring Addison	Data Structures and Algorithms
+S034	C006	85	Spring Addison	Physical Education
+S034	C015	76	Spring Addison	Digital Logic Design
+S034	C018	64	Spring Addison	Computer System
+S034	C011	76	Spring Addison	Algorithmic Design and Analysis
+S034	C010	97	Spring Addison	Compendium of Chinese Modern and Contemporary History
+S034	C003	90	Spring Addison	College English
+S034	C001	69	Spring Addison	High-level Language Programming
+S035	C011	62	Hermosa Snow	Algorithmic Design and Analysis
+S035	C008	77	Hermosa Snow	Calculus B(2)
+S035	C004	69	Hermosa Snow	Calculus B(1)
+S035	C013	77	Hermosa Snow	Probability and Statistics
+S035	C006	98	Hermosa Snow	Physical Education
+S035	C018	88	Hermosa Snow	Computer System
+S035	C012	79	Hermosa Snow	Mathematical Logic
+S035	C017	74	Hermosa Snow	Biochemistry B
+S035	C001	94	Hermosa Snow	High-level Language Programming
+S035	C009	63	Hermosa Snow	Situation and Policy
+S035	C016	68	Hermosa Snow	Data Structures and Algorithms
+S035	C015	75	Hermosa Snow	Digital Logic Design
+S035	C003	73	Hermosa Snow	College English
+S036	C015	80	Bernard Malachi	Digital Logic Design
+S036	C001	70	Bernard Malachi	High-level Language Programming
+S036	C012	65	Bernard Malachi	Mathematical Logic
+S036	C006	88	Bernard Malachi	Physical Education
+S036	C008	84	Bernard Malachi	Calculus B(2)
+S036	C017	72	Bernard Malachi	Biochemistry B
+S036	C011	90	Bernard Malachi	Algorithmic Design and Analysis
+S036	C014	79	Bernard Malachi	College Physics Experiments B
+S036	C009	89	Bernard Malachi	Situation and Policy
+S036	C003	68	Bernard Malachi	College English
+S036	C005	71	Bernard Malachi	Linear Algebra and Analytic Geometry
+S036	C002	72	Bernard Malachi	PjBL and Technological Innovation
+S037	C010	79	Kimberley Smith	Compendium of Chinese Modern and Contemporary History
+S037	C013	60	Kimberley Smith	Probability and Statistics
+S037	C011	72	Kimberley Smith	Algorithmic Design and Analysis
+S037	C018	82	Kimberley Smith	Computer System
+S037	C004	78	Kimberley Smith	Calculus B(1)
+S037	C016	79	Kimberley Smith	Data Structures and Algorithms
+S037	C012	99	Kimberley Smith	Mathematical Logic
+S037	C017	79	Kimberley Smith	Biochemistry B
+S037	C015	62	Kimberley Smith	Digital Logic Design
+S037	C002	100	Kimberley Smith	PjBL and Technological Innovation
+S038	C003	65	Albert Jack	College English
+S038	C006	89	Albert Jack	Physical Education
+S038	C011	68	Albert Jack	Algorithmic Design and Analysis
+S038	C009	85	Albert Jack	Situation and Policy
+S038	C012	79	Albert Jack	Mathematical Logic
+S038	C016	91	Albert Jack	Data Structures and Algorithms
+S038	C013	81	Albert Jack	Probability and Statistics
+S038	C004	77	Albert Jack	Calculus B(1)
+S038	C017	65	Albert Jack	Biochemistry B
+S038	C005	77	Albert Jack	Linear Algebra and Analytic Geometry
+S038	C018	73	Albert Jack	Computer System
+S038	C008	81	Albert Jack	Calculus B(2)
+S039	C004	99	Benjamin Sandy	Calculus B(1)
+S039	C014	74	Benjamin Sandy	College Physics Experiments B
+S039	C007	92	Benjamin Sandy	Set Theory and Graph Theory
+S039	C016	91	Benjamin Sandy	Data Structures and Algorithms
+S039	C010	67	Benjamin Sandy	Compendium of Chinese Modern and Contemporary History
+S039	C003	99	Benjamin Sandy	College English
+S039	C009	94	Benjamin Sandy	Situation and Policy
+S039	C015	75	Benjamin Sandy	Digital Logic Design
+S039	C012	65	Benjamin Sandy	Mathematical Logic
+S039	C001	88	Benjamin Sandy	High-level Language Programming
+S039	C005	74	Benjamin Sandy	Linear Algebra and Analytic Geometry
+S039	C018	77	Benjamin Sandy	Computer System
+S040	C007	64	Kerr Sapir	Set Theory and Graph Theory
+S040	C008	76	Kerr Sapir	Calculus B(2)
+S040	C003	78	Kerr Sapir	College English
+S040	C018	99	Kerr Sapir	Computer System
+S040	C005	100	Kerr Sapir	Linear Algebra and Analytic Geometry
+S040	C002	69	Kerr Sapir	PjBL and Technological Innovation
+S040	C014	66	Kerr Sapir	College Physics Experiments B
+S040	C009	87	Kerr Sapir	Situation and Policy
+S040	C006	94	Kerr Sapir	Physical Education
+S040	C013	92	Kerr Sapir	Probability and Statistics
+S040	C011	72	Kerr Sapir	Algorithmic Design and Analysis
+S041	C007	64	Ken Stephens	Set Theory and Graph Theory
+S041	C009	88	Ken Stephens	Situation and Policy
+S041	C003	92	Ken Stephens	College English
+S041	C012	71	Ken Stephens	Mathematical Logic
+S041	C017	85	Ken Stephens	Biochemistry B
+S041	C018	70	Ken Stephens	Computer System
+S041	C004	63	Ken Stephens	Calculus B(1)
+S041	C015	86	Ken Stephens	Digital Logic Design
+S041	C006	91	Ken Stephens	Physical Education
+S041	C011	69	Ken Stephens	Algorithmic Design and Analysis
+S042	C002	92	Porter Henry	PjBL and Technological Innovation
+S042	C011	62	Porter Henry	Algorithmic Design and Analysis
+S042	C009	86	Porter Henry	Situation and Policy
+S042	C017	74	Porter Henry	Biochemistry B
+S042	C015	65	Porter Henry	Digital Logic Design
+S042	C005	93	Porter Henry	Linear Algebra and Analytic Geometry
+S042	C008	70	Porter Henry	Calculus B(2)
+S042	C010	93	Porter Henry	Compendium of Chinese Modern and Contemporary History
+S042	C014	98	Porter Henry	College Physics Experiments B
+S042	C018	75	Porter Henry	Computer System
+S042	C012	71	Porter Henry	Mathematical Logic
+S042	C001	85	Porter Henry	High-level Language Programming
+S043	C004	89	Ruth Alice	Calculus B(1)
+S043	C008	69	Ruth Alice	Calculus B(2)
+S043	C003	79	Ruth Alice	College English
+S043	C015	86	Ruth Alice	Digital Logic Design
+S043	C016	99	Ruth Alice	Data Structures and Algorithms
+S043	C011	60	Ruth Alice	Algorithmic Design and Analysis
+S043	C014	88	Ruth Alice	College Physics Experiments B
+S043	C002	88	Ruth Alice	PjBL and Technological Innovation
+S043	C013	60	Ruth Alice	Probability and Statistics
+S043	C017	81	Ruth Alice	Biochemistry B
+S043	C001	60	Ruth Alice	High-level Language Programming
+S044	C002	92	Barbara Roy	PjBL and Technological Innovation
+S044	C014	63	Barbara Roy	College Physics Experiments B
+S044	C001	86	Barbara Roy	High-level Language Programming
+S044	C016	63	Barbara Roy	Data Structures and Algorithms
+S044	C013	87	Barbara Roy	Probability and Statistics
+S044	C015	87	Barbara Roy	Digital Logic Design
+S044	C009	70	Barbara Roy	Situation and Policy
+S044	C008	92	Barbara Roy	Calculus B(2)
+S044	C018	94	Barbara Roy	Computer System
+S044	C010	99	Barbara Roy	Compendium of Chinese Modern and Contemporary History
+S044	C006	66	Barbara Roy	Physical Education
+S044	C011	64	Barbara Roy	Algorithmic Design and Analysis
+S044	C012	70	Barbara Roy	Mathematical Logic
+S045	C009	62	Ed Bartlett	Situation and Policy
+S045	C010	85	Ed Bartlett	Compendium of Chinese Modern and Contemporary History
+S045	C002	75	Ed Bartlett	PjBL and Technological Innovation
+S045	C015	99	Ed Bartlett	Digital Logic Design
+S045	C011	91	Ed Bartlett	Algorithmic Design and Analysis
+S045	C018	64	Ed Bartlett	Computer System
+S045	C016	97	Ed Bartlett	Data Structures and Algorithms
+S045	C006	91	Ed Bartlett	Physical Education
+S045	C004	68	Ed Bartlett	Calculus B(1)
+S045	C012	63	Ed Bartlett	Mathematical Logic
+S045	C001	69	Ed Bartlett	High-level Language Programming
+S046	C018	99	Tyler Kennedy	Computer System
+S046	C013	71	Tyler Kennedy	Probability and Statistics
+S046	C016	76	Tyler Kennedy	Data Structures and Algorithms
+S046	C003	84	Tyler Kennedy	College English
+S046	C002	70	Tyler Kennedy	PjBL and Technological Innovation
+S046	C006	97	Tyler Kennedy	Physical Education
+S046	C005	67	Tyler Kennedy	Linear Algebra and Analytic Geometry
+S046	C011	70	Tyler Kennedy	Algorithmic Design and Analysis
+S046	C008	88	Tyler Kennedy	Calculus B(2)
+S046	C001	96	Tyler Kennedy	High-level Language Programming
+S046	C007	81	Tyler Kennedy	Set Theory and Graph Theory
+S046	C012	64	Tyler Kennedy	Mathematical Logic
+S046	C015	100	Tyler Kennedy	Digital Logic Design
+S047	C015	95	Bradley Mac	Digital Logic Design
+S047	C010	88	Bradley Mac	Compendium of Chinese Modern and Contemporary History
+S047	C018	97	Bradley Mac	Computer System
+S047	C017	69	Bradley Mac	Biochemistry B
+S047	C008	78	Bradley Mac	Calculus B(2)
+S047	C009	77	Bradley Mac	Situation and Policy
+S047	C014	83	Bradley Mac	College Physics Experiments B
+S047	C004	85	Bradley Mac	Calculus B(1)
+S047	C003	60	Bradley Mac	College English
+S048	C005	65	Millan	Linear Algebra and Analytic Geometry
+S048	C014	78	Millan	College Physics Experiments B
+S048	C007	85	Millan	Set Theory and Graph Theory
+S048	C004	95	Millan	Calculus B(1)
+S048	C002	61	Millan	PjBL and Technological Innovation
+S048	C003	78	Millan	College English
+S048	C010	83	Millan	Compendium of Chinese Modern and Contemporary History
+S048	C013	69	Millan	Probability and Statistics
+S048	C009	88	Millan	Situation and Policy
+S048	C015	77	Millan	Digital Logic Design
+S048	C008	67	Millan	Calculus B(2)
+S049	C003	87	Gabriel Philemon	College English
+S049	C014	66	Gabriel Philemon	College Physics Experiments B
+S049	C004	73	Gabriel Philemon	Calculus B(1)
+S049	C008	87	Gabriel Philemon	Calculus B(2)
+S049	C018	64	Gabriel Philemon	Computer System
+S049	C016	97	Gabriel Philemon	Data Structures and Algorithms
+S049	C001	67	Gabriel Philemon	High-level Language Programming
+S049	C017	91	Gabriel Philemon	Biochemistry B
+S049	C005	88	Gabriel Philemon	Linear Algebra and Analytic Geometry
+S049	C007	90	Gabriel Philemon	Set Theory and Graph Theory
+S049	C002	60	Gabriel Philemon	PjBL and Technological Innovation
+S049	C009	61	Gabriel Philemon	Situation and Policy
+S050	C007	82	Harley Cumberland	Set Theory and Graph Theory
+S050	C010	83	Harley Cumberland	Compendium of Chinese Modern and Contemporary History
+S050	C017	74	Harley Cumberland	Biochemistry B
+S050	C004	62	Harley Cumberland	Calculus B(1)
+S050	C016	80	Harley Cumberland	Data Structures and Algorithms
+S050	C015	82	Harley Cumberland	Digital Logic Design
+S050	C018	94	Harley Cumberland	Computer System
+S050	C005	71	Harley Cumberland	Linear Algebra and Analytic Geometry
+S050	C002	89	Harley Cumberland	PjBL and Technological Innovation
+S050	C013	88	Harley Cumberland	Probability and Statistics
+S050	C006	66	Harley Cumberland	Physical Education
+S050	C003	60	Harley Cumberland	College English
+S050	C014	88	Harley Cumberland	College Physics Experiments B
+S051	C010	76	Isidore Becher	Compendium of Chinese Modern and Contemporary History
+S051	C011	60	Isidore Becher	Algorithmic Design and Analysis
+S051	C012	93	Isidore Becher	Mathematical Logic
+S051	C008	75	Isidore Becher	Calculus B(2)
+S051	C003	84	Isidore Becher	College English
+S051	C005	60	Isidore Becher	Linear Algebra and Analytic Geometry
+S051	C014	61	Isidore Becher	College Physics Experiments B
+S051	C009	86	Isidore Becher	Situation and Policy
+S051	C002	86	Isidore Becher	PjBL and Technological Innovation
+S051	C017	86	Isidore Becher	Biochemistry B
+S052	C005	74	Sherry Lloyd	Linear Algebra and Analytic Geometry
+S052	C006	88	Sherry Lloyd	Physical Education
+S052	C001	77	Sherry Lloyd	High-level Language Programming
+S052	C018	82	Sherry Lloyd	Computer System
+S052	C015	93	Sherry Lloyd	Digital Logic Design
+S052	C011	61	Sherry Lloyd	Algorithmic Design and Analysis
+S052	C009	89	Sherry Lloyd	Situation and Policy
+S052	C002	76	Sherry Lloyd	PjBL and Technological Innovation
+S052	C016	90	Sherry Lloyd	Data Structures and Algorithms
+S052	C004	67	Sherry Lloyd	Calculus B(1)
+S052	C017	99	Sherry Lloyd	Biochemistry B
+S053	C011	81	Brook Crofts	Algorithmic Design and Analysis
+S053	C008	60	Brook Crofts	Calculus B(2)
+S053	C017	77	Brook Crofts	Biochemistry B
+S053	C009	82	Brook Crofts	Situation and Policy
+S053	C007	60	Brook Crofts	Set Theory and Graph Theory
+S053	C016	99	Brook Crofts	Data Structures and Algorithms
+S053	C006	88	Brook Crofts	Physical Education
+S053	C014	65	Brook Crofts	College Physics Experiments B
+S053	C005	62	Brook Crofts	Linear Algebra and Analytic Geometry
+S053	C015	63	Brook Crofts	Digital Logic Design
+S053	C001	63	Brook Crofts	High-level Language Programming
+S053	C002	95	Brook Crofts	PjBL and Technological Innovation
+S053	C010	73	Brook Crofts	Compendium of Chinese Modern and Contemporary History
+S054	C003	81	Lee Sara(h)	College English
+S054	C006	65	Lee Sara(h)	Physical Education
+S054	C012	94	Lee Sara(h)	Mathematical Logic
+S054	C016	72	Lee Sara(h)	Data Structures and Algorithms
+S054	C014	99	Lee Sara(h)	College Physics Experiments B
+S054	C004	82	Lee Sara(h)	Calculus B(1)
+S054	C018	96	Lee Sara(h)	Computer System
+S054	C001	62	Lee Sara(h)	High-level Language Programming
+S054	C015	88	Lee Sara(h)	Digital Logic Design
+S054	C011	60	Lee Sara(h)	Algorithmic Design and Analysis
+S054	C009	93	Lee Sara(h)	Situation and Policy
+S055	C018	82	Hamiltion Horace	Computer System
+S055	C017	63	Hamiltion Horace	Biochemistry B
+S055	C014	90	Hamiltion Horace	College Physics Experiments B
+S055	C008	66	Hamiltion Horace	Calculus B(2)
+S055	C001	73	Hamiltion Horace	High-level Language Programming
+S055	C004	79	Hamiltion Horace	Calculus B(1)
+S055	C012	94	Hamiltion Horace	Mathematical Logic
+S055	C003	66	Hamiltion Horace	College English
+S055	C002	91	Hamiltion Horace	PjBL and Technological Innovation
+S055	C010	70	Hamiltion Horace	Compendium of Chinese Modern and Contemporary History
+S056	C018	70	Roberta Lyly	Computer System
+S056	C005	94	Roberta Lyly	Linear Algebra and Analytic Geometry
+S056	C017	79	Roberta Lyly	Biochemistry B
+S056	C012	74	Roberta Lyly	Mathematical Logic
+S056	C007	98	Roberta Lyly	Set Theory and Graph Theory
+S056	C016	86	Roberta Lyly	Data Structures and Algorithms
+S056	C003	62	Roberta Lyly	College English
+S056	C004	86	Roberta Lyly	Calculus B(1)
+S056	C013	78	Roberta Lyly	Probability and Statistics
+S056	C006	93	Roberta Lyly	Physical Education
+S056	C009	62	Roberta Lyly	Situation and Policy
+S057	C006	85	Genevieve Leigh	Physical Education
+S057	C005	83	Genevieve Leigh	Linear Algebra and Analytic Geometry
+S057	C007	72	Genevieve Leigh	Set Theory and Graph Theory
+S057	C010	81	Genevieve Leigh	Compendium of Chinese Modern and Contemporary History
+S057	C015	69	Genevieve Leigh	Digital Logic Design
+S057	C011	75	Genevieve Leigh	Algorithmic Design and Analysis
+S057	C012	64	Genevieve Leigh	Mathematical Logic
+S057	C004	61	Genevieve Leigh	Calculus B(1)
+S057	C014	86	Genevieve Leigh	College Physics Experiments B
+S057	C008	88	Genevieve Leigh	Calculus B(2)
+S057	C013	79	Genevieve Leigh	Probability and Statistics
+S057	C018	68	Genevieve Leigh	Computer System
+S058	C006	98	Pag Nelson	Physical Education
+S058	C001	67	Pag Nelson	High-level Language Programming
+S058	C003	73	Pag Nelson	College English
+S058	C002	100	Pag Nelson	PjBL and Technological Innovation
+S058	C016	70	Pag Nelson	Data Structures and Algorithms
+S058	C015	82	Pag Nelson	Digital Logic Design
+S058	C009	67	Pag Nelson	Situation and Policy
+S058	C018	95	Pag Nelson	Computer System
+S058	C011	88	Pag Nelson	Algorithmic Design and Analysis
+S058	C014	67	Pag Nelson	College Physics Experiments B
+S058	C012	71	Pag Nelson	Mathematical Logic
+S059	C010	70	Clyde Bess	Compendium of Chinese Modern and Contemporary History
+S059	C013	71	Clyde Bess	Probability and Statistics
+S059	C009	73	Clyde Bess	Situation and Policy
+S059	C004	78	Clyde Bess	Calculus B(1)
+S059	C017	86	Clyde Bess	Biochemistry B
+S059	C014	97	Clyde Bess	College Physics Experiments B
+S059	C015	97	Clyde Bess	Digital Logic Design
+S059	C002	81	Clyde Bess	PjBL and Technological Innovation
+S059	C018	65	Clyde Bess	Computer System
+S059	C012	71	Clyde Bess	Mathematical Logic
+S059	C016	61	Clyde Bess	Data Structures and Algorithms
+S059	C003	76	Clyde Bess	College English
+S060	C018	71	Daphne Juliana	Computer System
+S060	C012	82	Daphne Juliana	Mathematical Logic
+S060	C007	99	Daphne Juliana	Set Theory and Graph Theory
+S060	C005	79	Daphne Juliana	Linear Algebra and Analytic Geometry
+S060	C010	67	Daphne Juliana	Compendium of Chinese Modern and Contemporary History
+S060	C016	61	Daphne Juliana	Data Structures and Algorithms
+S060	C011	91	Daphne Juliana	Algorithmic Design and Analysis
+S060	C001	80	Daphne Juliana	High-level Language Programming
+S060	C013	87	Daphne Juliana	Probability and Statistics
+S060	C017	97	Daphne Juliana	Biochemistry B
+S060	C006	93	Daphne Juliana	Physical Education
+S061	C014	86	Darren Harry	College Physics Experiments B
+S061	C004	98	Darren Harry	Calculus B(1)
+S061	C008	83	Darren Harry	Calculus B(2)
+S061	C017	65	Darren Harry	Biochemistry B
+S061	C010	85	Darren Harry	Compendium of Chinese Modern and Contemporary History
+S061	C001	63	Darren Harry	High-level Language Programming
+S061	C007	85	Darren Harry	Set Theory and Graph Theory
+S061	C005	77	Darren Harry	Linear Algebra and Analytic Geometry
+S061	C016	70	Darren Harry	Data Structures and Algorithms
+S061	C011	65	Darren Harry	Algorithmic Design and Analysis
+S061	C003	89	Darren Harry	College English
+S061	C002	66	Darren Harry	PjBL and Technological Innovation
+S061	C012	87	Darren Harry	Mathematical Logic
+S062	C015	79	Jeffrey Dick	Digital Logic Design
+S062	C007	80	Jeffrey Dick	Set Theory and Graph Theory
+S062	C012	87	Jeffrey Dick	Mathematical Logic
+S062	C017	88	Jeffrey Dick	Biochemistry B
+S062	C008	87	Jeffrey Dick	Calculus B(2)
+S062	C004	100	Jeffrey Dick	Calculus B(1)
+S062	C010	63	Jeffrey Dick	Compendium of Chinese Modern and Contemporary History
+S062	C003	97	Jeffrey Dick	College English
+S062	C002	84	Jeffrey Dick	PjBL and Technological Innovation
+S063	C002	65	Vivien Bentham	PjBL and Technological Innovation
+S063	C001	98	Vivien Bentham	High-level Language Programming
+S063	C005	96	Vivien Bentham	Linear Algebra and Analytic Geometry
+S063	C009	67	Vivien Bentham	Situation and Policy
+S063	C008	65	Vivien Bentham	Calculus B(2)
+S063	C017	66	Vivien Bentham	Biochemistry B
+S063	C010	77	Vivien Bentham	Compendium of Chinese Modern and Contemporary History
+S063	C015	60	Vivien Bentham	Digital Logic Design
+S063	C004	69	Vivien Bentham	Calculus B(1)
+S063	C006	83	Vivien Bentham	Physical Education
+S063	C014	93	Vivien Bentham	College Physics Experiments B
+S064	C014	71	Frances Surrey	College Physics Experiments B
+S064	C002	86	Frances Surrey	PjBL and Technological Innovation
+S064	C017	96	Frances Surrey	Biochemistry B
+S064	C003	63	Frances Surrey	College English
+S064	C006	63	Frances Surrey	Physical Education
+S064	C016	77	Frances Surrey	Data Structures and Algorithms
+S064	C007	87	Frances Surrey	Set Theory and Graph Theory
+S064	C013	88	Frances Surrey	Probability and Statistics
+S064	C018	92	Frances Surrey	Computer System
+S064	C008	90	Frances Surrey	Calculus B(2)
+S064	C005	89	Frances Surrey	Linear Algebra and Analytic Geometry
+S065	C008	87	Bing Timothy	Calculus B(2)
+S065	C015	94	Bing Timothy	Digital Logic Design
+S065	C003	98	Bing Timothy	College English
+S065	C007	96	Bing Timothy	Set Theory and Graph Theory
+S065	C002	60	Bing Timothy	PjBL and Technological Innovation
+S065	C010	66	Bing Timothy	Compendium of Chinese Modern and Contemporary History
+S065	C017	93	Bing Timothy	Biochemistry B
+S065	C004	68	Bing Timothy	Calculus B(1)
+S065	C014	72	Bing Timothy	College Physics Experiments B
+S065	C016	61	Bing Timothy	Data Structures and Algorithms
+S065	C012	90	Bing Timothy	Mathematical Logic
+S065	C001	84	Bing Timothy	High-level Language Programming
+S066	C002	81	Letitia Benjamin	PjBL and Technological Innovation
+S066	C009	69	Letitia Benjamin	Situation and Policy
+S066	C017	63	Letitia Benjamin	Biochemistry B
+S066	C010	76	Letitia Benjamin	Compendium of Chinese Modern and Contemporary History
+S066	C015	96	Letitia Benjamin	Digital Logic Design
+S066	C018	95	Letitia Benjamin	Computer System
+S066	C005	79	Letitia Benjamin	Linear Algebra and Analytic Geometry
+S066	C016	94	Letitia Benjamin	Data Structures and Algorithms
+S066	C006	93	Letitia Benjamin	Physical Education
+S066	C004	67	Letitia Benjamin	Calculus B(1)
+S066	C007	74	Letitia Benjamin	Set Theory and Graph Theory
+S067	C011	91	Teresa Shakespeare	Algorithmic Design and Analysis
+S067	C005	96	Teresa Shakespeare	Linear Algebra and Analytic Geometry
+S067	C014	66	Teresa Shakespeare	College Physics Experiments B
+S067	C010	88	Teresa Shakespeare	Compendium of Chinese Modern and Contemporary History
+S067	C003	64	Teresa Shakespeare	College English
+S067	C013	82	Teresa Shakespeare	Probability and Statistics
+S067	C012	95	Teresa Shakespeare	Mathematical Logic
+S067	C004	80	Teresa Shakespeare	Calculus B(1)
+S067	C007	75	Teresa Shakespeare	Set Theory and Graph Theory
+S067	C002	98	Teresa Shakespeare	PjBL and Technological Innovation
+S067	C016	98	Teresa Shakespeare	Data Structures and Algorithms
+S067	C018	94	Teresa Shakespeare	Computer System
+S067	C015	99	Teresa Shakespeare	Digital Logic Design
+S067	C001	97	Teresa Shakespeare	High-level Language Programming
+S068	C014	95	Hannah Berkeley	College Physics Experiments B
+S068	C015	74	Hannah Berkeley	Digital Logic Design
+S068	C012	77	Hannah Berkeley	Mathematical Logic
+S068	C010	100	Hannah Berkeley	Compendium of Chinese Modern and Contemporary History
+S068	C004	88	Hannah Berkeley	Calculus B(1)
+S068	C003	79	Hannah Berkeley	College English
+S068	C007	63	Hannah Berkeley	Set Theory and Graph Theory
+S068	C017	89	Hannah Berkeley	Biochemistry B
+S068	C013	63	Hannah Berkeley	Probability and Statistics
+S068	C018	84	Hannah Berkeley	Computer System
+S068	C008	91	Hannah Berkeley	Calculus B(2)
+S069	C012	72	Fabian Virginia	Mathematical Logic
+S069	C014	68	Fabian Virginia	College Physics Experiments B
+S069	C004	85	Fabian Virginia	Calculus B(1)
+S069	C007	79	Fabian Virginia	Set Theory and Graph Theory
+S069	C013	88	Fabian Virginia	Probability and Statistics
+S069	C008	100	Fabian Virginia	Calculus B(2)
+S069	C009	100	Fabian Virginia	Situation and Policy
+S069	C018	84	Fabian Virginia	Computer System
+S069	C010	83	Fabian Virginia	Compendium of Chinese Modern and Contemporary History
+S069	C016	82	Fabian Virginia	Data Structures and Algorithms
+S070	C003	63	Maxine Raglan	College English
+S070	C005	95	Maxine Raglan	Linear Algebra and Analytic Geometry
+S070	C015	62	Maxine Raglan	Digital Logic Design
+S070	C006	61	Maxine Raglan	Physical Education
+S070	C008	66	Maxine Raglan	Calculus B(2)
+S070	C011	87	Maxine Raglan	Algorithmic Design and Analysis
+S070	C009	75	Maxine Raglan	Situation and Policy
+S070	C016	76	Maxine Raglan	Data Structures and Algorithms
+S070	C001	67	Maxine Raglan	High-level Language Programming
+S070	C014	91	Maxine Raglan	College Physics Experiments B
+S070	C017	76	Maxine Raglan	Biochemistry B
+S070	C012	79	Maxine Raglan	Mathematical Logic
+S071	C009	91	Elma Job	Situation and Policy
+S071	C007	69	Elma Job	Set Theory and Graph Theory
+S071	C006	97	Elma Job	Physical Education
+S071	C012	63	Elma Job	Mathematical Logic
+S071	C005	94	Elma Job	Linear Algebra and Analytic Geometry
+S071	C002	100	Elma Job	PjBL and Technological Innovation
+S071	C013	89	Elma Job	Probability and Statistics
+S071	C017	93	Elma Job	Biochemistry B
+S071	C018	75	Elma Job	Computer System
+S071	C014	61	Elma Job	College Physics Experiments B
+S071	C011	95	Elma Job	Algorithmic Design and Analysis
+S071	C003	67	Elma Job	College English
+S072	C004	85	Kennedy Michelson	Calculus B(1)
+S072	C007	81	Kennedy Michelson	Set Theory and Graph Theory
+S072	C012	66	Kennedy Michelson	Mathematical Logic
+S072	C008	89	Kennedy Michelson	Calculus B(2)
+S072	C002	68	Kennedy Michelson	PjBL and Technological Innovation
+S072	C005	67	Kennedy Michelson	Linear Algebra and Analytic Geometry
+S072	C009	61	Kennedy Michelson	Situation and Policy
+S072	C001	65	Kennedy Michelson	High-level Language Programming
+S072	C003	65	Kennedy Michelson	College English
+S072	C010	66	Kennedy Michelson	Compendium of Chinese Modern and Contemporary History
+S072	C017	71	Kennedy Michelson	Biochemistry B
+S073	C008	82	Beatrice Zimmerman	Calculus B(2)
+S073	C010	100	Beatrice Zimmerman	Compendium of Chinese Modern and Contemporary History
+S073	C006	94	Beatrice Zimmerman	Physical Education
+S073	C011	93	Beatrice Zimmerman	Algorithmic Design and Analysis
+S073	C004	74	Beatrice Zimmerman	Calculus B(1)
+S073	C009	70	Beatrice Zimmerman	Situation and Policy
+S073	C013	71	Beatrice Zimmerman	Probability and Statistics
+S073	C012	78	Beatrice Zimmerman	Mathematical Logic
+S073	C005	65	Beatrice Zimmerman	Linear Algebra and Analytic Geometry
+S073	C015	82	Beatrice Zimmerman	Digital Logic Design
+S073	C007	60	Beatrice Zimmerman	Set Theory and Graph Theory
+S074	C002	84	Meredith Clapham	PjBL and Technological Innovation
+S074	C008	73	Meredith Clapham	Calculus B(2)
+S074	C015	84	Meredith Clapham	Digital Logic Design
+S074	C012	63	Meredith Clapham	Mathematical Logic
+S074	C010	77	Meredith Clapham	Compendium of Chinese Modern and Contemporary History
+S074	C005	75	Meredith Clapham	Linear Algebra and Analytic Geometry
+S074	C003	70	Meredith Clapham	College English
+S074	C014	67	Meredith Clapham	College Physics Experiments B
+S074	C006	74	Meredith Clapham	Physical Education
+S074	C001	83	Meredith Clapham	High-level Language Programming
+S075	C010	67	Ian Josh	Compendium of Chinese Modern and Contemporary History
+S075	C007	87	Ian Josh	Set Theory and Graph Theory
+S075	C006	100	Ian Josh	Physical Education
+S075	C003	67	Ian Josh	College English
+S075	C002	84	Ian Josh	PjBL and Technological Innovation
+S075	C012	78	Ian Josh	Mathematical Logic
+S075	C009	60	Ian Josh	Situation and Policy
+S075	C017	65	Ian Josh	Biochemistry B
+S075	C005	60	Ian Josh	Linear Algebra and Analytic Geometry
+S075	C001	83	Ian Josh	High-level Language Programming
+S075	C014	91	Ian Josh	College Physics Experiments B
+S075	C008	81	Ian Josh	Calculus B(2)
+S076	C003	72	Wright Charley	College English
+S076	C016	63	Wright Charley	Data Structures and Algorithms
+S076	C006	88	Wright Charley	Physical Education
+S076	C008	88	Wright Charley	Calculus B(2)
+S076	C013	80	Wright Charley	Probability and Statistics
+S076	C001	68	Wright Charley	High-level Language Programming
+S076	C002	87	Wright Charley	PjBL and Technological Innovation
+S076	C015	77	Wright Charley	Digital Logic Design
+S076	C017	91	Wright Charley	Biochemistry B
+S076	C005	94	Wright Charley	Linear Algebra and Analytic Geometry
+S077	C013	76	Carol Willard	Probability and Statistics
+S077	C015	60	Carol Willard	Digital Logic Design
+S077	C018	100	Carol Willard	Computer System
+S077	C008	74	Carol Willard	Calculus B(2)
+S077	C006	95	Carol Willard	Physical Education
+S077	C002	72	Carol Willard	PjBL and Technological Innovation
+S077	C012	98	Carol Willard	Mathematical Logic
+S077	C009	85	Carol Willard	Situation and Policy
+S077	C016	90	Carol Willard	Data Structures and Algorithms
+S077	C001	95	Carol Willard	High-level Language Programming
+S078	C004	81	Lynn Judd	Calculus B(1)
+S078	C001	83	Lynn Judd	High-level Language Programming
+S078	C015	77	Lynn Judd	Digital Logic Design
+S078	C014	63	Lynn Judd	College Physics Experiments B
+S078	C016	72	Lynn Judd	Data Structures and Algorithms
+S078	C010	91	Lynn Judd	Compendium of Chinese Modern and Contemporary History
+S078	C009	86	Lynn Judd	Situation and Policy
+S078	C007	79	Lynn Judd	Set Theory and Graph Theory
+S078	C005	68	Lynn Judd	Linear Algebra and Analytic Geometry
+S078	C012	88	Lynn Judd	Mathematical Logic
+S078	C003	90	Lynn Judd	College English
+S078	C017	95	Lynn Judd	Biochemistry B
+S079	C014	89	Henry Grote	College Physics Experiments B
+S079	C009	60	Henry Grote	Situation and Policy
+S079	C016	94	Henry Grote	Data Structures and Algorithms
+S079	C012	97	Henry Grote	Mathematical Logic
+S079	C010	62	Henry Grote	Compendium of Chinese Modern and Contemporary History
+S079	C004	63	Henry Grote	Calculus B(1)
+S079	C013	76	Henry Grote	Probability and Statistics
+S079	C006	68	Henry Grote	Physical Education
+S079	C007	60	Henry Grote	Set Theory and Graph Theory
+S079	C008	87	Henry Grote	Calculus B(2)
+S079	C005	78	Henry Grote	Linear Algebra and Analytic Geometry
+S079	C003	94	Henry Grote	College English
+S079	C017	92	Henry Grote	Biochemistry B
+S079	C011	90	Henry Grote	Algorithmic Design and Analysis
+S080	C002	85	Harriet Mc	PjBL and Technological Innovation
+S080	C010	95	Harriet Mc	Compendium of Chinese Modern and Contemporary History
+S080	C015	86	Harriet Mc	Digital Logic Design
+S080	C003	70	Harriet Mc	College English
+S080	C004	63	Harriet Mc	Calculus B(1)
+S080	C014	70	Harriet Mc	College Physics Experiments B
+S080	C012	80	Harriet Mc	Mathematical Logic
+S080	C016	70	Harriet Mc	Data Structures and Algorithms
+S080	C018	87	Harriet Mc	Computer System
+S080	C001	100	Harriet Mc	High-level Language Programming
+S080	C011	80	Harriet Mc	Algorithmic Design and Analysis
+S080	C013	64	Harriet Mc	Probability and Statistics
+S081	C004	77	Carthy	Calculus B(1)
+S081	C007	92	Carthy	Set Theory and Graph Theory
+S081	C014	84	Carthy	College Physics Experiments B
+S081	C009	92	Carthy	Situation and Policy
+S081	C016	100	Carthy	Data Structures and Algorithms
+S081	C002	76	Carthy	PjBL and Technological Innovation
+S081	C013	98	Carthy	Probability and Statistics
+S081	C017	86	Carthy	Biochemistry B
+S081	C001	78	Carthy	High-level Language Programming
+S081	C011	67	Carthy	Algorithmic Design and Analysis
+S081	C015	68	Carthy	Digital Logic Design
+S081	C012	66	Carthy	Mathematical Logic
+S081	C008	86	Carthy	Calculus B(2)
+S082	C004	96	Sabina Washington	Calculus B(1)
+S082	C001	60	Sabina Washington	High-level Language Programming
+S082	C013	62	Sabina Washington	Probability and Statistics
+S082	C002	67	Sabina Washington	PjBL and Technological Innovation
+S082	C010	83	Sabina Washington	Compendium of Chinese Modern and Contemporary History
+S082	C007	73	Sabina Washington	Set Theory and Graph Theory
+S082	C017	72	Sabina Washington	Biochemistry B
+S082	C006	64	Sabina Washington	Physical Education
+S082	C011	60	Sabina Washington	Algorithmic Design and Analysis
+S082	C003	83	Sabina Washington	College English
+S083	C017	62	Jeff Baker	Biochemistry B
+S083	C015	80	Jeff Baker	Digital Logic Design
+S083	C005	60	Jeff Baker	Linear Algebra and Analytic Geometry
+S083	C013	95	Jeff Baker	Probability and Statistics
+S083	C007	91	Jeff Baker	Set Theory and Graph Theory
+S083	C011	73	Jeff Baker	Algorithmic Design and Analysis
+S083	C008	86	Jeff Baker	Calculus B(2)
+S083	C004	73	Jeff Baker	Calculus B(1)
+S083	C012	66	Jeff Baker	Mathematical Logic
+S083	C001	95	Jeff Baker	High-level Language Programming
+S084	C002	94	Roy Mac	PjBL and Technological Innovation
+S084	C014	65	Roy Mac	College Physics Experiments B
+S084	C018	95	Roy Mac	Computer System
+S084	C007	100	Roy Mac	Set Theory and Graph Theory
+S084	C013	76	Roy Mac	Probability and Statistics
+S084	C011	70	Roy Mac	Algorithmic Design and Analysis
+S084	C017	68	Roy Mac	Biochemistry B
+S084	C006	97	Roy Mac	Physical Education
+S084	C010	62	Roy Mac	Compendium of Chinese Modern and Contemporary History
+S084	C016	94	Roy Mac	Data Structures and Algorithms
+S084	C008	73	Roy Mac	Calculus B(2)
+S085	C016	66	Arthur	Data Structures and Algorithms
+S085	C015	90	Arthur	Digital Logic Design
+S085	C017	85	Arthur	Biochemistry B
+S085	C002	82	Arthur	PjBL and Technological Innovation
+S085	C001	89	Arthur	High-level Language Programming
+S085	C018	69	Arthur	Computer System
+S085	C013	60	Arthur	Probability and Statistics
+S085	C009	89	Arthur	Situation and Policy
+S085	C012	97	Arthur	Mathematical Logic
+S085	C006	70	Arthur	Physical Education
+S086	C017	95	Byron Montgomery	Biochemistry B
+S086	C015	97	Byron Montgomery	Digital Logic Design
+S086	C018	76	Byron Montgomery	Computer System
+S086	C010	80	Byron Montgomery	Compendium of Chinese Modern and Contemporary History
+S086	C016	70	Byron Montgomery	Data Structures and Algorithms
+S086	C004	61	Byron Montgomery	Calculus B(1)
+S086	C009	94	Byron Montgomery	Situation and Policy
+S086	C002	75	Byron Montgomery	PjBL and Technological Innovation
+S086	C005	63	Byron Montgomery	Linear Algebra and Analytic Geometry
+S086	C011	78	Byron Montgomery	Algorithmic Design and Analysis
+S086	C013	96	Byron Montgomery	Probability and Statistics
+S087	C004	86	Sara Habakkuk	Calculus B(1)
+S087	C002	82	Sara Habakkuk	PjBL and Technological Innovation
+S087	C011	80	Sara Habakkuk	Algorithmic Design and Analysis
+S087	C010	64	Sara Habakkuk	Compendium of Chinese Modern and Contemporary History
+S087	C003	81	Sara Habakkuk	College English
+S087	C018	97	Sara Habakkuk	Computer System
+S087	C008	81	Sara Habakkuk	Calculus B(2)
+S087	C016	90	Sara Habakkuk	Data Structures and Algorithms
+S087	C013	87	Sara Habakkuk	Probability and Statistics
+S087	C015	91	Sara Habakkuk	Digital Logic Design
+S088	C018	76	Cora Godwin	Computer System
+S088	C001	98	Cora Godwin	High-level Language Programming
+S088	C014	99	Cora Godwin	College Physics Experiments B
+S088	C013	76	Cora Godwin	Probability and Statistics
+S088	C009	88	Cora Godwin	Situation and Policy
+S088	C006	99	Cora Godwin	Physical Education
+S088	C002	61	Cora Godwin	PjBL and Technological Innovation
+S088	C011	76	Cora Godwin	Algorithmic Design and Analysis
+S088	C005	66	Cora Godwin	Linear Algebra and Analytic Geometry
+S088	C010	77	Cora Godwin	Compendium of Chinese Modern and Contemporary History
+S088	C008	80	Cora Godwin	Calculus B(2)
+S089	C017	69	Chester Dillon	Biochemistry B
+S089	C013	93	Chester Dillon	Probability and Statistics
+S089	C010	92	Chester Dillon	Compendium of Chinese Modern and Contemporary History
+S089	C012	81	Chester Dillon	Mathematical Logic
+S089	C009	82	Chester Dillon	Situation and Policy
+S089	C018	79	Chester Dillon	Computer System
+S089	C001	83	Chester Dillon	High-level Language Programming
+S089	C016	86	Chester Dillon	Data Structures and Algorithms
+S089	C015	72	Chester Dillon	Digital Logic Design
+S089	C003	82	Chester Dillon	College English
+S089	C007	74	Chester Dillon	Set Theory and Graph Theory
+S090	C016	63	Hulda Thoreau	Data Structures and Algorithms
+S090	C002	60	Hulda Thoreau	PjBL and Technological Innovation
+S090	C012	72	Hulda Thoreau	Mathematical Logic
+S090	C010	85	Hulda Thoreau	Compendium of Chinese Modern and Contemporary History
+S090	C005	68	Hulda Thoreau	Linear Algebra and Analytic Geometry
+S090	C003	92	Hulda Thoreau	College English
+S090	C004	64	Hulda Thoreau	Calculus B(1)
+S090	C006	85	Hulda Thoreau	Physical Education
+S090	C001	60	Hulda Thoreau	High-level Language Programming
+S090	C013	95	Hulda Thoreau	Probability and Statistics
+S090	C008	82	Hulda Thoreau	Calculus B(2)
+S090	C017	93	Hulda Thoreau	Biochemistry B
+S091	C014	74	Liz Roosevelt	College Physics Experiments B
+S091	C012	60	Liz Roosevelt	Mathematical Logic
+S091	C003	74	Liz Roosevelt	College English
+S091	C007	64	Liz Roosevelt	Set Theory and Graph Theory
+S091	C013	71	Liz Roosevelt	Probability and Statistics
+S091	C009	98	Liz Roosevelt	Situation and Policy
+S091	C005	60	Liz Roosevelt	Linear Algebra and Analytic Geometry
+S091	C015	87	Liz Roosevelt	Digital Logic Design
+S091	C006	69	Liz Roosevelt	Physical Education
+S091	C010	82	Liz Roosevelt	Compendium of Chinese Modern and Contemporary History
+S091	C017	91	Liz Roosevelt	Biochemistry B
+S092	C011	86	Edwiin Bernard	Algorithmic Design and Analysis
+S092	C002	73	Edwiin Bernard	PjBL and Technological Innovation
+S092	C013	97	Edwiin Bernard	Probability and Statistics
+S092	C005	96	Edwiin Bernard	Linear Algebra and Analytic Geometry
+S092	C004	100	Edwiin Bernard	Calculus B(1)
+S092	C006	87	Edwiin Bernard	Physical Education
+S092	C012	77	Edwiin Bernard	Mathematical Logic
+S092	C018	90	Edwiin Bernard	Computer System
+S092	C017	90	Edwiin Bernard	Biochemistry B
+S092	C003	97	Edwiin Bernard	College English
+S092	C015	75	Edwiin Bernard	Digital Logic Design
+S093	C007	75	Darcy Hamilton	Set Theory and Graph Theory
+S093	C006	92	Darcy Hamilton	Physical Education
+S093	C012	75	Darcy Hamilton	Mathematical Logic
+S093	C014	96	Darcy Hamilton	College Physics Experiments B
+S093	C015	71	Darcy Hamilton	Digital Logic Design
+S093	C016	91	Darcy Hamilton	Data Structures and Algorithms
+S093	C002	63	Darcy Hamilton	PjBL and Technological Innovation
+S093	C011	81	Darcy Hamilton	Algorithmic Design and Analysis
+S093	C004	93	Darcy Hamilton	Calculus B(1)
+S093	C010	80	Darcy Hamilton	Compendium of Chinese Modern and Contemporary History
+S093	C017	69	Darcy Hamilton	Biochemistry B
+S093	C018	90	Darcy Hamilton	Computer System
+S094	C003	97	Charlotte Eugene	College English
+S094	C012	80	Charlotte Eugene	Mathematical Logic
+S094	C005	64	Charlotte Eugene	Linear Algebra and Analytic Geometry
+S094	C015	69	Charlotte Eugene	Digital Logic Design
+S094	C008	65	Charlotte Eugene	Calculus B(2)
+S094	C011	65	Charlotte Eugene	Algorithmic Design and Analysis
+S094	C007	89	Charlotte Eugene	Set Theory and Graph Theory
+S094	C016	84	Charlotte Eugene	Data Structures and Algorithms
+S094	C009	70	Charlotte Eugene	Situation and Policy
+S094	C018	65	Charlotte Eugene	Computer System
+S094	C004	99	Charlotte Eugene	Calculus B(1)
+S094	C006	81	Charlotte Eugene	Physical Education
+S094	C013	86	Charlotte Eugene	Probability and Statistics
+S094	C001	75	Charlotte Eugene	High-level Language Programming
+S095	C014	68	Perry Maltz	College Physics Experiments B
+S095	C016	61	Perry Maltz	Data Structures and Algorithms
+S095	C005	82	Perry Maltz	Linear Algebra and Analytic Geometry
+S095	C006	100	Perry Maltz	Physical Education
+S095	C002	98	Perry Maltz	PjBL and Technological Innovation
+S095	C010	84	Perry Maltz	Compendium of Chinese Modern and Contemporary History
+S095	C004	79	Perry Maltz	Calculus B(1)
+S095	C008	60	Perry Maltz	Calculus B(2)
+S095	C011	86	Perry Maltz	Algorithmic Design and Analysis
+S095	C007	73	Perry Maltz	Set Theory and Graph Theory
+S095	C009	92	Perry Maltz	Situation and Policy
+S096	C008	71	Kama Pigou	Calculus B(2)
+S096	C006	85	Kama Pigou	Physical Education
+S096	C011	68	Kama Pigou	Algorithmic Design and Analysis
+S096	C010	79	Kama Pigou	Compendium of Chinese Modern and Contemporary History
+S096	C002	95	Kama Pigou	PjBL and Technological Innovation
+S096	C005	82	Kama Pigou	Linear Algebra and Analytic Geometry
+S096	C004	70	Kama Pigou	Calculus B(1)
+S096	C014	89	Kama Pigou	College Physics Experiments B
+S096	C017	73	Kama Pigou	Biochemistry B
+S096	C015	63	Kama Pigou	Digital Logic Design
+S096	C012	72	Kama Pigou	Mathematical Logic
+S096	C009	81	Kama Pigou	Situation and Policy
+S096	C016	70	Kama Pigou	Data Structures and Algorithms
+S096	C018	91	Kama Pigou	Computer System
+S097	C015	94	Christine Julius	Digital Logic Design
+S097	C014	96	Christine Julius	College Physics Experiments B
+S097	C006	75	Christine Julius	Physical Education
+S097	C004	95	Christine Julius	Calculus B(1)
+S097	C018	98	Christine Julius	Computer System
+S097	C017	83	Christine Julius	Biochemistry B
+S097	C007	76	Christine Julius	Set Theory and Graph Theory
+S097	C005	75	Christine Julius	Linear Algebra and Analytic Geometry
+S097	C016	100	Christine Julius	Data Structures and Algorithms
+S097	C013	86	Christine Julius	Probability and Statistics
+S097	C002	90	Christine Julius	PjBL and Technological Innovation
+S097	C011	77	Christine Julius	Algorithmic Design and Analysis
+S098	C010	98	Coral Paul	Compendium of Chinese Modern and Contemporary History
+S098	C016	88	Coral Paul	Data Structures and Algorithms
+S098	C005	76	Coral Paul	Linear Algebra and Analytic Geometry
+S098	C013	82	Coral Paul	Probability and Statistics
+S098	C014	87	Coral Paul	College Physics Experiments B
+S098	C004	91	Coral Paul	Calculus B(1)
+S098	C006	84	Coral Paul	Physical Education
+S098	C012	76	Coral Paul	Mathematical Logic
+S098	C017	78	Coral Paul	Biochemistry B
+S098	C003	73	Coral Paul	College English
+S098	C015	99	Coral Paul	Digital Logic Design
+S099	C003	76	Andre Toby	College English
+S099	C001	72	Andre Toby	High-level Language Programming
+S099	C012	68	Andre Toby	Mathematical Logic
+S099	C009	76	Andre Toby	Situation and Policy
+S099	C007	100	Andre Toby	Set Theory and Graph Theory
+S099	C008	67	Andre Toby	Calculus B(2)
+S099	C004	78	Andre Toby	Calculus B(1)
+S099	C006	98	Andre Toby	Physical Education
+S099	C016	71	Andre Toby	Data Structures and Algorithms
+S099	C002	60	Andre Toby	PjBL and Technological Innovation
+S099	C014	85	Andre Toby	College Physics Experiments B
+S099	C013	79	Andre Toby	Probability and Statistics
+S100	C017	88	Megan Marcellus	Biochemistry B
+S100	C009	61	Megan Marcellus	Situation and Policy
+S100	C002	94	Megan Marcellus	PjBL and Technological Innovation
+S100	C001	63	Megan Marcellus	High-level Language Programming
+S100	C010	76	Megan Marcellus	Compendium of Chinese Modern and Contemporary History
+S100	C016	89	Megan Marcellus	Data Structures and Algorithms
+S100	C007	100	Megan Marcellus	Set Theory and Graph Theory
+S100	C004	92	Megan Marcellus	Calculus B(1)
+S100	C015	63	Megan Marcellus	Digital Logic Design
+S100	C012	81	Megan Marcellus	Mathematical Logic
+S100	C013	99	Megan Marcellus	Probability and Statistics
+S100	C011	69	Megan Marcellus	Algorithmic Design and Analysis
+S101	C008	89	Meroy Belle	Calculus B(2)
+S101	C013	88	Meroy Belle	Probability and Statistics
+S101	C006	86	Meroy Belle	Physical Education
+S101	C001	97	Meroy Belle	High-level Language Programming
+S101	C003	84	Meroy Belle	College English
+S101	C010	99	Meroy Belle	Compendium of Chinese Modern and Contemporary History
+S101	C005	84	Meroy Belle	Linear Algebra and Analytic Geometry
+S101	C012	97	Meroy Belle	Mathematical Logic
+S101	C018	79	Meroy Belle	Computer System
+S101	C007	88	Meroy Belle	Set Theory and Graph Theory
+S101	C015	61	Meroy Belle	Digital Logic Design
+S101	C002	87	Meroy Belle	PjBL and Technological Innovation
+S102	C016	78	Delia Crane	Data Structures and Algorithms
+S102	C011	62	Delia Crane	Algorithmic Design and Analysis
+S102	C007	92	Delia Crane	Set Theory and Graph Theory
+S102	C003	89	Delia Crane	College English
+S102	C005	86	Delia Crane	Linear Algebra and Analytic Geometry
+S102	C008	100	Delia Crane	Calculus B(2)
+S102	C018	97	Delia Crane	Computer System
+S102	C004	70	Delia Crane	Calculus B(1)
+S102	C014	100	Delia Crane	College Physics Experiments B
+S103	C018	96	Claire Sawyer	Computer System
+S103	C009	81	Claire Sawyer	Situation and Policy
+S103	C008	72	Claire Sawyer	Calculus B(2)
+S103	C002	85	Claire Sawyer	PjBL and Technological Innovation
+S103	C013	67	Claire Sawyer	Probability and Statistics
+S103	C011	66	Claire Sawyer	Algorithmic Design and Analysis
+S103	C007	86	Claire Sawyer	Set Theory and Graph Theory
+S103	C001	67	Claire Sawyer	High-level Language Programming
+S103	C006	68	Claire Sawyer	Physical Education
+S103	C017	100	Claire Sawyer	Biochemistry B
+S103	C015	73	Claire Sawyer	Digital Logic Design
+S103	C014	85	Claire Sawyer	College Physics Experiments B
+S103	C010	60	Claire Sawyer	Compendium of Chinese Modern and Contemporary History
+S104	C009	81	Burnell Ben	Situation and Policy
+S104	C004	87	Burnell Ben	Calculus B(1)
+S104	C005	69	Burnell Ben	Linear Algebra and Analytic Geometry
+S104	C002	74	Burnell Ben	PjBL and Technological Innovation
+S104	C008	97	Burnell Ben	Calculus B(2)
+S104	C015	90	Burnell Ben	Digital Logic Design
+S104	C012	66	Burnell Ben	Mathematical Logic
+S104	C010	97	Burnell Ben	Compendium of Chinese Modern and Contemporary History
+S104	C001	84	Burnell Ben	High-level Language Programming
+S104	C018	97	Burnell Ben	Computer System
+S105	C007	84	Lawrence Melville	Set Theory and Graph Theory
+S105	C015	97	Lawrence Melville	Digital Logic Design
+S105	C009	75	Lawrence Melville	Situation and Policy
+S105	C004	68	Lawrence Melville	Calculus B(1)
+S105	C011	94	Lawrence Melville	Algorithmic Design and Analysis
+S105	C014	91	Lawrence Melville	College Physics Experiments B
+S105	C018	85	Lawrence Melville	Computer System
+S105	C006	84	Lawrence Melville	Physical Education
+S105	C016	81	Lawrence Melville	Data Structures and Algorithms
+S105	C017	84	Lawrence Melville	Biochemistry B
+S105	C005	91	Lawrence Melville	Linear Algebra and Analytic Geometry
+S106	C001	61	Esther Guy	High-level Language Programming
+S106	C006	97	Esther Guy	Physical Education
+S106	C018	88	Esther Guy	Computer System
+S106	C009	72	Esther Guy	Situation and Policy
+S106	C008	89	Esther Guy	Calculus B(2)
+S106	C013	94	Esther Guy	Probability and Statistics
+S106	C017	94	Esther Guy	Biochemistry B
+S106	C015	68	Esther Guy	Digital Logic Design
+S106	C016	100	Esther Guy	Data Structures and Algorithms
+S106	C003	82	Esther Guy	College English
+S106	C007	96	Esther Guy	Set Theory and Graph Theory
+S106	C012	84	Esther Guy	Mathematical Logic
+S107	C010	85	Jenny Bowen	Compendium of Chinese Modern and Contemporary History
+S107	C014	73	Jenny Bowen	College Physics Experiments B
+S107	C016	83	Jenny Bowen	Data Structures and Algorithms
+S107	C002	87	Jenny Bowen	PjBL and Technological Innovation
+S107	C006	85	Jenny Bowen	Physical Education
+S107	C017	86	Jenny Bowen	Biochemistry B
+S107	C004	93	Jenny Bowen	Calculus B(1)
+S107	C013	61	Jenny Bowen	Probability and Statistics
+S107	C011	84	Jenny Bowen	Algorithmic Design and Analysis
+S107	C001	90	Jenny Bowen	High-level Language Programming
+S108	C015	79	Nelson Oscar	Digital Logic Design
+S108	C010	89	Nelson Oscar	Compendium of Chinese Modern and Contemporary History
+S108	C018	87	Nelson Oscar	Computer System
+S108	C006	72	Nelson Oscar	Physical Education
+S108	C009	61	Nelson Oscar	Situation and Policy
+S108	C016	66	Nelson Oscar	Data Structures and Algorithms
+S108	C017	81	Nelson Oscar	Biochemistry B
+S108	C002	76	Nelson Oscar	PjBL and Technological Innovation
+S108	C003	62	Nelson Oscar	College English
+S108	C011	73	Nelson Oscar	Algorithmic Design and Analysis
+S108	C007	82	Nelson Oscar	Set Theory and Graph Theory
