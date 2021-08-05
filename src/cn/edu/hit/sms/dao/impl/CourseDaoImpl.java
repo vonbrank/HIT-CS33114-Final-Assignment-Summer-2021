@@ -354,6 +354,7 @@ public class CourseDaoImpl implements CourseDao {
     public int getScoreBySidAndCid(String sid, String cid) {
         String sql = String.format("SELECT * FROM scores WHERE sid='%s' AND cid='%s';",
                 sid, cid);
+//        System.out.println(sql);
         int scoreValue = -1;
         ResultSet rs = DBUtils.executeQuery(sql);
         try {
@@ -412,9 +413,11 @@ public class CourseDaoImpl implements CourseDao {
 
     @Override
     public int removeScore(Score score) {
+//        System.out.println(score);
         if(this.getScoreBySidAndCid(score.getSid(), score.getCid()) == -1) {
             return -1;
         }
+//        System.out.println(score);
         String sid = score.getSid();
         String cid = score.getCid();
         int scoreValue = score.getScore();

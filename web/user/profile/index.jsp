@@ -5,7 +5,7 @@
 <%
     Object obj = request.getSession().getAttribute("user");
     if(!(obj instanceof User) ){
-        response.sendRedirect("../../auth/login/?op=LogoutError");
+        response.sendRedirect("../../auth/login/?error=Logout");
         return;
     }
     User user = (User) obj;
@@ -25,7 +25,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../css/index.css">
     <script src="../../js/main.js" defer></script>
-    <title>Score Management System | Profile</title>
+    <title>学生成绩管理系统 | 个人设置</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
                 <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" id="nav-about">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">关于</a>
                     </li>
                 </ul>
             </div>
@@ -50,14 +50,32 @@
         <div class="container">
             <div class="main-content">
                 <h2 class="main-tile">Score Management System</h2>
-
+                <%
+                    if(request.getParameter("error") != null) {
+                %>
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <%
+                        String error = request.getParameter("error");
+                        if(error.equals("WrongPassword")) out.print("原密码错误。");
+                        if(error.equals("PwdInconsistent")) out.print("两次输入的密码不相同。");
+                        if(error.equals("IllegalPwd")) out.print("密码应只包含数字、字母以及 _ . @ & + - * / ");
+                        if(error.equals("IncompleteInfo")) out.print("信息不全。");
+                    %>
+                </div>
+                <%
+                    }
+                %>
                 <div class="container">
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#home">Personal Information</a>
+                            <a class="nav-link active" data-toggle="tab" href="#home">个人信息</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#menu1">Security Settings</a>
+                            <a class="nav-link" data-toggle="tab" href="#menu1">安全选项</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../auth/login/">用户中心</a>
                         </li>
                     </ul>
 
@@ -74,15 +92,15 @@
                                                 <td><%=user.getId()%></td>
                                             </tr>
                                             <tr>
-                                                <td>Name</td>
+                                                <td>姓名</td>
                                                 <td><%=user.getName()%></td>
                                             </tr>
                                             <tr>
-                                                <td>Gender</td>
+                                                <td>性别</td>
                                                 <td><%=user.getGender()%></td>
                                             </tr>
                                             <tr>
-                                                <td>User Type</td>
+                                                <td>用户类型</td>
                                                 <td>
                                                     <%
                                                         if(user instanceof Staff) out.print("Staff");
@@ -92,7 +110,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Major or Profession</td>
+                                                <td>专业 或 方向</td>
                                                 <td>
                                                     <%
                                                         if(user instanceof Staff) out.print("N/A");
@@ -107,7 +125,7 @@
                                 <div class="card-footer">
                                     <form action="../../LoginServlet" method="post">
                                         <input type="hidden" name="op" value="logout">
-                                        <button type="submit" class="btn btn-danger">Logout</button>
+                                        <button type="submit" class="btn btn-danger">登出</button>
                                     </form>
 
                                 </div>
@@ -115,36 +133,31 @@
                         </div>
                         <div id="menu1" class="container tab-pane fade"><br>
                             <div class="card">
-                                <div class="card-header">Change your password</div>
+                                <div class="card-header">修改密码</div>
                                 <div class="card-body">
-                                    <form>
+                                    <form action="../../UserServlet" method="post">
                                         <div class="form-group">
-                                            <label for="ppwd">Privious Password:</label>
-                                            <input type="password" class="form-control" id="ppwd"
-                                                placeholder="Enter privious password">
+                                            <label for="ppd">原密码:</label>
+                                            <input type="password" class="form-control" id="ppd" name="ppd"
+                                                placeholder="Enter previous password">
                                         </div>
                                         <div class="form-group">
-                                            <label for="npwd">New Password:</label>
-                                            <input type="password" class="form-control" id="npwd"
+                                            <label for="npd">新密码:</label>
+                                            <input type="password" class="form-control" id="npd" name="npd"
                                                 placeholder="Enter new password">
                                         </div>
                                         <div class="form-group">
-                                            <label for="cfnpwd">Confirm New Password:</label>
-                                            <input type="password" class="form-control" id="cfnpwd"
+                                            <label for="cpd">确认密码:</label>
+                                            <input type="password" class="form-control" id="cpd" name="cpd"
                                                 placeholder="Confirm new password">
                                         </div>
-
-                                        <button type="submit" class="btn btn-primary btn-block mt-3">Confirm
-                                        </button>
+                                        <input type="hidden" name="op" value="resetPassword">
+                                        <button type="submit" class="btn btn-primary btn-block mt-3">
+                                            Confirm</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div id="menu2" class="container tab-pane fade"><br>
-    <h3>Menu 2</h3>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-        laudantium, totam rem aperiam.</p>
-</div> -->
                     </div>
                 </div>
 

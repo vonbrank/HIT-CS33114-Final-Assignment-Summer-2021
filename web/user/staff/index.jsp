@@ -20,7 +20,7 @@
 <%
     Object obj = request.getSession().getAttribute("user");
     if(!(obj instanceof Staff) ){
-        response.sendRedirect("../../auth/login/?op=LogoutError");
+        response.sendRedirect("../../auth/login/?error=Logout");
         return;
     }
     UserDao userDao = new UserDaoImpl();
@@ -49,7 +49,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../css/index.css">
     <script src="../../js/main.js" defer></script>
-    <title>Score Management System | Register</title>
+    <title>学生成绩管理系统 | 用户中心</title>
 </head>
 
 <body>
@@ -66,7 +66,7 @@
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">关于</a>
                 </li>
                 <!-- <li class="nav-item">
                 <a class="btn btn-primary " href="#">Logout</a>
@@ -76,7 +76,7 @@
     </div>
     <div class="container">
         <div class="main-content">
-            <h2 class="main-tile">Score Management System</h2>
+            <h2 class="main-tile">学生成绩管理系统 - 管理员</h2>
 
             <div class="container">
                 <!-- Nav tabs -->
@@ -85,17 +85,16 @@
                         <a class="nav-link active" data-toggle="tab" href="#personal-information">Personal Information</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#teacher-management">Teacher
-                            Management</a>
+                        <a class="nav-link active" data-toggle="tab" href="#teacher-management">教师管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#student-management">Student Management</a>
+                        <a class="nav-link" data-toggle="tab" href="#student-management">学生管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#course-management">Course Management</a>
+                        <a class="nav-link" data-toggle="tab" href="#course-management">课程管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../profile/">Profile</a>
+                        <a class="nav-link" href="../profile/">个人设置</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
@@ -117,11 +116,11 @@
                                         <thead class="btn-light">
                                         <tr>
                                             <td class="col-sm-1">ID</td>
-                                            <td class="col-sm-2">Name</td>
-                                            <td class="col-sm-1">Gender</td>
-                                            <td class="col-sm-4">Profession</td>
-                                            <td class="col-sm-2">Number of Courses</td>
-                                            <td class="col-sm-2">Option</td>
+                                            <td class="col-sm-2">姓名</td>
+                                            <td class="col-sm-1">性别</td>
+                                            <td class="col-sm-4">方向</td>
+                                            <td class="col-sm-2">课程数</td>
+                                            <td class="col-sm-2">选项</td>
                                         </tr>
                                         </thead>
                                     </table>
@@ -213,11 +212,11 @@
                                         <thead class="btn-light">
                                         <tr>
                                             <td class="col-sm-1">ID</td>
-                                            <td class="col-sm-2">Name</td>
-                                            <td class="col-sm-1">Gender</td>
-                                            <td class="col-sm-4">Major</td>
-                                            <td class="col-sm-2">Number of Courses</td>
-                                            <td class="col-sm-2">Option</td>
+                                            <td class="col-sm-2">姓名</td>
+                                            <td class="col-sm-1">性别</td>
+                                            <td class="col-sm-4">专业</td>
+                                            <td class="col-sm-2">选课数</td>
+                                            <td class="col-sm-2">选项</td>
                                         </tr>
                                         </thead>
                                     </table>

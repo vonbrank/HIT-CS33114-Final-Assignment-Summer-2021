@@ -19,4 +19,6 @@ public interface UserDao {
 
     public int remove(String id);
 
+    public boolean login(String userid, String pwdHash);
+
 }

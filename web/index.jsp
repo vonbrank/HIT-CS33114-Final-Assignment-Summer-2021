@@ -1,4 +1,4 @@
-<%--
+<%@ page import="cn.edu.hit.sms.entity.user.User" %><%--
     Created by IntelliJ IDEA.
     User: VonBrank
     Date: 2021/8/1
@@ -20,7 +20,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/main.js" defer></script>
-    <title>Welcome to Score Management System | Harbin Institute of Technology</title>
+    <title>欢迎访问 - 学生成绩管理系统 | 哈尔滨工业大学</title>
 </head>
 
 <body>
@@ -36,20 +36,29 @@
             <a class="navbar-brand" href="./">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">关于</a>
                 </li>
             </ul>
         </div>
     </div>
     <div class="main-content">
-        <h2 class="main-tile">Score Management System</h2>
+        <h2 class="main-tile">学生成绩管理系统</h2>
         <div>
-            <a href="./auth/login" class="btn btn-primary">Login</a>
+            <a href="./auth/login" class="btn btn-primary">
+                <%
+                    Object obj = request.getSession().getAttribute("user");
+                    if(!(obj instanceof User) ){
+                        out.print("登录");
+                    }
+                    else {
+                        out.print("用户中心");
+                    }
+                %>
+            </a>
         </div>
     </div>
     <div class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">
-            <!-- <a class="navbar-brand" href="#">Von Brank</a> -->
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">©2021</a>

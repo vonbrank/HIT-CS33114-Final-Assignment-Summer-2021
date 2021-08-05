@@ -14,7 +14,7 @@
 <%
     Object obj = request.getSession().getAttribute("user");
     if(!(obj instanceof Teacher) ){
-        response.sendRedirect("../../auth/login/?op=LogoutError");
+        response.sendRedirect("../../auth/login/?error=Logout");
         return;
     }
     Teacher teacher;
@@ -39,7 +39,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../css/index.css">
     <script src="../../js/main.js" defer></script>
-    <title>Score Management System | Register</title>
+    <title>学生成绩管理系统 | 用户中心</title>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">关于</a>
                 </li>
                 <!-- <li class="nav-item">
                       <a class="btn btn-primary " href="#">Logout</a>
@@ -66,8 +66,20 @@
     </div>
     <div class="container">
         <div class="main-content">
-            <h2 class="main-tile">Score Management System</h2>
-
+            <h2 class="main-tile">学生成绩管理系统 - 教师</h2>
+            <%
+                if(request.getParameter("error") != null) {
+            %>
+            <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <%
+                    String error = request.getParameter("error");
+                    if(error.equals("IllegalScore")) out.print("请输入一个整数。");
+                %>
+            </div>
+            <%
+                }
+            %>
             <div class="container">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
@@ -75,10 +87,10 @@
                                 <a class="nav-link active" data-toggle="tab" href="#personal-information">Personal Information</a>
                             </li> -->
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#course-management">Course Management</a>
+                        <a class="nav-link active" data-toggle="tab" href="#course-management">课程管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../profile/">Profile</a>
+                        <a class="nav-link" href="../profile/">个人设置</a>
                     </li>
                     <!-- <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
@@ -125,15 +137,14 @@
                                             <td class="col-sm-3">
                                                 <div class="btn-group btn-group-sm">
                                                     <a class="card-link btn btn-primary" data-toggle="collapse"
-                                                       href="#collapse-01">Details</a>
-                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
+                                                       href="#course-<%=courseCnt%>">详细信息</a>
                                                 </div>
                                             </td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div id="collapse-01" class="collapse" data-parent="#courseAccordion">
+                                <div id="course-<%=courseCnt%>" class="collapse" data-parent="#courseAccordion">
                                     <div class="card-body">
 
                                         <label>
@@ -141,7 +152,7 @@
                                         </label>
 
                                         <table class="table table-hover">
-                                            <thead class="btn-light" style="position: sticky; top: 0;">
+                                            <thead class="bg-light" style="position: sticky; top: 0; z-index: 100">
                                             <tr>
                                                 <td>ID</td>
                                                 <td>Name</td>
@@ -165,32 +176,37 @@
                                                     <button type="button" class="btn btn-primary btn-sm"
                                                             data-toggle="modal"
                                                             data-target="#scoreModal-<%=scoreCnt%>">
-                                                        Modify Score
+                                                        修改
                                                     </button>
                                                     <div class="modal fade" id="scoreModal-<%=scoreCnt%>">
                                                         <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h4 class="modal-title">Enter the score</h4>
+                                                                    <h4 class="modal-title">输入成绩</h4>
                                                                     <button type="button" class="close"
                                                                             data-dismiss="modal">&times;
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <form action="">
+                                                                    <form action="../../CourseServlet" method="post">
+                                                                        <input type="hidden" name="sid" value="<%=score.getSid()%>">
+                                                                        <input type="hidden" name="sname" value="<%=score.getSname()%>">
+                                                                        <input type="hidden" name="cid" value="<%=score.getCid()%>">
+                                                                        <input type="hidden" name="cname" value="<%=score.getCname()%>">
+                                                                        <input type="hidden" name="op" value="modifyScore">
                                                                         <input type="text" class="form-control"
                                                                                id="scoreModify-<%=scoreCnt%>"
-                                                                               name="scoreModify-<%=scoreCnt%>">
+                                                                               name="score" value="" autocomplete="off">
                                                                         <button type="submit"
                                                                                 class="btn btn-primary btn-block mt-3">
-                                                                            Submit
+                                                                            提交
                                                                         </button>
                                                                     </form>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button"
                                                                             class="btn btn-secondary btn-danger"
-                                                                            data-dismiss="modal">Cloese
+                                                                            data-dismiss="modal">关闭
                                                                     </button>
                                                                 </div>
                                                             </div>

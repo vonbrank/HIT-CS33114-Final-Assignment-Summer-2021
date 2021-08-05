@@ -229,4 +229,19 @@ public class UserDaoImpl implements UserDao {
         String sql = String.format("DELETE FROM users WHERE id='%s';", id);
         return DBUtils.executeUpdate(sql);
     }
+
+    @Override
+    public boolean login(String userid, String pwdHash) {
+        String sql = String.format("SELECT COUNT(*) FROM users WHERE userid='%s' AND pwdHash='%s'", userid, pwdHash);
+        ResultSet rs = DBUtils.executeQuery(sql);
+        boolean flag = false;
+        try {
+            rs.next();
+            int cnt = rs.getInt(1);
+            flag = cnt > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return flag;
+    }
 }

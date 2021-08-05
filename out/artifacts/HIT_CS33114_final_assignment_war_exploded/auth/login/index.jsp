@@ -50,26 +50,26 @@
                 <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">关于</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container">
             <div class="main-content">
-                <h2 class="main-tile">Score Management System</h2>
+                <h2 class="main-tile">学生成绩管理系统</h2>
                 <div class="login-box col-10 col-md-8 col-lg-6 col-xl-4">
                     <div class="card">
-                        <div class="card-header">Login to manage your scores</div>
+                        <div class="card-header">登录以管理您的成绩</div>
                         <div class="card-body">
                             <form action="../../LoginServlet" method="post">
                                 <div class="form-group">
-                                    <label for="userid">User ID:</label>
+                                    <label for="userid">用户 ID:</label>
                                     <input type="text" class="form-control" id="userid"
-                                        name="userid" placeholder="Enter user ID">
+                                        name="userid" placeholder="Enter user ID" autocomplete="off">
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd">Password:</label>
+                                    <label for="pwd">密码:</label>
                                     <input type="password" class="form-control" id="pwd"
                                         name="pwd" placeholder="Enter password">
                                 </div>
@@ -82,17 +82,46 @@
                                             Me</label>
                                     </div>
                                     <div>
-                                        <a href="#">Forget Password?</a>
+                                        <a href="./?error=ForgetPassword">忘记密码?</a>
                                     </div>
                                 </div>
                                 <input type="hidden" name="op" value="login">
-                                <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+
+                                <button type="submit" class="btn btn-primary btn-block mt-3">登录</button>
                                 <div class="mt-2">
-                                    <a href="../register">Register</a>
+                                    <a href="../register">还没有账户？ 注册</a>
                                 </div>
+                                <%
+                                    if(request.getParameter("error") != null) {
+                                %>
+                                <div class="alert alert-danger alert-dismissible fade show">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <%
+                                        String error = request.getParameter("error");
+                                        if(error.equals("WrongPassword")) out.print("用户名不存在或密码错误");
+                                        if(error.equals("ForgetPassword")) out.print("忘记密码？ 那你凉了。");
+                                        if(error.equals("Logout")) out.print("未登录，请先登录。");
+                                    %>
+                                </div>
+                                <%
+                                    }
+                                %>
+                                <%
+                                    if(request.getParameter("info") != null) {
+                                %>
+                                <div class="alert alert-success alert-dismissible fade show">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <%
+                                        String info = request.getParameter("info");
+                                        if(info.equals("RegisterSuccess")) out.print("注册成功，请登录。");
+                                        if(info.equals("ResetPassword")) out.print("重置密码成功，请重新登录。");
+                                    %>
+                                </div>
+                                <%
+                                    }
+                                %>
                             </form>
                         </div>
-                        <!-- <div class="card-footer">底部</div> -->
                     </div>
                 </div>
 

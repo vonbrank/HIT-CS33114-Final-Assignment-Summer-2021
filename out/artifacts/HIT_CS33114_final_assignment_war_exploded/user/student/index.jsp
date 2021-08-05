@@ -15,7 +15,7 @@
 <%
     Object obj = request.getSession().getAttribute("user");
     if(!(obj instanceof Student) ){
-        response.sendRedirect("../../auth/login/?op=LogoutError");
+        response.sendRedirect("../../auth/login/?error=Logout");
         return;
     }
     Student student = (Student) obj;
@@ -41,7 +41,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../css/index.css">
     <script src="../../js/main.js" defer></script>
-    <title>Score Management System | Register</title>
+    <title>学生成绩管理系统 | 用户中心</title>
 </head>
 
 <body>
@@ -58,22 +58,22 @@
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">关于</a>
                 </li>
             </ul>
         </div>
     </div>
     <div class="container">
         <div class="main-content">
-            <h2 class="main-tile">Score Management System</h2>
+            <h2 class="main-tile">学生成绩管理系统 - 学生</h2>
             <div class="container">
                 <ul class="nav nav-pills" role="tablist">
 
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#course-management">Course Management</a>
+                        <a class="nav-link active" data-toggle="tab" href="#course-management">课程管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../profile/">Profile</a>
+                        <a class="nav-link" href="../profile/">个人设置</a>
                     </li>
                 </ul>
 
@@ -98,16 +98,16 @@
                                 </table>
                             </div>
                             <div id="collapse-04" class="collapse">
-                                <form action="">
+                                <form action="../../CourseServlet" method="post">
                                     <div class="card">
                                         <div class="card-body mb-0">
                                             <table class="table table-hover mb-0">
                                                 <thead>
-                                                    <td class="col-sm-1">Select</td>
+                                                    <td class="col-sm-1">选中</td>
                                                     <td class="col-sm-1">ID</td>
-                                                    <td class="col-sm-4">Name</td>
-                                                    <td class="col-sm-3">Teacher Name</td>
-                                                    <td class="col-sm-3">Num of Student</td>
+                                                    <td class="col-sm-4">课程名</td>
+                                                    <td class="col-sm-3">任课老师</td>
+                                                    <td class="col-sm-3">已选人数</td>
 <%--                                                    <td class="col-sm-2"></td>--%>
                                                 </thead>
                                                 <tbody>
@@ -123,6 +123,7 @@
                                                         <div class="custom-control custom-checkbox mb-3">
                                                             <input type="checkbox" class="custom-control-input"
                                                                    id="courseCustomCheck-<%=courseCnt%>"
+                                                                   name="courseSelect" value="<%=course.getId()%>"
                                                                    <%
                                                                    boolean flag = false;
                                                                     for(int j=0; j<courseSelect.size(); j++) {
@@ -147,41 +148,10 @@
                                                 <%
                                                     }
                                                 %>
-                                                <tr>
-                                                    <td class="col-sm-2">
-                                                        <div class="custom-control custom-checkbox mb-3">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                   id="customCheck2"
-                                                                   name="example1" value="00001">
-                                                            <label class="custom-control-label"
-                                                                   for="customCheck2"></label>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-sm-2">000001</td>
-                                                    <td class="col-sm-2">Data Structure</td>
-                                                    <td class="col-sm-2">Lihua</td>
-                                                    <td class="col-sm-2">32</td>
-                                                    <td class="col-sm-2"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="col-sm-2">
-                                                        <div class="custom-control custom-checkbox mb-3">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                   id="customCheck3"
-                                                                   name="example1" value="00001">
-                                                            <label class="custom-control-label"
-                                                                   for="customCheck3"></label>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-sm-2">000001</td>
-                                                    <td class="col-sm-2">Data Structure</td>
-                                                    <td class="col-sm-2">Lihua</td>
-                                                    <td class="col-sm-2">32</td>
-                                                    <td class="col-sm-2"></td>
-                                                </tr>
 
                                                 </tbody>
                                             </table>
+                                            <input type="hidden" name="op" value="selectCourse">
                                             <button type="submit" class="btn btn-primary btn-block">Submit</button>
                                         </div>
                                     </div>
@@ -196,11 +166,11 @@
                                         </td>
                                         <tr>
                                             <td class="col-sm-1">ID</td>
-                                            <td class="col-sm-4">Name</td>
-                                            <td class="col-sm-2">Teacher Name</td>
-                                            <td class="col-sm-2">Number of Students</td>
-                                            <td class="col-sm-1">Score</td>
-                                            <td class="col-sm-2">Option</td>
+                                            <td class="col-sm-4">课程名</td>
+                                            <td class="col-sm-2">任课教师</td>
+                                            <td class="col-sm-2">已选人数</td>
+                                            <td class="col-sm-1">得分</td>
+                                            <td class="col-sm-2">选项</td>
 
                                         </tr>
                                         </thead>
@@ -218,9 +188,15 @@
                                             <td class="col-sm-2"><%=course.getNumOfStu()%></td>
                                             <td class="col-sm-1"><%=score.getScore()%></td>
                                             <td class="col-sm-2">
-                                                <div class="btn-group btn-group-sm">
-                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
-                                                </div>
+                                                <form action="../../CourseServlet" method="post">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <input type="hidden" name="cid" value="<%=course.getId()%>">
+                                                        <input type="hidden" name="cname" value="<%=course.getName()%>">
+                                                        <input type="hidden" name="op" value="deleteCourse">
+                                                        <button type="submit" class="card-link btn btn-danger">Delete</button>
+                                                    </div>
+                                                </form>
+
                                             </td>
                                         </tr>
                                         <%
