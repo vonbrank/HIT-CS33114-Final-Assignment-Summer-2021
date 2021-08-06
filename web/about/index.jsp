@@ -43,6 +43,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav" style="display: flex; align-items: center;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../">首页</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
                     <% if(obj instanceof User){ %>
                     <li class="nav-item">

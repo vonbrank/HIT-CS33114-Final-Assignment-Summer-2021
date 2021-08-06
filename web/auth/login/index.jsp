@@ -48,11 +48,21 @@
         <div class="navbar navbar-expand-sm bg-light navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../about">关于</a>
-                    </li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav" style="display: flex; align-items: center;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../">首页</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about">关于</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="container">
