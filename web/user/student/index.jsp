@@ -28,7 +28,7 @@
     List<Course> courseAll = courseDao.getAllCourses();
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -54,11 +54,20 @@
 
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center;">
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto"  style="display: flex; align-items: center;">
+                <li class="nav-item">
+                    <form action="../../LoginServlet" method="post">
+                        <input type="hidden" name="op" value="logout">
+                        <div class="btn-group btn-group-sm">
+                            <button type="submit" class="btn btn-danger">登出</button>
+                        </div>
+
+                    </form>
+                </li>
                 <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="#">关于</a>
+                    <a class="nav-link" href="../../about">关于</a>
                 </li>
             </ul>
         </div>
@@ -186,14 +195,18 @@
                                             <td class="col-sm-4"><%=course.getName()%></td>
                                             <td class="col-sm-2"><%=course.getTeacher().getName()%></td>
                                             <td class="col-sm-2"><%=course.getNumOfStu()%></td>
-                                            <td class="col-sm-1"><%=score.getScore()%></td>
+                                            <td class="col-sm-1"><%
+                                                if(score.getScore() == -100) out.print("N/A");
+                                                else out.print(score.getScore());
+                                            %></td>
                                             <td class="col-sm-2">
                                                 <form action="../../CourseServlet" method="post">
                                                     <div class="btn-group btn-group-sm">
                                                         <input type="hidden" name="cid" value="<%=course.getId()%>">
                                                         <input type="hidden" name="cname" value="<%=course.getName()%>">
                                                         <input type="hidden" name="op" value="deleteCourse">
-                                                        <button type="submit" class="card-link btn btn-danger">Delete</button>
+                                                        <button type="submit" class="card-link btn btn-danger"
+                                                                onclick="return confirm('确定要退课吗？你的学分将永久失去！（真的很久！）');">退课</button>
                                                     </div>
                                                 </form>
 

@@ -13,7 +13,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,11 +38,17 @@
 
     <div class="body-container">
         <div class="navbar navbar-expand-sm bg-light navbar-light">
-            <div class="container">
+            <div class="container" style="display: flex; align-items: center;">
                 <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                    <li class="nav-item">
+                        <form action="../../LoginServlet" method="post">
+                            <input type="hidden" name="op" value="logout">
+                            <button type="submit" class="btn btn-danger btn-sm">登出</button>
+                        </form>
+                    </li>
                     <li class="nav-item" id="nav-about">
-                        <a class="nav-link" href="#">关于</a>
+                        <a class="nav-link" href="../../about">关于</a>
                     </li>
                 </ul>
             </div>
@@ -69,21 +75,20 @@
                 <div class="container">
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#home">个人信息</a>
+                            <a class="nav-link active" data-toggle="tab" href="#personal-info">个人信息</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#menu1">安全选项</a>
+                            <a class="nav-link" data-toggle="tab" href="#security-options">安全选项</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../../auth/login/">用户中心</a>
                         </li>
                     </ul>
 
-                    <!-- Tab panes -->
                     <div class="tab-content">
-                        <div id="home" class="container tab-pane active"><br>
+                        <div id="personal-info" class="container tab-pane active"><br>
                             <div class="card">
-                                <div class="card-header">Check your information</div>
+                                <div class="card-header">检查您的个人信息</div>
                                 <div class="card-body">
                                     <table class="table table-hover">
                                         <tbody>
@@ -131,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="menu1" class="container tab-pane fade"><br>
+                        <div id="security-options" class="container tab-pane fade"><br>
                             <div class="card">
                                 <div class="card-header">修改密码</div>
                                 <div class="card-body">

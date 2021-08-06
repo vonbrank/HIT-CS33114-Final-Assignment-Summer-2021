@@ -26,7 +26,7 @@
     List<Score> scoreList;
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -52,15 +52,18 @@
 
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center;">
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="#">关于</a>
+            <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                <li class="nav-item">
+                    <form action="../../LoginServlet" method="post">
+                        <input type="hidden" name="op" value="logout">
+                        <button type="submit" class="btn btn-danger btn-sm">登出</button>
+                    </form>
                 </li>
-                <!-- <li class="nav-item">
-                      <a class="btn btn-primary " href="#">Logout</a>
-                  </li> -->
+                <li class="nav-item" id="nav-about">
+                    <a class="nav-link" href="../../about">关于</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -81,23 +84,18 @@
                 }
             %>
             <div class="container">
-                <!-- Nav tabs -->
+
                 <ul class="nav nav-tabs" role="tablist">
-                    <!-- <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#personal-information">Personal Information</a>
-                            </li> -->
+
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#course-management">课程管理</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../profile/">个人设置</a>
                     </li>
-                    <!-- <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
-                            </li> -->
                 </ul>
 
-                <!-- Tab panes -->
+
                 <div class="tab-content">
                     <div id="course-management" class="container tab-pane active mt-3">
                         <div id="courseAccordion">
@@ -108,8 +106,6 @@
                                         <tr>
                                             <td class="col-sm-2">ID</td>
                                             <td class="col-sm-4">Name</td>
-<%--                                            <td class="col-sm-2">Teacher ID</td>--%>
-<%--                                            <td class="col-sm-2">Teacher Name</td>--%>
                                             <td class="col-sm-3">Number of Students</td>
                                             <td class="col-sm-3">Option</td>
                                         </tr>
@@ -171,7 +167,10 @@
                                             <tr>
                                                 <td class="col-2"><%=score.getSid()%></td>
                                                 <td class="col-4"><%=score.getSname()%></td>
-                                                <td class="col-2"><%=score.getScore()%></td>
+                                                <td class="col-2"><%
+                                                    if(score.getScore() == -100) out.print("N/A");
+                                                    else out.print(score.getScore());
+                                                %></td>
                                                 <td class="col-2">
                                                     <button type="button" class="btn btn-primary btn-sm"
                                                             data-toggle="modal"
@@ -199,8 +198,7 @@
                                                                                name="score" value="" autocomplete="off">
                                                                         <button type="submit"
                                                                                 class="btn btn-primary btn-block mt-3">
-                                                                            提交
-                                                                        </button>
+                                                                            提交 </button>
                                                                     </form>
                                                                 </div>
                                                                 <div class="modal-footer">

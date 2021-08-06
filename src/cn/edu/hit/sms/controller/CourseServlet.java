@@ -1,10 +1,13 @@
 package cn.edu.hit.sms.controller;
 
 import cn.edu.hit.sms.dao.CourseDao;
+import cn.edu.hit.sms.dao.UserDao;
 import cn.edu.hit.sms.dao.impl.CourseDaoImpl;
+import cn.edu.hit.sms.dao.impl.UserDaoImpl;
 import cn.edu.hit.sms.entity.course.Course;
 import cn.edu.hit.sms.entity.course.Score;
 import cn.edu.hit.sms.entity.user.Student;
+import cn.edu.hit.sms.entity.user.Teacher;
 import cn.edu.hit.sms.entity.user.User;
 
 import javax.servlet.*;
@@ -39,6 +42,7 @@ public class CourseServlet extends HttpServlet {
         if(op.equals("selectCourse")) selectCourse(request, response);
         if(op.equals("deleteCourse")) deleteCourse(request, response);
         if(op.equals("modifyScore")) modifyScore(request, response);
+        if(op.equals("assignTeacher")) assignTeacher(request, response);
     }
 
     private void selectCourse(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -101,5 +105,20 @@ public class CourseServlet extends HttpServlet {
         Score score = new Score(sid, sname, cid, cname, scoreValue);
         System.out.println(courseDao.modifyScore(score));
         response.sendRedirect("./user/teacher/");
+    }
+
+    private void assignTeacher  (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String tid = request.getParameter("teacherAssignment");
+        String cid = request.getParameter("cid");
+        CourseDao courseDao = new CourseDaoImpl();
+        UserDao userDao = new UserDaoImpl();
+        PrintWriter out = response.getWriter();
+        out.println(tid);
+        out.println(cid);
+        Course course = courseDao.getCourseByCid(cid);
+        course.setTeacher((Teacher) userDao.getById(tid));
+        out.println(course);
+        courseDao.modifyCourse(course);
+        response.sendRedirect("./user/staff/");
     }
 }

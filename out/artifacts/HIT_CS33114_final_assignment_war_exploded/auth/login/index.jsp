@@ -20,7 +20,7 @@
 %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../css/index.css">
     <script src="../../js/main.js" defer></script>
-    <title>Score Management System | Register</title>
+    <title>学生成绩管理系统 | 登录</title>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
                 <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">关于</a>
+                        <a class="nav-link" href="../../about">关于</a>
                     </li>
                 </ul>
             </div>

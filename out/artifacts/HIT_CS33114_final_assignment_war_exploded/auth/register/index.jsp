@@ -16,7 +16,7 @@
     }
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -29,14 +29,10 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../css/index.css">
     <script src="../../js/main.js" defer></script>
-    <script>
-
-    </script>
-    <title>Score Management System | Register</title>
+    <title>学生成绩管理系统 | 注册</title>
 </head>
 
 <body>
-<!-- <p id="demo"></p> -->
 <div class="bg-video">
     <video class="video-01" autoplay muted loop>
         <source src="http://en.hit.edu.cn/public/video/z.mp4" type="video/mp4">
@@ -49,11 +45,8 @@
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="#">关于</a>
+                    <a class="nav-link" href="../../about">关于</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="btn btn-primary " href="#">Logout</a>
-                </li> -->
             </ul>
         </div>
     </div>

@@ -36,7 +36,7 @@
     Score score;
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -62,15 +62,18 @@
 
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center;">
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="#">关于</a>
+            <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                <li class="nav-item">
+                    <form action="../../LoginServlet" method="post">
+                        <input type="hidden" name="op" value="logout">
+                        <button type="submit" class="btn btn-danger btn-sm">登出</button>
+                    </form>
                 </li>
-                <!-- <li class="nav-item">
-                <a class="btn btn-primary " href="#">Logout</a>
-            </li> -->
+                <li class="nav-item" id="nav-about">
+                    <a class="nav-link" href="../../about">关于</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -96,12 +99,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../profile/">个人设置</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
-                    </li> -->
+
                 </ul>
 
-                <!-- Tab panes -->
                 <div class="tab-content">
 
                     <%
@@ -147,8 +147,8 @@
                                             <td class="col-sm-2">
                                                 <div class="btn-group btn-group-sm">
                                                     <a class="card-link btn btn-primary" data-toggle="collapse"
-                                                       href="#<%="teacher-"+teacherCnt%>">Details</a>
-                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
+                                                       href="#<%="teacher-"+teacherCnt%>">详细内容</a>
+<%--                                                    <a class="card-link btn btn-danger" href="#">Delete</a>--%>
                                                 </div>
                                             </td>
                                         </tr>
@@ -181,11 +181,6 @@
                                                 <td><%=course.getNumOfStu()%></td>
                                             </tr>
 
-<%--                                            <tr>--%>
-<%--                                                <td>000001</td>--%>
-<%--                                                <td>Data Structure</td>--%>
-<%--                                                <td>90</td>--%>
-<%--                                            </tr>--%>
                                             <%
                                                 }
                                             %>
@@ -241,8 +236,8 @@
                                             <td class="col-sm-2">
                                                 <div class="btn-group btn-group-sm">
                                                     <a class="card-link btn btn-primary" data-toggle="collapse"
-                                                       href="#score-<%=studentCnt%>">Details</a>
-                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
+                                                       href="#score-<%=studentCnt%>">详细内容</a>
+<%--                                                    <a class="card-link btn btn-danger" href="#">Delete</a>--%>
                                                 </div>
                                             </td>
                                         </tr>
@@ -273,7 +268,10 @@
                                             <tr>
                                                 <td><%=score.getCid()%></td>
                                                 <td><%=score.getCname()%></td>
-                                                <td><%=score.getScore()%></td>
+                                                <td><%
+                                                    if(score.getScore() == -100) out.print("N/A");
+                                                    else out.print(score.getScore());
+                                                %></td>
                                             </tr>
 
                                             <%
@@ -294,8 +292,9 @@
 
                     <%
                         courseList = courseDao.getAllCourses();
+                        teacherList = userDao.getAllTeachers();
                     %>
-                    <div id="course-management" class="container tab-pane fade">
+                    <div id="course-management" class="container tab-pane fade mt-3">
                         <div id="courseAccordion">
                             <div class="card">
                                 <div class="card-header mb-0">
@@ -332,8 +331,8 @@
                                             <td class="col-sm-2">
                                                 <div class="btn-group btn-group-sm">
                                                     <a class="card-link btn btn-primary" data-toggle="collapse"
-                                                       href="#course-<%=courseCnt%>">Details</a>
-                                                    <a class="card-link btn btn-danger" href="#">Delete</a>
+                                                       href="#course-<%=courseCnt%>">详细内容</a>
+<%--                                                    <a class="card-link btn btn-danger" href="#">Delete</a>--%>
                                                 </div>
                                             </td>
                                         </tr>
@@ -344,30 +343,63 @@
                                 <div id="course-<%=courseCnt%>" class="collapse" data-parent="#courseAccordion">
                                     <div class="card-body">
 
-                                        <form action="" method="POST">
-                                            <div class="form-group">
-                                                <form action="">
-                                                    <label for="teacherAssignment-01">
-                                                        <h4>Assign a Teacher</h4>
-                                                    </label>
-                                                    <select class="form-control" id="teacherAssignment-01"
-                                                            name="teacherAssignment-01">
-                                                        <option value="Teacher-01" selected>
-                                                            Teacher-01
-                                                        </option>
-                                                        <option value="Teacher-02">
-                                                            Teacher-02
-                                                        </option>
-                                                        <option value="Teacher-03">
-                                                            Teacher-03
-                                                        </option>
-                                                    </select>
-                                                    <button type="submit"
-                                                            class="btn btn-primary btn-block mt-3">Assign</button>
-                                                </form>
+                                        <div class="mt-3 mb-3">
+                                            <button type="button" class="btn btn-primary btn-sm"
+                                                    data-toggle="modal"
+                                                    data-target="#courseModal-<%=courseCnt%>">
+                                                指派任课教师
+                                            </button>
+                                        </div>
 
+                                        <div class="modal fade" id="courseModal-<%=courseCnt%>">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">选择一名教师</h4>
+                                                        <button type="button" class="close"
+                                                                data-dismiss="modal">&times;
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="../../CourseServlet" method="post">
+
+                                                            <select  class="form-control" name="teacherAssignment"
+                                                                     id="teacherAssignment-<%=courseCnt%>"
+                                                                     autocomplete="off">
+                                                                <%
+                                                                    for(int j=0; j<teacherList.size(); j++) {
+                                                                        teacher = teacherList.get(j);
+
+                                                                %>
+                                                                <option value="<%=teacher.getId()%>"
+                                                                        <%if(course.getTeacher().getId().equals(teacher.getId())) {
+                                                                            out.print(" selected ");
+                                                                        }%> >
+                                                                    <%out.print(String.format("%s - %s",
+                                                                            teacher.getId(),
+                                                                            teacher.getName()));%>
+                                                                </option>
+                                                                <%
+                                                                    }
+                                                                %>
+                                                            </select>
+                                                            <input type="hidden" name="cid" value="<%=course.getId()%>">
+                                                            <input type="hidden" name="op" value="assignTeacher">
+                                                            <button type="submit"
+                                                                    class="btn btn-primary btn-block mt-3">
+                                                                提交
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button"
+                                                                class="btn btn-secondary btn-danger"
+                                                                data-dismiss="modal">关闭
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </form>
+                                        </div>
 
                                         <label>
                                             <h4>Student List</h4>
@@ -392,7 +424,10 @@
                                             <tr>
                                                 <td><%=score.getSid()%></td>
                                                 <td><%=score.getSname()%></td>
-                                                <td><%=score.getScore()%></td>
+                                                <td><%
+                                                    if(score.getScore() == -100) out.print("N/A");
+                                                    else out.print(score.getScore());
+                                                %></td>
                                             </tr>
                                             <%
                                                 }
