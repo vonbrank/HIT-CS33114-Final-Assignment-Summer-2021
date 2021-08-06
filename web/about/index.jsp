@@ -24,7 +24,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/index.css">
     <script src="../js/main.js" defer></script>
-    <title>欢迎访问 - 学生成绩管理系统 | 哈尔滨工业大学</title>
+    <title>学生成绩管理系统 | 关于</title>
 </head>
 
 <body>
@@ -35,22 +35,28 @@
 </div>
 
 <div class="body-container">
+
     <div class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container" style="display: flex; align-items: center;">
+        <div class="container">
             <a class="navbar-brand" href="../">Harbin Institute of Technology</a>
-            <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
-                <% if(obj instanceof User){ %>
-                <li class="nav-item">
-                    <form action="./LoginServlet" method="post">
-                        <input type="hidden" name="op" value="logout">
-                        <button type="submit" class="btn btn-danger btn-sm">登出</button>
-                    </form>
-                </li>
-                <% } %>
-                <li class="nav-item">
-                    <a class="nav-link" href="./about">关于</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                    <% if(obj instanceof User){ %>
+                    <li class="nav-item">
+                        <form action="./LoginServlet" method="post">
+                            <input type="hidden" name="op" value="logout">
+                            <button type="submit" class="btn btn-danger btn-sm">登出</button>
+                        </form>
+                    </li>
+                    <% } %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about">关于</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="main-content">

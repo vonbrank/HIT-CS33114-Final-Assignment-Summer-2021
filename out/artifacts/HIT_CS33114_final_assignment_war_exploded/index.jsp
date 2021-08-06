@@ -33,13 +33,17 @@
             <source src="http://en.hit.edu.cn/public/video/z.mp4" type="video/mp4">
         </video>
     </div>
-
     <div class="body-container">
+
         <div class="navbar navbar-expand-sm bg-light navbar-light">
-            <div class="container" style="display: flex; align-items: center;">
+            <div class="container">
                 <a class="navbar-brand" href="./">Harbin Institute of Technology</a>
-                <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
-                    <% if(obj instanceof User){ %>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                        <% if(obj instanceof User){ %>
                         <li class="nav-item">
                             <form action="./LoginServlet" method="post">
                                 <input type="hidden" name="op" value="logout">
@@ -47,10 +51,11 @@
                             </form>
                         </li>
                         <% } %>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about">关于</a>
-                            </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about">关于</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="main-content">

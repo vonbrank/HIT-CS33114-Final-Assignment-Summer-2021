@@ -54,22 +54,24 @@
 
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container" style="display: flex; align-items: center;">
+        <div class="container">
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-            <ul class="navbar-nav ml-auto"  style="display: flex; align-items: center;">
-                <li class="nav-item">
-                    <form action="../../LoginServlet" method="post">
-                        <input type="hidden" name="op" value="logout">
-                        <div class="btn-group btn-group-sm">
-                            <button type="submit" class="btn btn-danger">登出</button>
-                        </div>
-
-                    </form>
-                </li>
-                <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="../../about">关于</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                    <li class="nav-item">
+                        <form action="../../LoginServlet" method="post">
+                            <input type="hidden" name="op" value="logout">
+                            <button type="submit" class="btn btn-danger btn-sm">登出</button>
+                        </form>
+                    </li>
+                    <li class="nav-item" id="nav-about">
+                        <a class="nav-link" href="../../about">关于</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -89,17 +91,17 @@
                 <div class="tab-content">
                     <div id="course-management" class="container tab-pane active mt-3">
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header ">
                                 <table class="table table-hover mb-0">
                                     <tbody>
                                     <tr>
-                                        <td class="col-sm-6">
-                                            <h4>Select your Courses</h4>
+                                        <td class="col-6">
+                                            <div>选课</div>
                                         </td>
-                                        <td class="col-sm-6">
+                                        <td class="col-6">
                                             <div class="btn-group">
                                                 <a class="card-link btn btn-primary btn-sm" data-toggle="collapse"
-                                                   href="#collapse-04">More</a>
+                                                   href="#collapse-04">更多</a>
                                             </div>
                                         </td>
                                     </tr>
@@ -109,14 +111,14 @@
                             <div id="collapse-04" class="collapse">
                                 <form action="../../CourseServlet" method="post">
                                     <div class="card">
-                                        <div class="card-body mb-0">
-                                            <table class="table table-hover mb-0">
+                                        <div class="card-body mb-0 table-responsive-lg">
+                                            <table class="table table-hover mb-0" style="min-width: 768px">
                                                 <thead>
-                                                    <td class="col-sm-1">选中</td>
-                                                    <td class="col-sm-1">ID</td>
-                                                    <td class="col-sm-4">课程名</td>
-                                                    <td class="col-sm-3">任课老师</td>
-                                                    <td class="col-sm-3">已选人数</td>
+                                                    <td class="col-1">选中</td>
+                                                    <td class="col-1">ID</td>
+                                                    <td class="col-4">课程名</td>
+                                                    <td class="col-3">任课老师</td>
+                                                    <td class="col-3">已选人数</td>
 <%--                                                    <td class="col-sm-2"></td>--%>
                                                 </thead>
                                                 <tbody>
@@ -128,7 +130,7 @@
                                                         course = courseAll.get(i);
                                                %>
                                                 <tr>
-                                                    <td class="col-sm-1">
+                                                    <td class="col-1">
                                                         <div class="custom-control custom-checkbox mb-3">
                                                             <input type="checkbox" class="custom-control-input"
                                                                    id="courseCustomCheck-<%=courseCnt%>"
@@ -148,11 +150,10 @@
                                                                    for="courseCustomCheck-<%=courseCnt%>"></label>
                                                         </div>
                                                     </td>
-                                                    <td class="col-sm-1"><%=course.getId()%></td>
-                                                    <td class="col-sm-4"><%=course.getName()%></td>
-                                                    <td class="col-sm-3"><%=course.getTeacher().getName()%></td>
-                                                    <td class="col-sm-3"><%=course.getNumOfStu()%></td>
-<%--                                                    <td class="col-sm-2"></td>--%>
+                                                    <td class="col-1"><%=course.getId()%></td>
+                                                    <td class="col-4"><%=course.getName()%></td>
+                                                    <td class="col-3"><%=course.getTeacher().getName()%></td>
+                                                    <td class="col-3"><%=course.getNumOfStu()%></td>
                                                 </tr>
                                                 <%
                                                     }
@@ -167,19 +168,19 @@
                                 </form>
                             </div>
                             <div class="card">
-                                <div class="card-header">
-                                    <table class="table table-hover mb-0">
+                                <div class="card-header table-responsive-lg">
+                                    <table class="table table-hover mb-0"  style="min-width: 768px">
                                         <thead>
                                         <td colspan="6">
-                                            <h4>Course List</h4>
+                                            <div>课程列表</div>
                                         </td>
                                         <tr>
-                                            <td class="col-sm-1">ID</td>
-                                            <td class="col-sm-4">课程名</td>
-                                            <td class="col-sm-2">任课教师</td>
-                                            <td class="col-sm-2">已选人数</td>
-                                            <td class="col-sm-1">得分</td>
-                                            <td class="col-sm-2">选项</td>
+                                            <td class="col-1">ID</td>
+                                            <td class="col-4">课程名</td>
+                                            <td class="col-2">任课教师</td>
+                                            <td class="col-2">已选人数</td>
+                                            <td class="col-1">得分</td>
+                                            <td class="col-2">选项</td>
 
                                         </tr>
                                         </thead>
@@ -191,15 +192,15 @@
                                                 course = courseDao.getCourseByCid(score.getCid());
                                         %>
                                         <tr>
-                                            <td class="col-sm-1"><%=course.getId()%></td>
-                                            <td class="col-sm-4"><%=course.getName()%></td>
-                                            <td class="col-sm-2"><%=course.getTeacher().getName()%></td>
-                                            <td class="col-sm-2"><%=course.getNumOfStu()%></td>
-                                            <td class="col-sm-1"><%
+                                            <td class="col-1"><%=course.getId()%></td>
+                                            <td class="col-4"><%=course.getName()%></td>
+                                            <td class="col-2"><%=course.getTeacher().getName()%></td>
+                                            <td class="col-2"><%=course.getNumOfStu()%></td>
+                                            <td class="col-1"><%
                                                 if(score.getScore() == -100) out.print("N/A");
                                                 else out.print(score.getScore());
                                             %></td>
-                                            <td class="col-sm-2">
+                                            <td class="col-2">
                                                 <form action="../../CourseServlet" method="post">
                                                     <div class="btn-group btn-group-sm">
                                                         <input type="hidden" name="cid" value="<%=course.getId()%>">

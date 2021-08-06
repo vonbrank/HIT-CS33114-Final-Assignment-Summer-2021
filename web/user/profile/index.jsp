@@ -38,19 +38,24 @@
 
     <div class="body-container">
         <div class="navbar navbar-expand-sm bg-light navbar-light">
-            <div class="container" style="display: flex; align-items: center;">
+            <div class="container">
                 <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-                <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
-                    <li class="nav-item">
-                        <form action="../../LoginServlet" method="post">
-                            <input type="hidden" name="op" value="logout">
-                            <button type="submit" class="btn btn-danger btn-sm">登出</button>
-                        </form>
-                    </li>
-                    <li class="nav-item" id="nav-about">
-                        <a class="nav-link" href="../../about">关于</a>
-                    </li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                        <li class="nav-item">
+                            <form action="../../LoginServlet" method="post">
+                                <input type="hidden" name="op" value="logout">
+                                <button type="submit" class="btn btn-danger btn-sm">登出</button>
+                            </form>
+                        </li>
+                        <li class="nav-item" id="nav-about">
+                            <a class="nav-link" href="../../about">关于</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -94,19 +99,19 @@
                                         <tbody>
                                             <tr>
                                                 <td class="col-6">ID</td>
-                                                <td><%=user.getId()%></td>
+                                                <td class="col-6"><%=user.getId()%></td>
                                             </tr>
                                             <tr>
-                                                <td>姓名</td>
-                                                <td><%=user.getName()%></td>
+                                                <td class="col-6">姓名</td>
+                                                <td class="col-6"><%=user.getName()%></td>
                                             </tr>
                                             <tr>
-                                                <td>性别</td>
-                                                <td><%=user.getGender()%></td>
+                                                <td class="col-6">性别</td>
+                                                <td class="col-6"><%=user.getGender()%></td>
                                             </tr>
                                             <tr>
-                                                <td>用户类型</td>
-                                                <td>
+                                                <td class="col-6">用户类型</td>
+                                                <td class="col-6">
                                                     <%
                                                         if(user instanceof Staff) out.print("Staff");
                                                         if(user instanceof Teacher) out.print("Teacher");
@@ -115,8 +120,8 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>专业 或 方向</td>
-                                                <td>
+                                                <td class="col-6">专业 或 方向</td>
+                                                <td class="col-6">
                                                     <%
                                                         if(user instanceof Staff) out.print("N/A");
                                                         if(user instanceof Teacher) out.print(((Teacher) user).getProfession());

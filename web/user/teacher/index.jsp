@@ -52,19 +52,24 @@
 
 <div class="body-container">
     <div class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container" style="display: flex; align-items: center;">
+        <div class="container">
             <a class="navbar-brand" href="../../">Harbin Institute of Technology</a>
-            <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
-                <li class="nav-item">
-                    <form action="../../LoginServlet" method="post">
-                        <input type="hidden" name="op" value="logout">
-                        <button type="submit" class="btn btn-danger btn-sm">登出</button>
-                    </form>
-                </li>
-                <li class="nav-item" id="nav-about">
-                    <a class="nav-link" href="../../about">关于</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+                    <li class="nav-item">
+                        <form action="../../LoginServlet" method="post">
+                            <input type="hidden" name="op" value="logout">
+                            <button type="submit" class="btn btn-danger btn-sm">登出</button>
+                        </form>
+                    </li>
+                    <li class="nav-item" id="nav-about">
+                        <a class="nav-link" href="../../about">关于</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -100,14 +105,14 @@
                     <div id="course-management" class="container tab-pane active mt-3">
                         <div id="courseAccordion">
                             <div class="card">
-                                <div class="card-header mb-0">
-                                    <table class="table table-hover mb-0">
+                                <div class="card-header mb-0 table-responsive-md">
+                                    <table class="table table-hover mb-0"  style="min-width: 576px">
                                         <thead class="btn-light">
                                         <tr>
-                                            <td class="col-sm-2">ID</td>
-                                            <td class="col-sm-4">Name</td>
-                                            <td class="col-sm-3">Number of Students</td>
-                                            <td class="col-sm-3">Option</td>
+                                            <td class="col-2">ID</td>
+                                            <td class="col-4">Name</td>
+                                            <td class="col-3">Number of Students</td>
+                                            <td class="col-3">Option</td>
                                         </tr>
                                         </thead>
                                     </table>
@@ -121,16 +126,16 @@
 
                             %>
                             <div class="card">
-                                <div class="card-header">
-                                    <table class="table table-hover mb-0">
+                                <div class="card-header table-responsive-md">
+                                    <table class="table table-hover mb-0" style="min-width: 576px">
                                         <tbody>
                                         <tr>
-                                            <td class="col-sm-2"><%=course.getId()%></td>
-                                            <td class="col-sm-4"><%=course.getName()%></td>
+                                            <td class="col-2"><%=course.getId()%></td>
+                                            <td class="col-4"><%=course.getName()%></td>
 <%--                                            <td class="col-sm-2"><%=course.getId()%></td>--%>
 <%--                                            <td class="col-sm-2"><%=course.getId()%></td>--%>
-                                            <td class="col-sm-3"><%=course.getNumOfStu()%></td>
-                                            <td class="col-sm-3">
+                                            <td class="col-3"><%=course.getNumOfStu()%></td>
+                                            <td class="col-3">
                                                 <div class="btn-group btn-group-sm">
                                                     <a class="card-link btn btn-primary" data-toggle="collapse"
                                                        href="#course-<%=courseCnt%>">详细信息</a>
@@ -141,19 +146,19 @@
                                     </table>
                                 </div>
                                 <div id="course-<%=courseCnt%>" class="collapse" data-parent="#courseAccordion">
-                                    <div class="card-body">
+                                    <div class="card-body table-responsive-md" >
 
                                         <label>
                                             <h4>Student List</h4>
                                         </label>
 
-                                        <table class="table table-hover">
-                                            <thead class="bg-light" style="position: sticky; top: 0; z-index: 100">
+                                        <table class="table table-hover"  style="min-width: 576px">
+                                            <thead class="bg-light" style="position: sticky; position: -webkit-sticky; top: 0; z-index: 100">
                                             <tr>
-                                                <td>ID</td>
-                                                <td>Name</td>
-                                                <td>Score</td>
-                                                <td>Option</td>
+                                                <td class="col-2">ID</td>
+                                                <td class="col-2">Name</td>
+                                                <td class="col-2">Score</td>
+                                                <td class="col-2">Option</td>
                                             </tr>
                                             </thead>
                                             <tbody>
