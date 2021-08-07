@@ -12,16 +12,31 @@ import cn.edu.hit.sms.entity.user.Teacher;
 import cn.edu.hit.sms.entity.user.User;
 import cn.edu.hit.sms.utils.DBUtils;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Logger;
 
 import tools.EasyFileIO;
 public class Test {
-    public static void main(String[] args) {
-
-//        courseDaoTest();
-        Logger.getGlobal().info("Test");
+    public static void main(String[] args) throws IOException {
+        Properties properties = new Properties();
+        // 使用InPutStream流读取properties文件
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("./config/app.properties"));
+        properties.load(bufferedReader);
+        // 获取key对应的value值
+        String HostAddress = properties.getProperty("HostAddress");
+        String Database = properties.getProperty("Database");
+        String USER = properties.getProperty("Username");
+        String PASS = properties.getProperty("Password");
+        String DB_URL = String.format("jdbc:mysql://%s/%s", HostAddress, Database);
+//        System.out.println(JDBC_DRIVER);
+        System.out.println(DB_URL);
+        System.out.println(USER);
+        System.out.println(PASS);
     }
 
     static void userDaoTest() {

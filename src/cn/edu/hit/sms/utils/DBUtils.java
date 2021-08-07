@@ -1,19 +1,47 @@
 package cn.edu.hit.sms.utils;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.*;
 import java.sql.*;
+import java.util.Properties;
 import java.util.logging.Logger;
 
 public class DBUtils {
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://47.101.32.121:3306/education_system";
+    static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    static String DB_URL;
 
-    static final String USER = "eduSys";
-    static final String PASS = "123456";
+    static String USER;
+    static String PASS;
 
     private static Connection con;
     private static Statement stmt;
 
     static {
+        Properties properties = new Properties();
+        BufferedReader bufferedReader = null;
+
+        try {
+            Path relative = Paths.get("../conf/sms.properties");
+            Path absolute = relative.toAbsolutePath();
+            bufferedReader = new BufferedReader(new FileReader(String.valueOf(absolute.toRealPath())));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            properties.load(bufferedReader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String HostAddress = properties.getProperty("HostAddress");
+        String Database = properties.getProperty("Database");
+        USER = properties.getProperty("Username");
+        PASS = properties.getProperty("Password");
+        DB_URL = String.format("jdbc:mysql://%s/%s", HostAddress, Database);
+
         try {
             Class.forName(JDBC_DRIVER);
             con = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -21,6 +49,13 @@ public class DBUtils {
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+//        System.out.println(JDBC_DRIVER);
+        System.out.println(DB_URL);
+        System.out.println(USER);
+        System.out.println(PASS);
     }
 
     public static ResultSet executeQuery(String sql) {
