@@ -1,4 +1,4 @@
-package tools;
+package test;
 
 import cn.edu.hit.sms.dao.CourseDao;
 import cn.edu.hit.sms.dao.UserDao;
