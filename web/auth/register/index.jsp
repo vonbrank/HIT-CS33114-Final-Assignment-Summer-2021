@@ -54,7 +54,7 @@
                 </ul>
                 <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
                     <li class="nav-item">
-                        <a class="nav-link" href="./about">关于</a>
+                        <a class="nav-link" href="../../about">关于</a>
                     </li>
                 </ul>
             </div>
