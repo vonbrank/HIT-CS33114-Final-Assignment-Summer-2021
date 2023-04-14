@@ -25,7 +25,7 @@ export const AppDefaultLayout = () => {
           sx={{
             position: "relative",
             zIndex: 1,
-            color: (theme) => alpha(theme.palette.common.white, 0.8),
+            color: (theme) => alpha(theme.palette.common.white, 0.9),
             "& .footer-img": {
               objectFit: "cover",
               width: "100%",
@@ -33,19 +33,20 @@ export const AppDefaultLayout = () => {
               position: "absolute",
               top: 0,
               left: 0,
-              zIndex: 0,
+              zIndex: 1,
             },
           }}
           height="6.4rem"
           alignItems={"center"}
           justifyContent="center"
         >
-          <Container>
-            <Typography
-              sx={{
-                zIndex: 1,
-              }}
-            >
+          <Container
+            sx={{
+              zIndex: 2,
+              textAlign: "center",
+            }}
+          >
+            <Typography>
               © 2020 Copyright VonBrank All Rights Reserved.
             </Typography>
           </Container>

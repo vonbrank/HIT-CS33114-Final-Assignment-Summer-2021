@@ -19,7 +19,7 @@ const Home = () => {
         top: "50%",
         transform: "translate(-50%, -50%)",
         width: "100%",
-        color: (theme) => alpha(theme.palette.common.white, 0.9),
+        color: (theme) => alpha(theme.palette.common.white, 0.95),
       }}
     >
       <Container>
@@ -37,7 +37,7 @@ const Home = () => {
             <span>现代 Web 技术驱动的</span>
             <span>学生成绩管理系统</span>
           </Typography>
-          <Button variant="outlined" color="inherit">
+          <Button variant="outlined" color="inherit" size="large">
             登陆
           </Button>
         </Stack>
