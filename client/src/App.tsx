@@ -5,7 +5,7 @@ import { AppThemeProvider } from "./theme";
 
 function App() {
   return (
-    <AppThemeProvider>
+    <AppThemeProvider darkMode="light">
       <RouterProvider router={router} />
     </AppThemeProvider>
   );
