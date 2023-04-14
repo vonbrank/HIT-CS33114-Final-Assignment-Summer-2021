@@ -2,8 +2,7 @@ package cn.edu.hit.coursety.service
 
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Service
-
-data class Score(val sid: String, val cid: String, val score: Int)
+import cn.edu.hit.coursety.entity.Score
 
 @Service
 class ScoreService(val db: JdbcTemplate) {

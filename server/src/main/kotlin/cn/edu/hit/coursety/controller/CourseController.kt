@@ -1,6 +1,6 @@
 package cn.edu.hit.coursety.controller
 
-import cn.edu.hit.coursety.service.Score
+import cn.edu.hit.coursety.entity.Score
 import cn.edu.hit.coursety.service.ScoreService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
