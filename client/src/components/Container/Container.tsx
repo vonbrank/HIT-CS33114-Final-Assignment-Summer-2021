@@ -1,13 +1,29 @@
-import { AppBar, Box, Toolbar, Typography, Stack, alpha } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Stack,
+  alpha,
+  Button,
+} from "@mui/material";
 import Container from "@mui/material/Container";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 export const AppDefaultLayout = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <AppBar>
         <Toolbar>
-          <Typography variant="h5">Coursety</Typography>
+          <Button
+            variant="text"
+            color="inherit"
+            sx={{ textTransform: "none" }}
+            onClick={() => navigate("/")}
+          >
+            <Typography variant="h5">HIT-Coursety</Typography>
+          </Button>
         </Toolbar>
       </AppBar>
       <Stack sx={{ minHeight: "100vh" }}>
