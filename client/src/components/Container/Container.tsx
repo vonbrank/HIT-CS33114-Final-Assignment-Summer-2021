@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   AppBar,
   Box,
@@ -6,24 +7,120 @@ import {
   Stack,
   alpha,
   Button,
+  Tabs,
+  Tab,
+  IconButton,
 } from "@mui/material";
 import Container from "@mui/material/Container";
 import { Outlet, useNavigate } from "react-router-dom";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import ModeNightIcon from "@mui/icons-material/ModeNight";
+
+type TabOptionBase = "Home" | "About";
+
+interface TabState {
+  currentTabOption: TabOptionBase;
+  currentTabList: TabOptionBase[];
+}
+
+const baseTabList: TabOptionBase[] = ["Home", "About"];
 
 export const AppDefaultLayout = () => {
   const navigate = useNavigate();
+
+  const [tabState, setTabState] = useState<TabState>({
+    currentTabOption: "Home",
+    currentTabList: [...baseTabList],
+  });
+
+  const handleChangeTabOption = (
+    event: React.SyntheticEvent,
+    newOption: TabOptionBase
+  ) => {
+    setTabState((current) => {
+      if (
+        current.currentTabList.findIndex((option) => option === newOption) !==
+        -1
+      )
+        return {
+          ...current,
+          currentTabOption: newOption,
+        };
+      return { ...current };
+    });
+  };
+
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <Box>
       <AppBar>
         <Toolbar>
-          <Button
-            variant="text"
-            color="inherit"
-            sx={{ textTransform: "none" }}
-            onClick={() => navigate("/")}
-          >
-            <Typography variant="h5">HIT-Coursety</Typography>
-          </Button>
+          <Stack direction="row" width="100%" spacing="2.4rem">
+            <Button
+              variant="text"
+              color="inherit"
+              sx={{ textTransform: "none" }}
+              onClick={() => navigate("/")}
+            >
+              <Typography variant="h5">HIT-Coursety</Typography>
+            </Button>
+            <Stack
+              sx={{ flex: 1 }}
+              direction="row"
+              justifyContent="space-between"
+            >
+              <Box
+                sx={{
+                  color: (theme) => theme.palette.common.white,
+                }}
+              >
+                <Tabs
+                  value={tabState.currentTabOption}
+                  onChange={handleChangeTabOption}
+                  textColor="inherit"
+                  sx={{
+                    "& .MuiTabs-indicator": {
+                      backgroundColor: (theme) => theme.palette.common.white,
+                    },
+                  }}
+                >
+                  {tabState.currentTabList.map((option) => (
+                    <Tab
+                      key={option}
+                      label={option}
+                      value={option}
+                      sx={{
+                        fontSize: "1.8rem",
+                        textTransform: "none",
+                      }}
+                    />
+                  ))}
+                </Tabs>
+              </Box>
+              <Stack
+                direction="row"
+                sx={{
+                  color: (theme) => theme.palette.common.white,
+                  "& .MuiIconButton-root": {
+                    width: "4.8rem",
+                    height: "4.8rem",
+                  },
+                }}
+              >
+                <IconButton color="inherit">
+                  <GitHubIcon />
+                </IconButton>
+                <IconButton
+                  color="inherit"
+                  onClick={() => setDarkMode((current) => !current)}
+                >
+                  {darkMode ? <ModeNightIcon /> : <LightModeIcon />}
+                </IconButton>
+              </Stack>
+            </Stack>
+          </Stack>
         </Toolbar>
       </AppBar>
       <Stack sx={{ minHeight: "100vh" }}>
