@@ -15,10 +15,26 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../store/hooks";
+import { login } from "../../store/slice/LoginSlice";
 
 const Login = () => {
+  const dispatch = useAppDispatch();
+
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  const [userId, setUserId] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = () => {
+    dispatch(
+      login({
+        userId: userId,
+        password: password,
+      })
+    );
+  };
 
   return (
     <Stack
@@ -51,11 +67,18 @@ const Login = () => {
                 </IconButton>
               </Box>
               <Stack spacing="2rem">
-                <TextField label="用户 ID" fullWidth />
+                <TextField
+                  label="用户 ID"
+                  fullWidth
+                  value={userId}
+                  onChange={(e) => setUserId(e.target.value)}
+                />
                 <TextField
                   label="密码"
                   type={showPassword ? "text" : "password"}
                   fullWidth
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
@@ -70,7 +93,7 @@ const Login = () => {
                   }}
                 />
               </Stack>
-              <Button fullWidth variant="contained">
+              <Button fullWidth variant="contained" onClick={handleSubmit}>
                 登录
               </Button>
             </Stack>
