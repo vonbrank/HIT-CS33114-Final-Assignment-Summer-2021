@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController
 class CourseController(val scoreService: ScoreService) {
 
     @CrossOrigin
-    @GetMapping("/course/getStudentCourseScore")
+    @GetMapping("api/course/getStudentCourseScore")
     @ResponseBody
     fun getAllScore(): Response {
         return SuccessResponse(scoreService.getStudentScores("S021"));
