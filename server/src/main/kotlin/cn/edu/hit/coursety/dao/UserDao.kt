@@ -16,4 +16,14 @@ class UserDao(val db: JdbcTemplate) {
         }
         return if (users.isNotEmpty()) users[0] else null
     }
+
+    fun getUserByIdAndPassword(id: String, password: String): User? {
+        val users = db.query("SELECT * FROM users WHERE userid=? AND password=?", id, password) { response, _ ->
+            User(response.getString("userid"), response.getString("name"),
+                    response.getString("gender"), response.getString("major"),
+                    response.getString("profession"),
+                    response.getInt("userType"))
+        }
+        return if (users.isNotEmpty()) users[0] else null
+    }
 }
