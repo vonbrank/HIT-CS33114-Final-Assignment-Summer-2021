@@ -4,7 +4,6 @@ import cn.edu.hit.coursety.dao.CourseDao
 import cn.edu.hit.coursety.dao.ScoreDao
 import cn.edu.hit.coursety.dao.UserDao
 import org.springframework.stereotype.Service
-import cn.edu.hit.coursety.entity.domain.Score
 import cn.edu.hit.coursety.entity.vo.StudentCourseScoreVo
 
 @Service

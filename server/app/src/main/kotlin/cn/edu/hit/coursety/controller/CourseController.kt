@@ -1,7 +1,5 @@
 package cn.edu.hit.coursety.controller
 
-import cn.edu.hit.coursety.entity.domain.Score
-import cn.edu.hit.coursety.entity.vo.StudentCourseScoreVo
 import cn.edu.hit.coursety.response.Response
 import cn.edu.hit.coursety.response.SuccessResponse
 import cn.edu.hit.coursety.service.ScoreService

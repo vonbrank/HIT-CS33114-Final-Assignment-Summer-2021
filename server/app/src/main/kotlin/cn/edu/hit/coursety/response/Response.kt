@@ -1,7 +1,6 @@
 package cn.edu.hit.coursety.response
 
 import java.time.LocalDateTime
-import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType
 
 sealed class Response(val code: Int, val description: String,
                       val timestamp: LocalDateTime = LocalDateTime.now(), val data: Any?)
