@@ -2,18 +2,17 @@ package cn.edu.hit.coursety.response
 
 import java.time.LocalDateTime
 
-sealed class Response(val code: Int, val description: String,
-                      val timestamp: LocalDateTime = LocalDateTime.now(), val data: Any?)
+sealed class BaseResponse(
+    val status: String,
+    val timestamp: LocalDateTime = LocalDateTime.now()
+)
 
-class SuccessResponse(
-        data: Any?,
-        description: String = "OK",
-        timestamp: LocalDateTime = LocalDateTime.now(),
+class Response<T>(
+    val data: T?,
+    status: String = "success",
+    timestamp: LocalDateTime = LocalDateTime.now(),
 ) :
-        Response(ResponseCode.SUCCESS.code, description, timestamp, data = data);
+    BaseResponse(status, timestamp)
 
-class FailResponse(description: String, timestamp: LocalDateTime = LocalDateTime.now()) :
-        Response(ResponseCode.FAIL.code, description, timestamp, null)
-
-class InternalErrorResponse(description: String, timestamp: LocalDateTime = LocalDateTime.now()) :
-        Response(ResponseCode.INTERNAL_SERVER_ERROR.code, description, timestamp, null)
+class ErrorResponse(val message: String, status: String = "error", timestamp: LocalDateTime = LocalDateTime.now()) :
+    BaseResponse(status, timestamp)

@@ -1,20 +1,31 @@
 package cn.edu.hit.coursety.controller
 
+import cn.edu.hit.coursety.entity.domain.Course
+import cn.edu.hit.coursety.response.BaseResponse
+import cn.edu.hit.coursety.response.ErrorResponse
 import cn.edu.hit.coursety.response.Response
-import cn.edu.hit.coursety.response.SuccessResponse
-import cn.edu.hit.coursety.service.ScoreService
-import org.springframework.web.bind.annotation.CrossOrigin
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.ResponseBody
-import org.springframework.web.bind.annotation.RestController
+import cn.edu.hit.coursety.service.CourseService
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.*
 
 @RestController
-class CourseController(val scoreService: ScoreService) {
+@RequestMapping("api/v1/courses")
+@CrossOrigin
+class CourseController(val courseService: CourseService) {
+    @GetMapping("")
+    fun getAllCourses(): ResponseEntity<Response<List<Course>>> {
+        return ResponseEntity.ok(Response(courseService.getAllCourses()))
+    }
 
-    @CrossOrigin
-    @GetMapping("api/course/getStudentCourseScore")
-    @ResponseBody
-    fun getAllScore(): Response {
-        return SuccessResponse(scoreService.getStudentScores("S021"));
+    @GetMapping("{id}")
+    fun getCourse(@PathVariable id: String): ResponseEntity<BaseResponse> {
+        val course = courseService.getCourse(id.toInt())
+        return if (course == null) {
+            ResponseEntity(ErrorResponse("No course found with that ID."), HttpStatus.NOT_FOUND)
+        } else {
+            ResponseEntity.ok(Response(course))
+        }
+
     }
 }
