@@ -20,4 +20,18 @@ data class Course(
     ) {
 
     }
+
+    companion object {
+        fun dataBaseFieldName(propertyName: String): String? {
+            return when (propertyName) {
+                "id" -> "id"
+                "name" -> "name"
+                "courseCredit" -> "course_credit"
+                "creditHour" -> "credit_hour"
+                "department" -> "department"
+                "teacher" -> "teacher"
+                else -> null
+            }
+        }
+    }
 }

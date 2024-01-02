@@ -1,10 +1,10 @@
 package cn.edu.hit.coursety.controller
 
-import cn.edu.hit.coursety.entity.domain.Course
 import cn.edu.hit.coursety.response.BaseResponse
 import cn.edu.hit.coursety.response.ErrorResponse
 import cn.edu.hit.coursety.response.Response
 import cn.edu.hit.coursety.service.CourseService
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*
 @CrossOrigin
 class CourseController(val courseService: CourseService) {
     @GetMapping("")
-    fun getAllCourses(): ResponseEntity<Response<List<Course>>> {
-        return ResponseEntity.ok(Response(courseService.getAllCourses()))
+    fun getAllCourses(@RequestParam query: Map<String, String>): ResponseEntity<BaseResponse> {
+        return ResponseEntity.ok(Response(courseService.getAllCourses(query)))
     }
 
     @GetMapping("{id}")
