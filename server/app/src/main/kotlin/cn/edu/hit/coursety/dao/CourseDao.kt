@@ -10,54 +10,31 @@ import java.sql.ResultSet
 @Repository
 class CourseDao(val db: JdbcTemplate) {
 
-    val dataBaseFieldNameMapper = mapOf(
-        "id" to "id",
-        "name" to "name",
-        "courseCredit" to "course_credit",
-        "creditHour" to "credit_hour",
-        "department" to "department",
-        "teacher" to "teacher"
-    )
+    companion object {
+        val dataBaseFieldNameMapper = mapOf(
+            "id" to "id",
+            "name" to "name",
+            "courseCredit" to "course_credit",
+            "creditHour" to "credit_hour",
+            "department" to "department",
+            "teacher" to "teacher"
+        )
+
+        fun String.dataClassFieldName(): String? {
+            return dataBaseFieldNameMapper.entries.find { it.value == this }?.key
+        }
+
+
+    }
+
 
     fun findAll(
-        queryFilter: Map<String, String> = HashMap(),
-        sortKeywords: List<String> = listOf(),
-        limitOffset: Int = 0,
-        limitRowCount: Int = 100
+        featureQuerySql: String, featureParamValues: Array<String>
     ): List<Course> {
 
-        var sql = "SELECT * FROM courses";
-        var paramValues = arrayOf<String>()
-
-
-        val conditions = queryFilter.keys.joinToString("AND ") { key -> "$key = ?" }
-
-        if (conditions.isNotEmpty()) {
-            sql += " WHERE $conditions"
-            paramValues += queryFilter.values
-        }
-
-        val sorts = sortKeywords.map { keyword ->
-            val isDescending = keyword.startsWith("-")
-            val property = keyword.removePrefix("-")
-            (property.dataBaseFieldName() ?: "") to if (isDescending) "ASC" else "DESC"
-        }
-            .filter { (property, _) ->
-                property.isNotEmpty()
-            }
-
-        if (sorts.isNotEmpty()) {
-            println(sorts)
-            sql += " ORDER BY ${sorts.joinToString(", ") { (property, sortType) -> "$property $sortType" }}"
-        }
-
-        sql += if (limitRowCount < 0) {
-            " LIMIT $limitOffset, 100"
-        } else {
-            " LIMIT $limitOffset, $limitRowCount"
-        }
-
-        return db.query(sql, paramValues, courseMapRow)
+        val sql = "SELECT * FROM courses" + featureQuerySql
+        println(sql)
+        return db.query(sql, featureParamValues, courseMapRow)
     }
 
     fun findById(id: Int): Course? {
@@ -118,14 +95,6 @@ class CourseDao(val db: JdbcTemplate) {
             null
         }
 
-    }
-
-    private fun String.dataBaseFieldName(): String? {
-        return dataBaseFieldNameMapper[this]
-    }
-
-    private fun String.dataClassFieldName(): String? {
-        return dataBaseFieldNameMapper.entries.find { it.value == this }?.key
     }
 
     private val courseMapRow = { rs: ResultSet, rowNum: Int ->
