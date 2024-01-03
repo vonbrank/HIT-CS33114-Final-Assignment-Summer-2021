@@ -2,8 +2,11 @@ package cn.edu.hit.coursety.service
 
 import cn.edu.hit.coursety.dao.CourseDao
 import cn.edu.hit.coursety.entity.domain.Course
+import cn.edu.hit.coursety.entity.dto.CourseDto
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import jakarta.validation.Valid
 import org.springframework.stereotype.Service
+import org.springframework.web.bind.annotation.RequestBody
 import kotlin.math.max
 
 @Service
@@ -39,7 +42,20 @@ class CourseService(val courseDao: CourseDao) {
         return courseMaps
     }
 
+    fun createCourse(courseDto: CourseDto): Course {
+        val id = courseDao.create(courseDto)
+        return courseDao.findById(id)!!
+    }
+
     fun getCourse(id: Int): Course? {
         return courseDao.findById(id)
+    }
+
+    fun updateCourse(id: Int, courseDto: CourseDto): Course? {
+        return courseDao.findByIdAndUpdate(id, courseDto)
+    }
+
+    fun deleteCourse(id: Int): Boolean {
+        return courseDao.findByIdAndDelete(id) != null
     }
 }

@@ -15,13 +15,13 @@ class LoginController(val userService: UserService) {
     @CrossOrigin
     @PostMapping("api/user/login")
     @ResponseBody
-    fun login(@RequestBody loginDto: LoginDto): BaseResponse {
+    fun login(@RequestBody loginDto: LoginDto): Response {
         val authorization = userService.checkUserAuthorization(loginDto.userId, loginDto.password)
 
         if (authorization) {
             val user = userService.getUserById(loginDto.userId)
                 ?: return ErrorResponse("Internal server error.")
-            return Response(UserLoginVo.fromUser(user))
+            return SuccessResponse(UserLoginVo.fromUser(user))
         }
 
         return ErrorResponse("User does not exist.")
