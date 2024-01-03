@@ -18,6 +18,7 @@ repositories {
 dependencies {
     implementation(libs.springframework.boot.starter.data.jdbc)
     implementation(libs.springframework.boot.starter.web)
+    implementation(libs.springframework.boot.starter.validation)
     implementation(libs.fasterxml.jackson.module.kotlin)
     implementation(libs.jetbrains.kotlin.reflect)
     runtimeOnly(libs.mysql.connector.java)

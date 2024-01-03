@@ -4,6 +4,7 @@ mysql-connector-java = "8.0.28"
 [libraries]
 springframework-boot-starter-data-jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-data-jdbc" }
 springframework-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+springframework-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
 fasterxml-jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin" }
 jetbrains-kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
 mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version.ref = "mysql-connector-java" }
