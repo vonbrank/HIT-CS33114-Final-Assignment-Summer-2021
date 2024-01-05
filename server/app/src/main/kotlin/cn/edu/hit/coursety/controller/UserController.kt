@@ -1,5 +1,6 @@
 package cn.edu.hit.coursety.controller
 
+import cn.edu.hit.coursety.exception.AppException
 import cn.edu.hit.coursety.response.ErrorResponse
 import cn.edu.hit.coursety.response.Response
 import cn.edu.hit.coursety.response.SuccessResponse
@@ -26,14 +27,14 @@ class UserController(val userService: UserService) {
 
     @PostMapping("")
     fun createUsers(): ResponseEntity<Response> {
-        return ResponseEntity(ErrorResponse("This route is not yet defined"), HttpStatus.INTERNAL_SERVER_ERROR)
+        throw AppException("This route is not yet defined", HttpStatus.BAD_REQUEST)
     }
 
     @GetMapping("{id}")
     fun getUser(@PathVariable id: String): ResponseEntity<Response> {
         val user = userService.getUserById(id.toInt())
         return if (user == null) {
-            ResponseEntity(ErrorResponse("No user found with this ID."), HttpStatus.NOT_FOUND)
+            throw AppException("No user found with this ID.", HttpStatus.NOT_FOUND)
         } else {
             ResponseEntity.ok(SuccessResponse(user))
         }
@@ -41,12 +42,12 @@ class UserController(val userService: UserService) {
 
     @PatchMapping("{id}")
     fun updateUser(@PathVariable id: String): ResponseEntity<Response> {
-        return ResponseEntity(ErrorResponse("This route is not yet defined"), HttpStatus.INTERNAL_SERVER_ERROR)
+        throw AppException("This route is not yet defined", HttpStatus.BAD_REQUEST)
     }
 
     @DeleteMapping("{id}")
     fun deleteUser(@PathVariable id: String): ResponseEntity<Response> {
-        return ResponseEntity(ErrorResponse("This route is not yet defined"), HttpStatus.INTERNAL_SERVER_ERROR)
+        throw AppException("This route is not yet defined", HttpStatus.BAD_REQUEST)
     }
 
 }
