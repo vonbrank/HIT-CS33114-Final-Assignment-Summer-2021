@@ -6,11 +6,12 @@ import org.springframework.stereotype.Service
 
 @Service
 class UserService(val userDao: UserDao) {
-    fun checkUserAuthorization(id: String, password: String): Boolean {
-        return userDao.getUserByIdAndPassword(id, password) != null
+
+    fun getAllUser(): List<User> {
+        return userDao.findAll()
     }
 
-    fun getUserById(id: String): User? {
-        return userDao.getUserById(id)
+    fun getUserById(id: Int): User? {
+        return userDao.findById(id)
     }
 }

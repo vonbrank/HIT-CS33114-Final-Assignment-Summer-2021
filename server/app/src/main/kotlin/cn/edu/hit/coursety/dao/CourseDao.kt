@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository
 import java.sql.ResultSet
 
 @Repository
-class CourseDao(val db: JdbcTemplate) {
+class CourseDao(val db: JdbcTemplate) : IDao<Course> {
 
-    companion object {
-        val dataBaseFieldNameMapper = mapOf(
+    companion object : IDaoCompanionObject {
+        override val dataBaseFieldNameMapper = mapOf(
             "id" to "id",
             "name" to "name",
             "courseCredit" to "course_credit",
@@ -20,25 +20,18 @@ class CourseDao(val db: JdbcTemplate) {
             "teacher" to "teacher"
         )
 
-        fun String.dataClassFieldName(): String? {
-            return dataBaseFieldNameMapper.entries.find { it.value == this }?.key
-        }
-
-
     }
-
 
     fun findAll(
         featureQuerySql: String, featureParamValues: Array<String>
     ): List<Course> {
 
         val sql = "SELECT * FROM courses" + featureQuerySql
-        println(sql)
-        return db.query(sql, featureParamValues, courseMapRow)
+        return db.query(sql, featureParamValues, mapRow)
     }
 
     fun findById(id: Int): Course? {
-        val courses = db.query("SELECT * FROM courses WHERE id=?", arrayOf(id), courseMapRow)
+        val courses = db.query("SELECT * FROM courses WHERE id=?", arrayOf(id), mapRow)
         return if (courses.isNotEmpty()) courses[0] else null
     }
 
@@ -97,14 +90,16 @@ class CourseDao(val db: JdbcTemplate) {
 
     }
 
-    private val courseMapRow = { rs: ResultSet, rowNum: Int ->
-        Course(
-            rs.getInt("id"),
-            rs.getString("name"),
-            rs.getInt("course_credit"),
-            rs.getInt("credit_hour"),
-            rs.getInt("department"),
-            rs.getInt("teacher")
-        )
-    }
+    override val mapRow: (ResultSet, Int) -> Course
+        get() = { rs: ResultSet, rowNum: Int ->
+            Course(
+                rs.getInt("id".dataBaseFieldName()),
+                rs.getString("name"),
+                rs.getInt("course_credit"),
+                rs.getInt("credit_hour"),
+                rs.getInt("department"),
+                rs.getInt("teacher")
+            )
+        }
+
 }
