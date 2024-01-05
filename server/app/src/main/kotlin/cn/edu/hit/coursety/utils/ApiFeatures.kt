@@ -1,6 +1,8 @@
 package cn.edu.hit.coursety.utils
 
+import cn.edu.hit.coursety.exception.AppException
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import org.springframework.http.HttpStatus
 import kotlin.math.max
 
 class ApiFeatures<T>(private val query: Map<String, String>, private val dataBaseFieldNameMapper: Map<String, String>) {
@@ -36,7 +38,12 @@ class ApiFeatures<T>(private val query: Map<String, String>, private val dataBas
         val sorts = sortKeywords.map { keyword ->
             val isDescending = keyword.startsWith("-")
             val property = keyword.removePrefix("-")
-            (property.dataBaseFieldName() ?: "") to if (isDescending) "ASC" else "DESC"
+            val dataBaseFieldName = property.dataBaseFieldName()
+                ?: throw AppException(
+                    "$property does not mapped to database field name.",
+                    HttpStatus.BAD_REQUEST
+                )
+            dataBaseFieldName to if (isDescending) "ASC" else "DESC"
         }
             .filter { (property, _) ->
                 property.isNotEmpty()
