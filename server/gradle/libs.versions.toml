@@ -1,5 +1,7 @@
 [versions]
 mysql-connector-java = "8.0.28"
+java-jwt = "4.4.0"
+favre-bcrypt = "0.10.2"
 
 [libraries]
 springframework-boot-starter-data-jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-data-jdbc" }
@@ -9,5 +11,7 @@ fasterxml-jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name
 jetbrains-kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
 mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version.ref = "mysql-connector-java" }
 springframework-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+auth0-java-jwt = { group = "com.auth0", name = "java-jwt", version.ref = "java-jwt" }
+favre-bcrypt = { group = "at.favre.lib", name = "bcrypt", version.ref = "favre-bcrypt" }
 
 [plugins]

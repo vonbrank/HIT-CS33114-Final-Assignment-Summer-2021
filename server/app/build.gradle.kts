@@ -21,6 +21,8 @@ dependencies {
     implementation(libs.springframework.boot.starter.validation)
     implementation(libs.fasterxml.jackson.module.kotlin)
     implementation(libs.jetbrains.kotlin.reflect)
+    implementation(libs.auth0.java.jwt)
+    implementation(libs.favre.bcrypt)
     runtimeOnly(libs.mysql.connector.java)
     testImplementation(libs.springframework.boot.starter.test)
 }
