@@ -4,6 +4,7 @@ import cn.edu.hit.coursety.exception.AppException
 import cn.edu.hit.coursety.response.ErrorResponse
 import cn.edu.hit.coursety.response.Response
 import cn.edu.hit.coursety.response.SuccessResponse
+import cn.edu.hit.coursety.service.AuthService
 import cn.edu.hit.coursety.service.UserService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -13,15 +14,19 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PatchMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestHeader
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("api/v1/users")
 @CrossOrigin
-class UserController(val userService: UserService) {
+class UserController(val userService: UserService, val authService: AuthService) {
     @GetMapping("")
-    fun getAllUsers(): ResponseEntity<Response> {
+    fun getAllUsers(@RequestHeader("Authorization") authorization: String?): ResponseEntity<Response> {
+
+        authService.authorize(authorization ?: "")
+
         return ResponseEntity.ok(SuccessResponse(userService.getAllUser()))
     }
 
@@ -33,11 +38,7 @@ class UserController(val userService: UserService) {
     @GetMapping("{id}")
     fun getUser(@PathVariable id: String): ResponseEntity<Response> {
         val user = userService.getUserById(id.toInt())
-        return if (user == null) {
-            throw AppException("No user found with this ID.", HttpStatus.NOT_FOUND)
-        } else {
-            ResponseEntity.ok(SuccessResponse(user))
-        }
+        return ResponseEntity.ok(SuccessResponse(user))
     }
 
     @PatchMapping("{id}")
