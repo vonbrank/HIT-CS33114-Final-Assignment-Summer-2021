@@ -2,12 +2,16 @@
 
 const fs = require("fs");
 const mysql = require("mysql2");
+const dotenv = require("dotenv");
+const moment = require("moment-timezone");
+
+dotenv.config({ path: `${__dirname}/config.env` });
 
 const connection = mysql.createConnection({
-  host: "",
-  user: "",
-  password: "",
-  database: "",
+  host: process.env.DATABASE_LOCAL || "",
+  user: process.env.DATABASE_USER_NAME || "",
+  password: process.env.DATABASE_USER_PASSWORD || "",
+  database: process.env.DATABASE_NAME || "",
 });
 
 const tableNames = ["courses", "departments", "users"];
@@ -31,7 +35,7 @@ const usersData = JSON.parse(
 
 const dropTables = () => {
   tableNames.forEach((tableName) => {
-    connection.execute(`DROP TABLE ${tableName}`);
+    connection.execute(`DROP TABLE IF EXISTS ${tableName}`);
   });
 };
 
@@ -67,7 +71,7 @@ const insertData = () => {
   });
   usersData.forEach((user) => {
     connection.execute(
-      "INSERT INTO users (id, first_name, last_name, email, password, role, department) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (id, first_name, last_name, email, password, role, department, password_changed_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
       [
         user.id,
         user.first_name,
@@ -76,6 +80,7 @@ const insertData = () => {
         "",
         user.role,
         user.department,
+        moment().utc().format(),
       ]
     );
   });

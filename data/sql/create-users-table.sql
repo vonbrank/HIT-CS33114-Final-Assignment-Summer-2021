@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS users (
 	email varchar(100) NOT NULL,
 	password varchar(100) NOT NULL,
 	role varchar(100) NOT NULL,
-	department INT UNSIGNED NOT NULL
+	department INT UNSIGNED NOT NULL,
+	password_changed_at varchar(100) NOT NULL
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
