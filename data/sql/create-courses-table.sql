@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS courses (
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	name varchar(100) NOT NULL,
+	course_credit INT NOT NULL,
+	credit_hour INT NOT NULL,
+	department INT NOT NULL,
+	teacher INT UNSIGNED NOT NULL
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
