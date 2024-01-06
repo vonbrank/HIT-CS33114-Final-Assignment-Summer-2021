@@ -11,10 +11,11 @@ import cn.edu.hit.coursety.entity.vo.UserVo
 import cn.edu.hit.coursety.exception.AppException
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
-import com.auth0.jwt.exceptions.JWTVerificationException
+import com.auth0.jwt.interfaces.DecodedJWT
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
-import java.util.Calendar
+import java.time.ZoneOffset
+import java.time.ZonedDateTime
 
 @Service
 class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
@@ -38,7 +39,19 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
         val authorizationSplit = authorization.split(" ")
         if (authorization.length >= 2) {
             val (_, token) = authorizationSplit
-            verifyToken(token)
+            val decodedJWT = verifyToken(token) ?: throw AppException(
+                "Token is invalid or has expired.",
+                HttpStatus.UNAUTHORIZED
+            )
+
+            val id = decodedJWT.getClaim("id").toString().toInt()
+            val expiredTime = decodedJWT.expiresAt
+            val user = userDao.findById(id)
+            if (expiredTime.time < user.passwordChangedAt.time) {
+                throw AppException("User recently changed password!. Please log in again.", HttpStatus.UNAUTHORIZED)
+            }
+
+
         } else {
             throw AppException("You are not logged in! Please log in to get access.", HttpStatus.UNAUTHORIZED)
         }
@@ -53,26 +66,29 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
     }
 
     fun signToken(id: Int): String {
-
-        val calendar = Calendar.getInstance()
-        calendar.add(Calendar.DAY_OF_YEAR, jwtConfig.expiredInDays.toInt())
-        val expiredDate = calendar.time
+        var currentZoneTime = ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC)
+        currentZoneTime = currentZoneTime.plusDays(jwtConfig.expiredInDays.toLong())
+//        currentZoneTime = currentZoneTime.plusSeconds(3)
+        val expiredDate = currentZoneTime.toInstant()
 
         val algorithm = Algorithm.HMAC256(jwtConfig.secret)
         return JWT.create().withClaim("id", id).withExpiresAt(expiredDate).sign(algorithm)
     }
 
-    fun verifyToken(candidateToken: String) {
+    fun verifyToken(candidateToken: String): DecodedJWT? {
+        println(candidateToken)
+        var decodedJWT: DecodedJWT? = null
         runCatching {
             val algorithm = Algorithm.HMAC256(jwtConfig.secret)
             val verifier = JWT.require(algorithm).build()
-            verifier.verify(candidateToken)
+            decodedJWT = verifier.verify(candidateToken)
         }.onFailure {
-            if (it is JWTVerificationException) {
-                throw AppException("You are not logged in! Please log in to get access.", HttpStatus.UNAUTHORIZED)
-            }
+            throw AppException(
+                "Token is invalid or has expired.",
+                HttpStatus.UNAUTHORIZED
+            )
         }
 
-
+        return decodedJWT
     }
 }

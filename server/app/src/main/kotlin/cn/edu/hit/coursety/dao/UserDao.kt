@@ -8,7 +8,10 @@ import org.springframework.http.HttpStatus
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.jdbc.support.GeneratedKeyHolder
 import org.springframework.stereotype.Repository
+import java.sql.Date
 import java.sql.ResultSet
+import java.time.ZoneOffset
+import java.time.ZonedDateTime
 
 @Repository
 class UserDao(val db: JdbcTemplate) : IDao<User> {
@@ -22,7 +25,8 @@ class UserDao(val db: JdbcTemplate) : IDao<User> {
                 "email" to "email",
                 "password" to "password",
                 "role" to "role",
-                "department" to "department"
+                "department" to "department",
+                "passwordChangedAt" to "password_changed_at"
             )
     }
 
@@ -51,8 +55,8 @@ class UserDao(val db: JdbcTemplate) : IDao<User> {
 
     fun create(signupDto: SignupDto): Int {
         val sql = """
-            INSERT INTO users(first_name, last_name, email, password, role, department)
-            VALUES(?, ?, ?, ?, ?, ?)
+            INSERT INTO users(first_name, last_name, email, password, role, department, password_changed_at)
+            VALUES(?, ?, ?, ?, ?, ?, ?)
         """.trimIndent()
         val keyHolder = GeneratedKeyHolder()
         db.update({ connection ->
@@ -63,6 +67,7 @@ class UserDao(val db: JdbcTemplate) : IDao<User> {
             preparedStatement.setString(4, signupDto.password)
             preparedStatement.setString(5, signupDto.role)
             preparedStatement.setInt(6, signupDto.department)
+            preparedStatement.setString(7, ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC).toString())
             preparedStatement
         }, keyHolder)
 
@@ -71,6 +76,12 @@ class UserDao(val db: JdbcTemplate) : IDao<User> {
 
     override val mapRow: (ResultSet, Int) -> User
         get() = { rs, rowNum ->
+
+            val passwordChangedAt = rs.getString("passwordChangedAt".dataBaseFieldName())
+            val zonedDateTime = ZonedDateTime.parse(passwordChangedAt)
+            val instant = zonedDateTime.toInstant()
+            val passwordChangedAtDate = Date.from(instant)
+
             User(
                 rs.getInt("id".dataBaseFieldName()),
                 rs.getString("firstName".dataBaseFieldName()),
@@ -78,7 +89,8 @@ class UserDao(val db: JdbcTemplate) : IDao<User> {
                 rs.getString("email".dataBaseFieldName()),
                 rs.getString("password".dataBaseFieldName()),
                 UserRole.roleValueOf(rs.getString("role".dataBaseFieldName()))!!,
-                rs.getInt("department".dataBaseFieldName())
+                rs.getInt("department".dataBaseFieldName()),
+                passwordChangedAtDate
             )
         }
 

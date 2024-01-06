@@ -1,6 +1,7 @@
 package cn.edu.hit.coursety.entity.domain
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import java.util.Date
 
 data class User(
     val id: Int,
@@ -9,7 +10,8 @@ data class User(
     val email: String,
     val password: String,
     val role: UserRole,
-    val department: Int
+    val department: Int,
+    val passwordChangedAt: Date,
 )
 
 enum class UserRole(val value: String) {

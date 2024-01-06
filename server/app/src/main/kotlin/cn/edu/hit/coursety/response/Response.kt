@@ -1,18 +1,23 @@
 package cn.edu.hit.coursety.response
 
-import java.time.LocalDateTime
+import java.time.ZoneOffset
+import java.time.ZonedDateTime
 
 sealed class Response(
     val status: String,
-    val timestamp: LocalDateTime = LocalDateTime.now()
+    val timestamp: ZonedDateTime = ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC)
 )
 
 class SuccessResponse<T>(
     val data: T?,
     status: String = "success",
-    timestamp: LocalDateTime = LocalDateTime.now(),
+    timestamp: ZonedDateTime = ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC),
 ) :
     Response(status, timestamp)
 
-class ErrorResponse(val message: String, status: String = "error", timestamp: LocalDateTime = LocalDateTime.now()) :
+class ErrorResponse(
+    val message: String,
+    status: String = "error",
+    timestamp: ZonedDateTime = ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC)
+) :
     Response(status, timestamp)
