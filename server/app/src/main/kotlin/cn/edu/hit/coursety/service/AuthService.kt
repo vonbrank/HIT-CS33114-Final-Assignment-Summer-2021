@@ -13,6 +13,7 @@ import com.auth0.jwt.algorithms.Algorithm
 import com.auth0.jwt.interfaces.DecodedJWT
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
+import java.time.Instant
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
 
@@ -49,7 +50,7 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
         val expiredDate = currentZoneTime.toInstant()
 
         val algorithm = Algorithm.HMAC256(jwtConfig.secret)
-        return JWT.create().withClaim("id", id).withExpiresAt(expiredDate).sign(algorithm)
+        return JWT.create().withClaim("id", id).withExpiresAt(expiredDate).withIssuedAt(Instant.now()).sign(algorithm)
     }
 
     fun verifyToken(candidateToken: String): DecodedJWT? {

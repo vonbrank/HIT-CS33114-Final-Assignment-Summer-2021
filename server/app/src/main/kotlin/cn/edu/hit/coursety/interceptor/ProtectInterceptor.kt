@@ -25,9 +25,9 @@ class ProtectInterceptor(val authService: AuthService, val userService: UserServ
             )
 
             val id = decodedJWT.getClaim("id").toString().toInt()
-            val expiredTime = decodedJWT.expiresAt
+            val issuedTime = decodedJWT.issuedAt
             val user = userService.getUserById(id)
-            if (expiredTime.time < user.passwordChangedAt.time) {
+            if (issuedTime.time < user.passwordChangedAt.time) {
                 throw AppException("User recently changed password!. Please log in again.", HttpStatus.UNAUTHORIZED)
             }
 

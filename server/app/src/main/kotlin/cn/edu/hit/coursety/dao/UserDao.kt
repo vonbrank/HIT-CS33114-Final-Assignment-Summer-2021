@@ -14,21 +14,21 @@ import java.time.ZoneOffset
 import java.time.ZonedDateTime
 
 @Repository
-class UserDao(val db: JdbcTemplate) : IDao<User> {
+class UserDao(val db: JdbcTemplate) : BaseDao<User>() {
 
-    companion object : IDaoCompanionObject {
-        override val dataBaseFieldNameMapper
-            get() = mapOf(
-                "id" to "id",
-                "firstName" to "first_name",
-                "lastName" to "last_name",
-                "email" to "email",
-                "password" to "password",
-                "role" to "role",
-                "department" to "department",
-                "passwordChangedAt" to "password_changed_at"
-            )
-    }
+    override val dataBaseFieldNameMapper: Map<String, String>
+        get() = mapOf(
+            "id" to "id",
+            "firstName" to "first_name",
+            "lastName" to "last_name",
+            "email" to "email",
+            "password" to "password",
+            "role" to "role",
+            "department" to "department",
+            "passwordChangedAt" to "password_changed_at",
+            "passwordResetToken" to "password_reset_token",
+            "passwordResetExpires" to "password_reset_expires"
+        )
 
     fun findAll(): List<User> {
         val sql = "SELECT * FROM users"
@@ -77,11 +77,6 @@ class UserDao(val db: JdbcTemplate) : IDao<User> {
     override val mapRow: (ResultSet, Int) -> User
         get() = { rs, rowNum ->
 
-            val passwordChangedAt = rs.getString("passwordChangedAt".dataBaseFieldName())
-            val zonedDateTime = ZonedDateTime.parse(passwordChangedAt)
-            val instant = zonedDateTime.toInstant()
-            val passwordChangedAtDate = Date.from(instant)
-
             User(
                 rs.getInt("id".dataBaseFieldName()),
                 rs.getString("firstName".dataBaseFieldName()),
@@ -90,7 +85,9 @@ class UserDao(val db: JdbcTemplate) : IDao<User> {
                 rs.getString("password".dataBaseFieldName()),
                 UserRole.roleValueOf(rs.getString("role".dataBaseFieldName()))!!,
                 rs.getInt("department".dataBaseFieldName()),
-                passwordChangedAtDate
+                rs.getDateFromString("passwordChangedAt".dataBaseFieldName()),
+                rs.getStringOrNull("passwordResetToken".dataBaseFieldName()),
+                rs.getStringOrNull("passwordResetExpires".dataBaseFieldName())
             )
         }
 

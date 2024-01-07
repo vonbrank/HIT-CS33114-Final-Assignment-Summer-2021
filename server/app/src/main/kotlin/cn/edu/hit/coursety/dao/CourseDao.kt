@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository
 import java.sql.ResultSet
 
 @Repository
-class CourseDao(val db: JdbcTemplate) : IDao<Course> {
+class CourseDao(val db: JdbcTemplate) : BaseDao<Course>() {
 
-    companion object : IDaoCompanionObject {
-        override val dataBaseFieldNameMapper = mapOf(
+    override val dataBaseFieldNameMapper: Map<String, String>
+        get() = mapOf(
             "id" to "id",
             "name" to "name",
             "courseCredit" to "course_credit",
@@ -19,8 +19,6 @@ class CourseDao(val db: JdbcTemplate) : IDao<Course> {
             "department" to "department",
             "teacher" to "teacher"
         )
-
-    }
 
     fun findAll(
         featureQuerySql: String, featureParamValues: Array<String>

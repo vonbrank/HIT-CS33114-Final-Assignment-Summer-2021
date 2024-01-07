@@ -1,5 +1,6 @@
 package cn.edu.hit.coursety.response
 
+import java.lang.Exception
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
 
@@ -15,9 +16,18 @@ class SuccessResponse<T>(
 ) :
     Response(status, timestamp)
 
-class ErrorResponse(
+open class ErrorResponse(
     val message: String,
     status: String = "error",
     timestamp: ZonedDateTime = ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC)
 ) :
     Response(status, timestamp)
+
+class ErrorDebugResponse(
+    message: String,
+    error: Exception,
+    val stack: String,
+    status: String = "error",
+    timestamp: ZonedDateTime = ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC),
+
+    ) : ErrorResponse(message, status, timestamp)

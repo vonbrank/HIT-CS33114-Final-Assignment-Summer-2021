@@ -1,5 +1,6 @@
 package cn.edu.hit.coursety.exception
 
+import cn.edu.hit.coursety.response.ErrorDebugResponse
 import cn.edu.hit.coursety.response.ErrorResponse
 import cn.edu.hit.coursety.response.Response
 import com.fasterxml.jackson.core.JsonParseException
@@ -46,22 +47,47 @@ class ExceptionControllerAdvice {
     @ExceptionHandler
     fun handleException(exception: Exception): ResponseEntity<Response> {
 
-        return when (exception) {
-            is AppException -> ResponseEntity(
-                ErrorResponse(exception.message ?: "Unknown app error"),
-                exception.statusCode
-            )
+        val mode = "Debug"
 
-            is MethodArgumentNotValidException -> exception.handle()
-            is HttpMessageNotReadableException -> {
-                when (exception.cause) {
-                    is JsonParseException, is MismatchedInputException -> handleJsonParseError()
-                    else -> exception.handle()
-                }
+        return if (mode == "Debug") {
+            if (exception is AppException) {
+                ResponseEntity(
+                    ErrorDebugResponse(
+                        exception.message ?: "Unknown app error",
+                        exception,
+                        exception.stackTraceToString()
+                    ),
+                    exception.statusCode
+                )
+            } else {
+                ResponseEntity(
+                    ErrorDebugResponse(
+                        exception.message ?: "Unknown app error",
+                        exception,
+                        exception.stackTraceToString()
+                    ),
+                    HttpStatus.INTERNAL_SERVER_ERROR
+                )
             }
+        } else {
+            when (exception) {
+                is AppException -> ResponseEntity(
+                    ErrorResponse(exception.message ?: "Unknown app error"),
+                    exception.statusCode
+                )
 
-            else -> exception.handle()
+                is MethodArgumentNotValidException -> exception.handle()
+                is HttpMessageNotReadableException -> {
+                    when (exception.cause) {
+                        is JsonParseException, is MismatchedInputException -> handleJsonParseError()
+                        else -> exception.handle()
+                    }
+                }
+
+                else -> exception.handle()
+            }
         }
+
 
     }
 }

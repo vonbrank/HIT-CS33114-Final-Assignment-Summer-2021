@@ -12,6 +12,8 @@ data class User(
     val role: UserRole,
     val department: Int,
     val passwordChangedAt: Date,
+    val passwordResetToken: String?,
+    val passwordResetExpires: String?
 )
 
 enum class UserRole(val value: String) {

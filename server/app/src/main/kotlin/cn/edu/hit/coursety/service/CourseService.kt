@@ -13,7 +13,7 @@ import kotlin.math.max
 @Service
 class CourseService(val courseDao: CourseDao) {
     fun getAllCourses(query: Map<String, String> = HashMap()): List<Map<*, *>> {
-        return ApiFeatures<Course>(query, CourseDao.dataBaseFieldNameMapper).filter().sort().paginate().limitFields()
+        return ApiFeatures<Course>(query, courseDao.dataBaseFieldNameMapper).filter().sort().paginate().limitFields()
             .execute { featureQuerySql, featureParamValues ->
                 courseDao.findAll(featureQuerySql, featureParamValues)
             }.queryResultMaps
