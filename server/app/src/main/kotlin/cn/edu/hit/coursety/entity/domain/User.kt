@@ -11,7 +11,7 @@ data class User(
     var password: String,
     val role: UserRole,
     val department: Int,
-    val passwordChangedAt: Date,
+    var passwordChangedAt: Date,
     var passwordResetToken: String?,
     var passwordResetExpires: Date?
 )

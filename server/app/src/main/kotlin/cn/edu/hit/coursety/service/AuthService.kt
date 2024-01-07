@@ -115,6 +115,7 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
         }
 
         user.password = bcryptPassword((updatePasswordDto.newPassword))
+        user.passwordChangedAt = Date.from(Instant.now())
         return UserVo(userDao.save(user))
     }
 }
