@@ -16,6 +16,8 @@ class InterceptorConfig(
         registry.addInterceptor(
             protectInterceptor
                 .match("/api/v1/users/**")
+                .matchExclude("/api/v1/users/signup")
+                .matchExclude("/api/v1/users/login")
         )
             .addPathPatterns("/**")
 

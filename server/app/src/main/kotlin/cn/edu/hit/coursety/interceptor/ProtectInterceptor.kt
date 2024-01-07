@@ -12,9 +12,7 @@ import org.springframework.stereotype.Component
 class ProtectInterceptor(val authService: AuthService, val userService: UserService) : BaseInterceptor() {
     override fun preHandle(request: HttpServletRequest, response: HttpServletResponse, handler: Any): Boolean {
 
-        if (!request.matchPatterns()) {
-            return true
-        }
+        if (!request.matchPatterns()) return true
 
         val authorization = request.getHeader("Authorization") ?: ""
 

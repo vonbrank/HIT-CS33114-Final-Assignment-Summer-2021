@@ -15,6 +15,8 @@ class RestrictToInterceptor : BaseInterceptor() {
 
     override fun preHandle(request: HttpServletRequest, response: HttpServletResponse, handler: Any): Boolean {
 
+        if (!request.matchPatterns()) return true
+
         val user = request.getAttribute("user") as User?
             ?: throw AppException("You do not have permission to perform this action", HttpStatus.FORBIDDEN)
 
