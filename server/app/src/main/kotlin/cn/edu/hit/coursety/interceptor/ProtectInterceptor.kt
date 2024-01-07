@@ -32,6 +32,9 @@ class ProtectInterceptor(val authService: AuthService, val userService: UserServ
             if (expiredTime.time < user.passwordChangedAt.time) {
                 throw AppException("User recently changed password!. Please log in again.", HttpStatus.UNAUTHORIZED)
             }
+
+            request.setAttribute("user", user)
+
         } else {
             throw AppException("You are not logged in! Please log in to get access.", HttpStatus.UNAUTHORIZED)
         }

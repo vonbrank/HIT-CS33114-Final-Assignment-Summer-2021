@@ -50,7 +50,7 @@ class ApiFeatures<T>(private val query: Map<String, String>, private val dataBas
             }
 
         if (sorts.isNotEmpty()) {
-            println(sorts)
+//            println(sorts)
             featureQuerySql += " ORDER BY ${sorts.joinToString(", ") { (property, sortType) -> "$property $sortType" }}"
         }
 

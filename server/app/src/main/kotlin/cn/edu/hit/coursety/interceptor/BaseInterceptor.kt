@@ -12,10 +12,11 @@ abstract class BaseInterceptor : HandlerInterceptor {
     private val antPathMatcher = AntPathMatcher()
 
     fun match(pattern: String, vararg methods: HttpMethod): BaseInterceptor {
+
         if (methods.isNotEmpty()) {
-            methods
+            methods.toList()
         } else {
-            HttpMethod.values()
+            HttpMethod.values().filter { it != HttpMethod.OPTIONS }
         }.forEach { method ->
             var list = patterns[method]
             if (list == null) {
