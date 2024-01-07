@@ -25,8 +25,6 @@ class UserController(val userService: UserService, val authService: AuthService)
     @GetMapping("")
     fun getAllUsers(@RequestHeader("Authorization") authorization: String?): ResponseEntity<Response> {
 
-        authService.authorize(authorization ?: "")
-
         return ResponseEntity.ok(SuccessResponse(userService.getAllUser()))
     }
 

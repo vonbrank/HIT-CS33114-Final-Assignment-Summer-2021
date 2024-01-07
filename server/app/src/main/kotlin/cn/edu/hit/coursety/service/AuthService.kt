@@ -3,7 +3,6 @@ package cn.edu.hit.coursety.service
 import at.favre.lib.crypto.bcrypt.BCrypt
 import cn.edu.hit.coursety.config.JwtConfig
 import cn.edu.hit.coursety.dao.UserDao
-import cn.edu.hit.coursety.entity.domain.User
 import cn.edu.hit.coursety.entity.dto.LoginDto
 import cn.edu.hit.coursety.entity.dto.SignupDto
 import cn.edu.hit.coursety.entity.vo.LoginVo
@@ -35,28 +34,6 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
         return LoginVo(token, UserVo(user))
     }
 
-    fun authorize(authorization: String) {
-        val authorizationSplit = authorization.split(" ")
-        if (authorization.length >= 2) {
-            val (_, token) = authorizationSplit
-            val decodedJWT = verifyToken(token) ?: throw AppException(
-                "Token is invalid or has expired.",
-                HttpStatus.UNAUTHORIZED
-            )
-
-            val id = decodedJWT.getClaim("id").toString().toInt()
-            val expiredTime = decodedJWT.expiresAt
-            val user = userDao.findById(id)
-            if (expiredTime.time < user.passwordChangedAt.time) {
-                throw AppException("User recently changed password!. Please log in again.", HttpStatus.UNAUTHORIZED)
-            }
-
-
-        } else {
-            throw AppException("You are not logged in! Please log in to get access.", HttpStatus.UNAUTHORIZED)
-        }
-    }
-
     fun bcryptPassword(password: String): String {
         return BCrypt.withDefaults().hashToString(12, password.toCharArray())
     }
@@ -76,7 +53,6 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
     }
 
     fun verifyToken(candidateToken: String): DecodedJWT? {
-        println(candidateToken)
         var decodedJWT: DecodedJWT? = null
         runCatching {
             val algorithm = Algorithm.HMAC256(jwtConfig.secret)
