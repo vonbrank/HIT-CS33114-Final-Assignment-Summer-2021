@@ -16,7 +16,7 @@ class ProtectInterceptor(val authService: AuthService, val userService: UserServ
             return true
         }
 
-        val authorization = request.getHeader("Authorization")
+        val authorization = request.getHeader("Authorization") ?: ""
 
         val authorizationSplit = authorization.split(" ")
         if (authorization.length >= 2) {
