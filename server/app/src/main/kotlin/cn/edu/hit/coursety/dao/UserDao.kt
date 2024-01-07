@@ -53,6 +53,15 @@ class UserDao(val db: JdbcTemplate) : BaseDao<User>() {
         return users[0]
     }
 
+    fun findByResetToken(resetToken: String): User {
+        val sql = "SELECT * FROM users WHERE password_reset_token=?"
+        val users = db.query(sql, arrayOf(resetToken), mapRow)
+        if (users.isEmpty()) {
+            throw AppException("Token is invalid or has expired.", HttpStatus.BAD_REQUEST)
+        }
+        return users[0]
+    }
+
     fun create(signupDto: SignupDto): Int {
         val sql = """
             INSERT INTO users(first_name, last_name, email, password, role, department, password_changed_at)
@@ -74,6 +83,36 @@ class UserDao(val db: JdbcTemplate) : BaseDao<User>() {
         return keyHolder.key!!.toInt()
     }
 
+    fun save(user: User): User {
+        val id = user.id
+        val sql = """
+            UPDATE users
+            SET first_name = ?, last_name = ?, email = ?, password = ?, role = ?, department = ?, 
+            password_changed_at = ?, 
+            password_reset_token = ?,
+            password_reset_expires = ?
+            WHERE id = ?
+        """.trimIndent()
+
+        val paramValues =
+            arrayOf(
+                user.firstName,
+                user.lastName,
+                user.email,
+                user.password,
+                user.role.value,
+                user.department,
+                user.passwordChangedAt.toInstant().toString(),
+                user.passwordResetToken,
+                user.passwordResetExpires?.toInstant()?.toString(),
+                id
+            )
+
+        db.update(sql, *paramValues)
+
+        return findById(id)
+    }
+
     override val mapRow: (ResultSet, Int) -> User
         get() = { rs, rowNum ->
 
@@ -85,9 +124,9 @@ class UserDao(val db: JdbcTemplate) : BaseDao<User>() {
                 rs.getString("password".dataBaseFieldName()),
                 UserRole.roleValueOf(rs.getString("role".dataBaseFieldName()))!!,
                 rs.getInt("department".dataBaseFieldName()),
-                rs.getDateFromString("passwordChangedAt".dataBaseFieldName()),
+                rs.getDateFromString("passwordChangedAt".dataBaseFieldName())!!,
                 rs.getStringOrNull("passwordResetToken".dataBaseFieldName()),
-                rs.getStringOrNull("passwordResetExpires".dataBaseFieldName())
+                rs.getDateFromString("passwordResetExpires".dataBaseFieldName())
             )
         }
 

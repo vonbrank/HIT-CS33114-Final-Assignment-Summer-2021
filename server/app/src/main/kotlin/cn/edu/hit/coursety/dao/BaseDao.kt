@@ -27,8 +27,8 @@ abstract class BaseDao<T> {
         }
     }
 
-    fun ResultSet.getDateFromString(columnLabel: String?): Date {
-        val passwordChangedAt = getString(columnLabel)
+    fun ResultSet.getDateFromString(columnLabel: String?): Date? {
+        val passwordChangedAt = getString(columnLabel) ?: return null
         val zonedDateTime = ZonedDateTime.parse(passwordChangedAt)
         val instant = zonedDateTime.toInstant()
         return Date.from(instant)

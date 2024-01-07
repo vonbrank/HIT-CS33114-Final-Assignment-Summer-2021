@@ -4,6 +4,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt
 import cn.edu.hit.coursety.config.JwtConfig
 import cn.edu.hit.coursety.dao.UserDao
 import cn.edu.hit.coursety.entity.dto.LoginDto
+import cn.edu.hit.coursety.entity.dto.ResetPasswordDto
 import cn.edu.hit.coursety.entity.dto.SignupDto
 import cn.edu.hit.coursety.entity.vo.LoginVo
 import cn.edu.hit.coursety.entity.vo.UserVo
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
+import java.util.*
 
 @Service
 class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
@@ -67,5 +69,40 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
         }
 
         return decodedJWT
+    }
+
+    fun createPasswordResetToken(email: String): String {
+        val user = userDao.findByEmail(email)
+
+        val stringBuilder = StringBuilder()
+        val random = Random()
+        repeat(32) {
+            val randomValue = random.nextInt(16)
+            stringBuilder.append(Integer.toHexString(randomValue))
+        }
+        val resetToken = stringBuilder.toString()
+
+        var currentZoneTime = ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC)
+        currentZoneTime = currentZoneTime.plusDays(jwtConfig.expiredInDays.toLong())
+        val expiredDate = currentZoneTime.toInstant()
+
+        user.passwordResetToken = resetToken
+        user.passwordResetExpires = Date.from(expiredDate)
+
+        userDao.save(user)
+
+        return resetToken
+    }
+
+    fun resetPassword(resetToken: String, resetPasswordDto: ResetPasswordDto): LoginVo {
+        val user = userDao.findByResetToken(resetToken)
+
+        user.password = bcryptPassword((resetPasswordDto.password))
+        user.passwordResetToken = null
+        user.passwordResetExpires = null
+        userDao.save(user)
+
+        val token = signToken(user.id)
+        return LoginVo(token, UserVo(user))
     }
 }

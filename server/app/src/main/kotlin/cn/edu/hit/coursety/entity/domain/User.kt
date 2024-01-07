@@ -8,12 +8,12 @@ data class User(
     val firstName: String,
     val lastName: String,
     val email: String,
-    val password: String,
+    var password: String,
     val role: UserRole,
     val department: Int,
     val passwordChangedAt: Date,
-    val passwordResetToken: String?,
-    val passwordResetExpires: String?
+    var passwordResetToken: String?,
+    var passwordResetExpires: Date?
 )
 
 enum class UserRole(val value: String) {

@@ -18,6 +18,8 @@ class InterceptorConfig(
                 .match("/api/v1/users/**")
                 .matchExclude("/api/v1/users/signup")
                 .matchExclude("/api/v1/users/login")
+                .matchExclude("/api/v1/users/forgotPassword")
+                .matchExclude("/api/v1/users/resetPassword/**")
         )
             .addPathPatterns("/**")
 
