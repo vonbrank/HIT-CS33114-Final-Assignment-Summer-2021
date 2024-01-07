@@ -6,6 +6,7 @@ import cn.edu.hit.coursety.dao.UserDao
 import cn.edu.hit.coursety.entity.dto.LoginDto
 import cn.edu.hit.coursety.entity.dto.ResetPasswordDto
 import cn.edu.hit.coursety.entity.dto.SignupDto
+import cn.edu.hit.coursety.entity.dto.UpdatePasswordDto
 import cn.edu.hit.coursety.entity.vo.LoginVo
 import cn.edu.hit.coursety.entity.vo.UserVo
 import cn.edu.hit.coursety.exception.AppException
@@ -104,5 +105,16 @@ class AuthService(val userDao: UserDao, val jwtConfig: JwtConfig) {
 
         val token = signToken(user.id)
         return LoginVo(token, UserVo(user))
+    }
+
+    fun updatePassword(id: Int, updatePasswordDto: UpdatePasswordDto): UserVo {
+        val user = userDao.findById(id)
+
+        if (!verifyPassword(updatePasswordDto.currentPassword, user.password)) {
+            throw AppException("Your current password is wrong!", HttpStatus.UNAUTHORIZED)
+        }
+
+        user.password = bcryptPassword((updatePasswordDto.newPassword))
+        return UserVo(userDao.save(user))
     }
 }

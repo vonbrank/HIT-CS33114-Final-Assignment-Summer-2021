@@ -1,9 +1,7 @@
 package cn.edu.hit.coursety.controller
 
-import cn.edu.hit.coursety.entity.dto.ForgotPasswordDto
-import cn.edu.hit.coursety.entity.dto.LoginDto
-import cn.edu.hit.coursety.entity.dto.ResetPasswordDto
-import cn.edu.hit.coursety.entity.dto.SignupDto
+import cn.edu.hit.coursety.entity.domain.User
+import cn.edu.hit.coursety.entity.dto.*
 import cn.edu.hit.coursety.entity.vo.ForgotPasswordVo
 import cn.edu.hit.coursety.response.Response
 import cn.edu.hit.coursety.response.SuccessResponse
@@ -43,5 +41,14 @@ class AuthController(val userService: UserService, val authService: AuthService)
     ): ResponseEntity<Response> {
         val loginVo = authService.resetPassword(token, resetPasswordDto)
         return ResponseEntity(SuccessResponse(loginVo), HttpStatus.CREATED)
+    }
+
+    @PostMapping("updatePassword")
+    fun updatePassword(
+        @RequestBody updatePasswordDto: UpdatePasswordDto,
+        @RequestAttribute("user") user: User
+    ): ResponseEntity<Response> {
+        val newUser = authService.updatePassword(user.id, updatePasswordDto)
+        return ResponseEntity.ok(SuccessResponse(newUser))
     }
 }
