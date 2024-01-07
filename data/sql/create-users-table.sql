@@ -6,7 +6,9 @@ CREATE TABLE IF NOT EXISTS users (
 	password varchar(100) NOT NULL,
 	role varchar(100) NOT NULL,
 	department INT UNSIGNED NOT NULL,
-	password_changed_at varchar(100) NOT NULL
+	password_changed_at varchar(100) NOT NULL,
+	password_reset_token varchar(100),
+	password_reset_expires varchar(100)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4

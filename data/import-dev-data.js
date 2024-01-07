@@ -71,7 +71,7 @@ const insertData = () => {
   });
   usersData.forEach((user) => {
     connection.execute(
-      "INSERT INTO users (id, first_name, last_name, email, password, role, department, password_changed_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (id, first_name, last_name, email, password, role, department, password_changed_at, password_reset_token, password_reset_expires) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
       [
         user.id,
         user.first_name,
@@ -81,6 +81,8 @@ const insertData = () => {
         user.role,
         user.department,
         moment().utc().format(),
+        null,
+        null,
       ]
     );
   });
